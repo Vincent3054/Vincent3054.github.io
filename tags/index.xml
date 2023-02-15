@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Note</title>
-    <link>https://your-github-username.github.io/tags/</link>
+    <link>https://Vincent3054.github.io/tags/</link>
     <description>Recent content in Tags on Note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://your-github-username.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://Vincent3054.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

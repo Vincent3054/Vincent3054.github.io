@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Note</title>
-    <link>https://your-github-username.github.io/</link>
+    <link>https://Vincent3054.github.io/</link>
     <description>Recent content on Note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://your-github-username.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://Vincent3054.github.io/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

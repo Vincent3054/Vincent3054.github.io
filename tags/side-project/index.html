@@ -17,7 +17,7 @@
   },
   "name":"Note",
   "description":"Hugo tranquilpeak theme demo",
-  "url":"https:\/\/Vincent3054.github.io\/archives\/",
+  "url":"https:\/\/Vincent3054.github.io\/tags\/side-project\/",
   "keywords":"[]"
 }
 
@@ -33,10 +33,10 @@
 
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Archives">
-<meta name="twitter:title" content="Archives">
-<meta property="og:url" content="https://Vincent3054.github.io/archives/">
-<meta property="twitter:url" content="https://Vincent3054.github.io/archives/">
+<meta property="og:title" content="Side Project">
+<meta name="twitter:title" content="Side Project">
+<meta property="og:url" content="https://Vincent3054.github.io/tags/side-project/">
+<meta property="twitter:url" content="https://Vincent3054.github.io/tags/side-project/">
 <meta property="og:site_name" content="Note">
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta name="twitter:description" content="Hugo tranquilpeak theme demo">
@@ -59,16 +59,16 @@
 
 
 
-    <title>Archives</title>
+    <title>Side Project</title>
 
     <link rel="icon" href="https://Vincent3054.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://Vincent3054.github.io/archives/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://Vincent3054.github.io/tags/side-project/index.xml">
     
 
     
 
-    <link rel="canonical" href="https://Vincent3054.github.io/archives/">
+    <link rel="canonical" href="https://Vincent3054.github.io/tags/side-project/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -226,34 +226,93 @@
   </div>
 </nav>
 
+      
+        
+
+      
       <div id="main" data-behavior="2"
         class="
                hasCoverMetaIn
                ">
-        <div id="archives" class="main-content-wrap">
-          <form id="filter-form" action="#">
-            <input name="date" type="text" class="form-control input--xlarge" placeholder="搜尋日期（YYYY/MM/DD）" autofocus="autofocus">
-          </form>
-          <h5 class="archive-result text-color-base text-xlarge" data-message-zero="沒有找到文章" data-message-one="找到 1 篇文章" data-message-other="找到 {n} 篇文章"></h5>
-<section class="boxes">
+        
+          <section class="postShorten-group main-content-wrap">
+            
+            
+              
   
     
-    <div class="archive archive-year box" data-date="2023">
-      <h4 class="archive-title" style="text-decoration: none;">2023</h4>
       
-        <ul class="archive-posts archive-month" data-date="202302">
-          <h5 class="archive-title" style="text-decoration: none;">二月</h5>
-          
-            <li class="archive-post archive-day" data-date="20230215">
-              <a class="archive-post-title" href="https://Vincent3054.github.io/notes/%E9%81%8B%E7%94%A8hugo%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/">運用Hugo架設個人網站</a>
-            </li>
-          
-        </ul>
+        
       
-    </div>
+    
   
-</section>
-        </div>
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://Vincent3054.github.io/notes/%E9%81%8B%E7%94%A8hugo%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/" aria-label="打開帖子: 運用Hugo架設個人網站">
+      
+          運用Hugo架設個人網站
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-02-15T00:00:00Z">
+        
+  二月 15, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>分類</span>
+    
+      <a class="category-link" href="https://Vincent3054.github.io/categories/notes">Notes</a>, 
+    
+      <a class="category-link" href="https://Vincent3054.github.io/categories/side-project">Side Project</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        如何使用 Hugo 在 GitHub 上架設個人網站？ 1. Chocolatey (Windows) 如果你是使用 Windows 可透過 chocolatey 安裝：
+//安裝chocolate Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;)) 2. 安裝hugo //安裝hugo choco install hugo -confirm //測試安裝安裝hugo成功 hugo version 3. hugo new 在你安裝完 Hugo 指令後，可透過以下指令建置新專案：
+hugo new site myblog 4. 透過 git 安裝佈景 根據官網指引安裝佈景，在安裝前你必須先有 git，我的建議是若你還沒有 git cli，先安裝 git，之後我也會建議你把整個專案做版本控制，若是你打算部署到 GitHub Pages，那你就更需要先裝好他。
+# 在專案目錄底下 ./myblog git init ## 基礎布景 git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke ## 部落格布景 git submodule add https://github.
+      
+      <p>
+        
+          <a href="https://Vincent3054.github.io/notes/%E9%81%8B%E7%94%A8hugo%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/" class="postShorten-excerpt_link link" aria-label="打開帖子: 運用Hugo架設個人網站">繼續閱讀</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+            
+
+          </section>
+        
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2023 Sky Chen. All Rights Reserved
+  </span>
+</footer>
+
       </div>
     </div>
     

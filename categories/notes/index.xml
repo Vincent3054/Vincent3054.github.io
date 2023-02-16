@@ -13,10 +13,7 @@
       <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://Vincent3054.github.io/notes/%E9%81%8B%E7%94%A8hugo%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/</guid>
-      <description>如何使用 Hugo 在 GitHub 上架設個人網站？ 1. Chocolatey (Windows) 如果你是使用 Windows 可透過 chocolatey 安裝：
-//安裝chocolate Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://community.chocolatey.org/install.ps1&amp;#39;)) 2. 安裝hugo //安裝hugo choco install hugo -confirm //測試安裝安裝hugo成功 hugo version 3. hugo new 在你安裝完 Hugo 指令後，可透過以下指令建置新專案：
-hugo new site myblog 4. 透過 git 安裝佈景 根據官網指引安裝佈景，在安裝前你必須先有 git，我的建議是若你還沒有 git cli，先安裝 git，之後我也會建議你把整個專案做版本控制，若是你打算部署到 GitHub Pages，那你就更需要先裝好他。
-# 在專案目錄底下 ./myblog git init ## 基礎布景 git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke ## 部落格布景 git submodule add https://github.</description>
+      <description></description>
     </item>
     
   </channel>

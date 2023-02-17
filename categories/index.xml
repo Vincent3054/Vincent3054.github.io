@@ -6,11 +6,20 @@
     <description>Recent content in Categories on Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://Vincent3054.github.io/categories/ai/</link>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/categories/ai/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Notes</title>
       <link>https://Vincent3054.github.io/categories/notes/</link>
-      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://Vincent3054.github.io/categories/notes/</guid>
       <description></description>

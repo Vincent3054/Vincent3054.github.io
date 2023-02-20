@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/Vincent3054.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "Sky Chen",
+    
+    "image": "https://Vincent3054.github.io/images/avatar3.png"
+    
+  },
+  "name":"Note",
+  "description":"串接ChatAI到LineBot，十分鐘做出自己的AI助理",
+  "url":"https:\/\/Vincent3054.github.io\/10minute\/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86\/",
+  "keywords":"[AI, LineBot, ChatAI, Chat, ChatGPT, BOT, ChatBot, 10minute]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.110.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Sky Chen">
+<meta name="keywords" content="AI, LineBot, ChatAI, Chat, ChatGPT, BOT, ChatBot, 10minute">
+<meta name="description" content="串接ChatAI到LineBot，十分鐘做出自己的AI助理">
+
+
+<meta property="og:description" content="串接ChatAI到LineBot，十分鐘做出自己的AI助理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[十分鐘]做出自己的AI助理">
+<meta name="twitter:title" content="[十分鐘]做出自己的AI助理">
+<meta property="og:url" content="https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86/">
+<meta property="twitter:url" content="https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86/">
+<meta property="og:site_name" content="Note">
+<meta property="og:description" content="串接ChatAI到LineBot，十分鐘做出自己的AI助理">
+<meta name="twitter:description" content="串接ChatAI到LineBot，十分鐘做出自己的AI助理">
+<meta property="og:locale" content="zh-tw">
+
+  
+    <meta property="article:published_time" content="2023-02-17T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2023-02-17T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Notes">
+    
+      <meta property="article:section" content="AI">
+    
+  
+  
+    
+      <meta property="article:tag" content="AI">
+    
+      <meta property="article:tag" content="十分鐘">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/avatar3.png">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/avatar3.png">
+
+
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/notes0002.jpg">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/notes0002.jpg">
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/notes0002.jpg">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/notes0002.jpg">
+
+
+    <title>[十分鐘]做出自己的AI助理</title>
+
+    <link rel="icon" href="https://Vincent3054.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://Vincent3054.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://Vincent3054.github.io/" aria-label="去首頁">Note</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://Vincent3054.github.io/#about" aria-label="打開鏈接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://Vincent3054.github.io/#about" aria-label="閱讀有關作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+        </a>
+        <h4 class="sidebar-profile-name">Sky Chen</h4>
+        
+          <h5 class="sidebar-profile-bio">I&rsquo;m Sky Chen, a creative developer passionate about C#, DevOps and Agile.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首頁</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分類</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">標籤</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">所有文章</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Atom</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">關於</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/Vincent3054" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/%E5%BB%BA%E6%88%90-%E9%99%B3-6438201a0/" target="_blank" rel="noopener" title="Linkedin">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Linkedin</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://reactgatsbypersonalwebsite.gatsbyjs.io/resume/" target="_blank" rel="noopener" title="Personal">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-brands fa-react" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Personal</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-left
+              post-header-cover--partial"
+       style="background-image:url('/images/notes0002.jpg')"
+       data-behavior="4">
+    
+      <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      [十分鐘]做出自己的AI助理
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-02-17T00:00:00Z">
+        
+  二月 17, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>分類</span>
+    
+      <a class="category-link" href="https://Vincent3054.github.io/categories/notes">Notes</a>, 
+    
+      <a class="category-link" href="https://Vincent3054.github.io/categories/ai">AI</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <h1 id="十分鐘做出自己的ai助理">[十分鐘]做出自己的AI助理</h1>
+<h6 id="tags-ai">tags: <code>AI</code></h6>
+<h2 id="chat-gpt簡介">Chat GPT簡介</h2>
+<p>ChatGPT 是由 OpenAI 開發的自然語言處理（<strong>NLP</strong>)模型「GPT-3」延伸出的「<strong>GPT-3.5</strong>」製作的，基於 人類反饋強化學習(<strong>RLH</strong>F) 進行訓練，簡單來說就是人類提問機器答、機器提問人類答，並且不斷迭代，再排除掉不健康的答案，透過<strong>人類干預以增強機器學習的效果</strong>，獲得更為逼真的結果。</p>
+<p><img src="https://Vincent3054.github.io/images/20230217001.png" alt=""></p>
+<p>ChatGPT 二個月內，已經吸引超過1億人使用，而 ChatGPT 功能強大，從客服對話、故事創作、翻譯、修改文法、寫詩、歌詞、文字整理，甚至是寫程式都可以。</p>
+<h3 id="gpt-3-vs-gpt-35">GPT-3 VS GPT-3.5</h3>
+<p>現在我們知道了 ChatGPT 是經過 GPT-3.5 訓練而來的，那到底 GPT-3 跟 GPT-3.5 又是什麼東西呢？</p>
+<ul>
+<li>GPT-3
+生成型預訓練變換模型3（英語：Generative Pre-trained Transformer 3，簡稱 GPT-3）是一個自迴歸語言模型，基於<strong>谷歌開發的語言模型</strong>，模型訓練內容大部分來自網路，讓 ChatGPT 能夠相當自然地組織語句。
+GPT-3 這個模型也是當前最大的語言處理模型之一，神經網路包含1750億個參數，為有史以來參數最多的神經網路模型。</li>
+</ul>
+<blockquote>
+<p>OpenAI 於2020年5月發表 GPT-3 的論文，微軟在2020年9月22日宣布取得了 GPT-3 的獨家授權。</p>
+</blockquote>
+<ul>
+<li>
+<p>GPT-3.5
+GPT-3.5 與 GPT-3 最大的差別在於 GPT-3 主要扮演一個蒐集資料的角色，較單純的使用網路上的資料進行訓練。
+GPT-3.5 則是由 GPT-3 微調出來的版本，而其中 GPT-3.5 使用與 GPT-3 不同的訓練方式，所產生出來不同的模型，比起 GPT-3 來的更強大</p>
+</li>
+<li>
+<p>ChatGPT
+而 ChatGPT 又是建立 GPT-3.5 之上，且更加上使用更完整的 人類反饋強化學習(RLHF) 去訓練。 (大致上可以想成 GPT-3 → GPT-3.5 → ChatGPT 啦)
+也因此 ChatGPT 除了能夠準確理解問題，更能夠將對話一路記住和按此調整內容，其中包括承認錯誤、糾正錯處和拒絕不當要求等等較為複雜的互動內容，更符合道德要求的訓練方式，達到更接近真人的效果，這也是 GPT-3 所沒有的。</p>
+</li>
+</ul>
+<blockquote>
+<p>關於 GPT 各代的差異
+<a href="https://www.techbang.com/posts/102473-openai-footprint-chatgpt">https://www.techbang.com/posts/102473-openai-footprint-chatgpt</a></p>
+</blockquote>
+<h2 id="openai">OpenAI</h2>
+<p>OpenAI 是美國一個人工智慧（AI）研究實驗室，創始人為<strong>伊隆·馬斯克</strong>（沒錯就是特斯拉那位）以及山姆·柯曼，原先為一個非營利組織，其使命是創造通用人工智能（英文：Artificial General Intelligence，簡稱 AGI），促進和發展友好的人工智慧，使人類整體受益，後來因為營運的成本所成立一個子公司營利組織 OpenAI LP。
+<strong>OpenAI 每一年都會陸續推出自己所研發出的成果，從 GPT-1 到 GPT-3.5 都是他們所創造的成品</strong>。</p>
+<blockquote>
+<p>OpenAI 官方網站
+<a href="https://openai.com/">https://openai.com/</a></p>
+</blockquote>
+<h1 id="gpt-ai-assistant">GPT AI Assistant</h1>
+<p>GPT AI Assistant 是基於 OpenAI API 與 LINE Messaging API 實作的範例應用程式，透過安裝步驟，你可以使用 LINE 手機應用程式與你專屬的 AI 助理聊天。</p>
+<h2 id="範例">範例</h2>
+<p>![](<a href="https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/screenshot-1.png?raw=true">https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/screenshot-1.png?raw=true</a> =50%x)</p>
+<p>![](<a href="https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/screenshot-2.png?raw=true">https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/screenshot-2.png?raw=true</a> =50%x)</p>
+<h2 id="安裝步驟">安裝步驟</h2>
+<ul>
+<li>登入 <a href="https://beta.openai.com/">OpenAI</a> 平台，或註冊一個新的帳號。
+<ul>
+<li>生成一個 OpenAI 的 <a href="https://Vincent3054.github.io/demo/openai-api-key.png">API key</a>。</li>
+</ul>
+</li>
+<li>登入 <a href="https://developers.line.biz/">LINE</a> 平台，或註冊一個新的帳號。
+<ul>
+<li>新增一個提供者（Provider），例如「My Provider」。</li>
+<li>在「My Provider」新增一個類型為「Messaging API」的頻道（Channel），例如「My AI Assistant」。</li>
+<li>在「My AI Assistant」點選「Messaging API」頁籤，生成一個頻道的 <a href="https://Vincent3054.github.io/demo/line-api-key.png">channel access token</a>。</li>
+</ul>
+</li>
+<li>登入 <a href="https://github.com/">GitHub</a> 平台，或註冊一個新的帳號。
+<ul>
+<li>進到 <code>gpt-ai-assistant</code> 專案頁面，點選「Star」按鈕，支持開發者開發有趣的專案。</li>
+<li>再點選「Fork」按鈕，將原始碼複製到自己的儲存庫。</li>
+</ul>
+</li>
+<li>登入 <a href="https://vercel.com/">Vercel</a> 平台，或註冊一個新的帳號。
+<ul>
+<li>點選「Create a New Project」按鈕，建立一個新專案。</li>
+<li>點選「Import」按鈕，將 <code>gpt-ai-assistant</code> 專案匯入。</li>
+<li>點選「Environment Variables」頁籤，新增以下環境變數：
+<ul>
+<li><code>OPENAI_API_KEY</code>：將值設置為 OpenAI 的 <a href="https://Vincent3054.github.io/demo/openai-api-key.png">API key</a>。</li>
+<li><code>LINE_API_KEY</code>：將值設置為 LINE 的 <a href="https://Vincent3054.github.io/demo/line-api-key.png">channel access token</a>。</li>
+<li><code>LINE_API_SECRET</code>：將值設置為 LINE 的 <a href="https://Vincent3054.github.io/demo/line-api-secret.png">channel secret</a>。</li>
+</ul>
+</li>
+<li>點選「Deploy」按鈕，等待部署完成。</li>
+<li>點選「Domains」按鈕，複製應用程式網址，例如「<a href="https://gpt-ai-assistant.vercel.app/">https://gpt-ai-assistant.vercel.app/</a>」。</li>
+</ul>
+</li>
+<li>回到 <a href="https://developers.line.biz/">LINE</a> 平台。
+<ul>
+<li>進到「My AI Assistant」頻道頁面，點選「Messaging API」頁籤，設置「Webhook URL」，例如「<a href="https://gpt-ai-assistant.vercel.app/webhook">https://gpt-ai-assistant.vercel.app/webhook</a>」，點選「Update」按鈕。</li>
+<li>點選「Verify」按鈕，驗證是否呼叫成功。</li>
+<li>將「Use webhook」功能打開。</li>
+<li>將「Auto-reply messages」功能關閉。</li>
+<li>將「Greeting messages」功能關閉。</li>
+<li>使用 LINE 手機應用程式掃描 QR code，加入好友。</li>
+</ul>
+</li>
+<li>開始與你專屬的 AI 助理聊天！</li>
+</ul>
+<h2 id="更新程式">更新程式</h2>
+<p>進到自己的 <code>gpt-ai-assistant</code> 專案頁面，點選「Sync fork」選單，再點選「Update branch」或「Discard commit」按鈕，以同步最新的程式碼到自己的儲存庫。</p>
+<p>![](<a href="https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/github-sync-fork.png?raw=true">https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/github-sync-fork.png?raw=true</a> =50%x)</p>
+<h2 id="環境變數">環境變數</h2>
+<p>在 Vercel 平台上新增或修改環境變數，以變更程式設定。</p>
+<table>
+<thead>
+<tr>
+<th>名字</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>APP_DEBUG</code></td>
+<td>決定是否印出訊息，可設置為 <code>true</code> 或 <code>false</code></td>
+</tr>
+<tr>
+<td><code>OPENAI_API_KEY</code></td>
+<td>OpenAI 的 API key</td>
+</tr>
+<tr>
+<td><code>OPENAI_COMPLETION_INIT_LANG</code></td>
+<td>決定初始語言，可設置為 <code>zh</code> 或 <code>en</code></td>
+</tr>
+<tr>
+<td><code>OPENAI_COMPLETION_MODEL</code></td>
+<td>參見 <a href="https://beta.openai.com/docs/api-reference/completions/create#completions/create-model">model</a> 說明</td>
+</tr>
+<tr>
+<td><code>OPENAI_COMPLETION_TEMPERATURE</code></td>
+<td>參見 <a href="https://beta.openai.com/docs/api-reference/completions/create#completions/create-temperature">temperature</a> 說明</td>
+</tr>
+<tr>
+<td><code>OPENAI_COMPLETION_MAX_TOKENS</code></td>
+<td>參見 <a href="https://beta.openai.com/docs/api-reference/completions/create#completions/create-max_tokens">max_tokens</a> 說明</td>
+</tr>
+<tr>
+<td><code>OPENAI_COMPLETION_FREQUENCY_PENALTY</code></td>
+<td>參見 <a href="https://beta.openai.com/docs/api-reference/completions/create#completions/create-frequency_penalty">frequency_penalty</a> 說明</td>
+</tr>
+<tr>
+<td><code>OPENAI_COMPLETION_PRESENCE_PENALTY</code></td>
+<td>參見 <a href="https://beta.openai.com/docs/api-reference/completions/create#completions/create-presence_penalty">presence_penalty</a> 說明</td>
+</tr>
+<tr>
+<td><code>LINE_API_KEY</code></td>
+<td>LINE 的 channel access token</td>
+</tr>
+<tr>
+<td><code>LINE_API_SECRET</code></td>
+<td>LINE 的 channel secret</td>
+</tr>
+</tbody>
+</table>
+<p>點選「Redeploy」按鈕，以重新部署。
+![](<a href="https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/vercel-redeploy.png?raw=true">https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/vercel-redeploy.png?raw=true</a> =50%x)</p>
+<h2 id="除錯">除錯</h2>
+<p>首先，在 Vercel 平台上檢查專案的環境變數是否填寫正確。</p>
+<p>![](<a href="https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/vercel-environments.png?raw=true">https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/vercel-environments.png?raw=true</a> =50%x)</p>
+<p>如果有變更，點選「Redeploy」按鈕，以重新部署。</p>
+<p>![](<a href="https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/vercel-redeploy.png?raw=true">https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/vercel-redeploy.png?raw=true</a> =50%x)</p>
+<p>進一步的除錯方式是，在專案首頁點選「View Function Logs」按鈕。</p>
+<p>![](<a href="https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/vercel-view-logs.png?raw=true">https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/vercel-view-logs.png?raw=true</a> =50%x)</p>
+<p>查看應用程式的錯誤訊息。</p>
+<p>![](<a href="https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/vercel-logs.png?raw=true">https://github.com/Vincent3054/gpt-ai-assistant/blob/main/demo/vercel-logs.png?raw=true</a> =50%x)</p>
+<p>如果還是無法解決，請到「<a href="https://github.com/memochou1993/gpt-ai-assistant/issues">Issues</a>」頁面，點選「New issue」按鈕，描述你的問題，並附上螢幕截圖。</p>
+<h2 id="功能建議">功能建議</h2>
+<p>請到「<a href="https://github.com/memochou1993/gpt-ai-assistant/issues">Issues</a>」頁面，點選「New issue」按鈕，描述你的功能建議。</p>
+<h2 id="開發">開發</h2>
+<p>下載專案。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git@github.com:memochou1993/gpt-ai-assistant.git
+</span></span></code></pre></div><p>進到專案目錄。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd gpt-ai-assistant
+</span></span></code></pre></div><p>安裝依賴套件。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm ci
+</span></span></code></pre></div><p>建立 <code>.env</code> 檔。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp .env.example .env
+</span></span></code></pre></div><p>設置環境變數如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-env" data-lang="env"><span style="display:flex;"><span>APP_ENV<span style="color:#f92672">=</span>local
+</span></span><span style="display:flex;"><span>APP_DEBUG<span style="color:#f92672">=</span>true
+</span></span><span style="display:flex;"><span>APP_URL<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>APP_PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">3000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>OPENAI_API_KEY<span style="color:#f92672">=</span>&lt;your_openai_api_key&gt;
+</span></span><span style="display:flex;"><span>OPENAI_COMPLETION_INIT_LANG<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>OPENAI_COMPLETION_MODEL<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>OPENAI_COMPLETION_TEMPERATURE<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>OPENAI_COMPLETION_MAX_TOKENS<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>OPENAI_COMPLETION_FREQUENCY_PENALTY<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>OPENAI_COMPLETION_PRESENCE_PENALTY<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>LINE_API_KEY<span style="color:#f92672">=</span>&lt;your_channel_access_token&gt;
+</span></span><span style="display:flex;"><span>LINE_API_SECRET<span style="color:#f92672">=</span>&lt;your_channel_secret&gt;
+</span></span></code></pre></div><h3 id="測試">測試</h3>
+<p>在終端機使用以下指令，運行測試，向 OpenAI 伺服器發送請求。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm run test
+</span></span></code></pre></div><p>查看結果。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; gpt-ai-assistant@1.0.0 test
+</span></span><span style="display:flex;"><span>&gt; jest
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  console.info
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">===</span> 000000 <span style="color:#f92672">===</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    AI: 嗨！我可以怎麼幫助你？
+</span></span><span style="display:flex;"><span>    Human: 嗨？
+</span></span><span style="display:flex;"><span>    AI: 你好！有什麼可以幫助你的嗎？
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      at Assistant.info <span style="color:#f92672">[</span>as debug<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>assistant/assistant.js:55:28<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> PASS  assistant/index.test.js
+</span></span><span style="display:flex;"><span>  ✓ assistant works <span style="color:#f92672">(</span><span style="color:#ae81ff">1689</span> ms<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Test Suites: <span style="color:#ae81ff">1</span> passed, <span style="color:#ae81ff">1</span> total
+</span></span><span style="display:flex;"><span>Tests:       <span style="color:#ae81ff">1</span> passed, <span style="color:#ae81ff">1</span> total
+</span></span><span style="display:flex;"><span>Snapshots:   <span style="color:#ae81ff">0</span> total
+</span></span><span style="display:flex;"><span>Time:        2.579 s, estimated <span style="color:#ae81ff">4</span> s
+</span></span><span style="display:flex;"><span>Ran all test suites.
+</span></span></code></pre></div><h3 id="反向代理">反向代理</h3>
+<p>修改環境變數如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-env" data-lang="env"><span style="display:flex;"><span>APP_ENV<span style="color:#f92672">=</span>production
+</span></span></code></pre></div><p>在終端機使用以下指令，啟動一個 Local 伺服器。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm run dev
+</span></span></code></pre></div><p>在另一個終端機使用以下指令，啟動一個 Proxy 伺服器。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ngrok http <span style="color:#ae81ff">3000</span>
+</span></span></code></pre></div><p>回到 Line 平台，修改「Webhook URL」，例如「<a href="https://0000-0000-0000.jp.ngrok.io">https://0000-0000-0000.jp.ngrok.io</a>」，點選「Update」按鈕。</p>
+<p>使用 LINE 手機應用程式發送訊息。</p>
+<p>查看結果。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; gpt-ai-assistant@1.0.0 dev
+</span></span><span style="display:flex;"><span>&gt; node api/index.js
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===</span> 0x1234 <span style="color:#f92672">===</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>AI: 哈囉！
+</span></span><span style="display:flex;"><span>Human: 嗨？
+</span></span><span style="display:flex;"><span>AI: 很高興見到你！有什麼可以為你服務的嗎？
+</span></span></code></pre></div><h3 id="模擬請求">模擬請求</h3>
+<p>在終端機使用以下指令，啟動一個 Local 伺服器。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm run dev
+</span></span></code></pre></div><p>在另一個終端機使用以下指令，模擬 LINE 伺服器向 Local 伺服器發送請求，再由 Local 伺服器向 OpenAI 伺服器發送請求。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --request POST <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --url http://localhost:3000/webhook <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --data <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;events&#34;: [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;type&#34;: &#34;message&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;source&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;type&#34;: &#34;user&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &#34;userId&#34;: &#34;000000&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        },
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;message&#34;: {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;type&#34;: &#34;text&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            &#34;text&#34;: &#34;我是誰&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      ]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }&#39;</span>
+</span></span></code></pre></div><p>查看結果。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; gpt-ai-assistant@1.0.0 dev
+</span></span><span style="display:flex;"><span>&gt; node api/index.js
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===</span> 000000 <span style="color:#f92672">===</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>AI: 嗨！我可以怎麼幫助你？
+</span></span><span style="display:flex;"><span>Human: 我是誰？
+</span></span><span style="display:flex;"><span>AI: 你是一個人，一個有意識的生物！
+</span></span></code></pre></div><h2 id="相關專案">相關專案</h2>
+<ul>
+<li><a href="https://github.com/memochou1993/line-bot-node">line-bot-node</a></li>
+<li><a href="https://github.com/memochou1993/openai-cli-node">openai-cli-node</a></li>
+</ul>
+<h2 id="貢獻者">貢獻者</h2>
+<p><a href="https://github.com/memochou1993/gpt-ai-assistant/graphs/contributors">https://github.com/memochou1993/gpt-ai-assistant/graphs/contributors</a></p>
+<h2 id="授權條款">授權條款</h2>
+<p><a href="LICENSE">MIT</a></p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">標籤</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://Vincent3054.github.io/tags/ai/">AI</a>
+
+  <a class="tag tag--primary tag--small" href="https://Vincent3054.github.io/tags/%E5%8D%81%E5%88%86%E9%90%98/">十分鐘</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/" data-tooltip="[十分鐘]架設個人網站" aria-label="上一篇: [十分鐘]架設個人網站">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享這個帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="發表評論">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到頂部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/Vincent3054.github.io\/10minute\/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86\/';
+        
+          this.page.identifier = '\/10minute\/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'https-vincent3054-github-io';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2023 Sky Chen. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/" data-tooltip="[十分鐘]架設個人網站" aria-label="上一篇: [十分鐘]架設個人網站">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享這個帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E5%81%9A%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84ai%E5%8A%A9%E7%90%86/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="發表評論">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到頂部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FVincent3054.github.io%2F10minute%2F%25E5%258D%2581%25E5%2588%2586%25E9%2590%2598%25E5%2581%259A%25E5%2587%25BA%25E8%2587%25AA%25E5%25B7%25B1%25E7%259A%2584ai%25E5%258A%25A9%25E7%2590%2586%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2FVincent3054.github.io%2F10minute%2F%25E5%258D%2581%25E5%2588%2586%25E9%2590%2598%25E5%2581%259A%25E5%2587%25BA%25E8%2587%25AA%25E5%25B7%25B1%25E7%259A%2584ai%25E5%258A%25A9%25E7%2590%2586%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2FVincent3054.github.io%2F10minute%2F%25E5%258D%2581%25E5%2588%2586%25E9%2590%2598%25E5%2581%259A%25E5%2587%25BA%25E8%2587%25AA%25E5%25B7%25B1%25E7%259A%2584ai%25E5%258A%25A9%25E7%2590%2586%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+    
+    <h4 id="about-card-name">Sky Chen</h4>
+    
+      <div id="about-card-bio">I&rsquo;m Sky Chen, a creative developer passionate about C#, DevOps and Agile.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Software Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Taipei, Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://Vincent3054.github.io/images/cover1.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://Vincent3054.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

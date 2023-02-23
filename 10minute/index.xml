@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>10minutes on Note</title>
+    <title>10minutes on Blog</title>
     <link>https://Vincent3054.github.io/10minute/</link>
-    <description>Recent content in 10minutes on Note</description>
+    <description>Recent content in 10minutes on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-tw</language>
     <lastBuildDate>Fri, 17 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/10minute/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[十分鐘]做出自己的AI助理</title>
@@ -17,11 +17,11 @@
     </item>
     
     <item>
-      <title>[十分鐘]架設個人網站</title>
-      <link>https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/</link>
+      <title>[十分鐘]運用Hugo十架設部落格</title>
+      <link>https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E9%81%8B%E7%94%A8hugo%E5%8D%81%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC/</link>
       <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E6%9E%B6%E8%A8%AD%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/</guid>
+      <guid>https://Vincent3054.github.io/10minute/%E5%8D%81%E5%88%86%E9%90%98%E9%81%8B%E7%94%A8hugo%E5%8D%81%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC/</guid>
       <description></description>
     </item>
     

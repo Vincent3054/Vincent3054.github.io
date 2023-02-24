@@ -8,11 +8,20 @@
     <language>zh-tw</language>
     <lastBuildDate>Wed, 15 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Hugo]運用Hugo架設部落格</title>
-      <link>https://Vincent3054.github.io/10minute/hugo%E9%81%8B%E7%94%A8hugo%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC/</link>
+      <title>[Hugo]Hugo網站的SEO優化指南</title>
+      <link>https://Vincent3054.github.io/10minute/hugo-website-seo-guide/</link>
       <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://Vincent3054.github.io/10minute/hugo%E9%81%8B%E7%94%A8hugo%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC/</guid>
+      <guid>https://Vincent3054.github.io/10minute/hugo-website-seo-guide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>[Hugo]運用Hugo架設部落格</title>
+      <link>https://Vincent3054.github.io/10minute/hugo-github-page-blog/</link>
+      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/10minute/hugo-github-page-blog/</guid>
       <description></description>
     </item>
     

@@ -6,7 +6,25 @@
     <description>Recent content in Categories on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 17 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://Vincent3054.github.io/categories/hugo/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SEO</title>
+      <link>https://Vincent3054.github.io/categories/seo/</link>
+      <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/categories/seo/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>10minute</title>
       <link>https://Vincent3054.github.io/categories/10minute/</link>
@@ -22,24 +40,6 @@
       <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://Vincent3054.github.io/categories/ai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://Vincent3054.github.io/categories/hugo/</link>
-      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://Vincent3054.github.io/categories/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SEO</title>
-      <link>https://Vincent3054.github.io/categories/seo/</link>
-      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://Vincent3054.github.io/categories/seo/</guid>
       <description></description>
     </item>
     

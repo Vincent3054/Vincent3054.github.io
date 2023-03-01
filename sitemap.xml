@@ -2,47 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://Vincent3054.github.io/10minute/hugo-comment-board-disqus-gitalkw/</loc>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Vincent3054.github.io/tags/10minute/</loc>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Vincent3054.github.io/10minute/</loc>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Vincent3054.github.io/</loc>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Vincent3054.github.io/categories/</loc>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Vincent3054.github.io/tags/hugo/</loc>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Vincent3054.github.io/categories/hugo/</loc>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Vincent3054.github.io/tags/</loc>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://Vincent3054.github.io/10minute/hugo-website-seo-guide/</loc>
     <lastmod>2023-02-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://Vincent3054.github.io/tags/10minute/</loc>
-    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://Vincent3054.github.io/10minute/</loc>
-    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://Vincent3054.github.io/</loc>
-    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://Vincent3054.github.io/categories/</loc>
-    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://Vincent3054.github.io/tags/hugo/</loc>
-    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://Vincent3054.github.io/categories/hugo/</loc>
-    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://Vincent3054.github.io/categories/seo/</loc>
-    <lastmod>2023-02-24T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://Vincent3054.github.io/tags/</loc>
     <lastmod>2023-02-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

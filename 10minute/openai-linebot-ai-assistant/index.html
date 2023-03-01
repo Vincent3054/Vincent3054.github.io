@@ -100,6 +100,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha512-MLcK/YRapzET1qTBXrOiZE6bGBgtATMo2bIyalVJ8EKDEGNoeA3SPQkvWAR0zNS650YG13ocXBMeioDuZcSRuQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     
     
     <link rel="stylesheet" href="https://Vincent3054.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
@@ -550,8 +552,8 @@ GPT-3.5 則是由 GPT-3 微調出來的版本，而其中 GPT-3.5 使用與 GPT-
   
   
     <li class="post-action">
-      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="發表評論">
-        <i class="far fa-comment"></i>
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="發表評論">
+        <i class="fa fa-comment"></i>
       </a>
     </li>
   
@@ -568,32 +570,31 @@ GPT-3.5 則是由 GPT-3 微調出來的版本，而其中 GPT-3.5 使用與 GPT-
 
             
   
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    <div id="gitalk">
+      <noscript>Please enable JavaScript to view the comments powered by Gitalk.</noscript>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js" integrity="sha512-EcTCcXV46teiNwe0VcnM5A038tcY+BaQYO4nW6Gh2i7v4/HjBVg7xx3+JBLl9WofDds//INJAiEGAtdgr8PWyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript">
-      var disqus_config = function() {
-        this.page.url = 'https:\/\/Vincent3054.github.io\/10minute\/openai-linebot-ai-assistant\/';
-        
-          this.page.identifier = '\/10minute\/openai-linebot-ai-assistant\/'
-        
-      };
       (function() {
-        
-        
         if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          document.getElementById('gitalk').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
           return;
         }
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        var disqus_shortname = 'https-vincent3054-github-io';
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
+        new Gitalk({
+          clientID: '13ab4cf55a20f60eaae5',
+          clientSecret: 'a205de00e3ce3b21e9dda0beb645ea488c49255f',
+          repo: '',
+          owner: '',
+          admin: [''],
+          id: '6c55ae739d7ff2f4415b672d7d7f679e',
+          ...{"distractionfreemode":false,"enablehotkey":true,"language":"zh-tw","pagerdirection":"first","perpage":10}
+        }).render('gitalk')
+      })()
     </script>
   
 
 
+            
           </div>
         </article>
         <footer id="footer" class="main-content-wrap">
@@ -657,8 +658,8 @@ GPT-3.5 則是由 GPT-3 微調出來的版本，而其中 GPT-3.5 使用與 GPT-
   
   
     <li class="post-action">
-      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="發表評論">
-        <i class="far fa-comment"></i>
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="發表評論">
+        <i class="fa fa-comment"></i>
       </a>
     </li>
   

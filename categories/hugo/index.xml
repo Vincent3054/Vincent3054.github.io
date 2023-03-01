@@ -6,7 +6,16 @@
     <description>Recent content in Hugo on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Hugo]如何在Hugo上使用Disqus或Gitalk創建一個互動式留言板</title>
+      <link>https://Vincent3054.github.io/10minute/hugo-comment-board-disqus-gitalkw/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/10minute/hugo-comment-board-disqus-gitalkw/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>[Hugo]Hugo網站的SEO優化指南</title>
       <link>https://Vincent3054.github.io/10minute/hugo-website-seo-guide/</link>

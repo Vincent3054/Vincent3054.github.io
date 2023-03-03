@@ -6,7 +6,16 @@
     <description>Recent content in AI on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 17 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI]Notion AI：一款強大的AI寫作助手，讓你事半功倍</title>
+      <link>https://Vincent3054.github.io/10minute/notion-ai-writing-assistant/</link>
+      <pubDate>Fri, 03 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/10minute/notion-ai-writing-assistant/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>[AI]串接OpenAI到LineBot，建立屬於自己的AI助理</title>
       <link>https://Vincent3054.github.io/10minute/openai-linebot-ai-assistant/</link>

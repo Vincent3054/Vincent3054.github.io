@@ -18,7 +18,7 @@
   "name":"Blog",
   "description":"用Hugo打造一個完美的留言板，從安裝到配置的全程指南",
   "url":"https:\/\/Vincent3054.github.io\/10minute\/hugo-comment-board-disqus-gitalkw\/",
-  "keywords":"[Hugo, Disqus, Gitalk, message board, Comments, web2.0]"
+  "keywords":"[Hugo, Disqus, Gitalk, message board, Comments, web2.0, 部落格, 部落格留言板, 部落格互動]"
 }
 
 </script>
@@ -27,7 +27,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.110.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Sky Chen">
-<meta name="keywords" content="Hugo, Disqus, Gitalk, message board, Comments, web2.0">
+<meta name="keywords" content="Hugo, Disqus, Gitalk, message board, Comments, web2.0, 部落格, 部落格留言板, 部落格互動">
 <meta name="description" content="用Hugo打造一個完美的留言板，從安裝到配置的全程指南">
 
 
@@ -342,7 +342,7 @@
 <p>當讀者對你的部落格內容有問題，想發問交流時，勢必需要留言溝通的工具，此類工具通常稱為 Comments System (評論系統)，常見的有：<a href="https://disqus.com/">Disqus</a>、<a href="https://developers.facebook.com/docs/plugins/comments/">Facebook comments</a>、GitHub issue (Gitalk)、Livefyre 等。</p>
 <p>Hugo 具有追加整合 Comments 服務的彈性，讓我們可以輕鬆地將此類工具，放在任何頁面中，本篇會介紹 Disqus 評論系統的整合方式。</p>
 <h3 id="disqus是什麼">Disqus是什麼?</h3>
-<p><img src="https://Vincent3054.github.io/images/20230301001.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301001.png" alt=""></p>
 <p>Disqus是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言。它有以下幾個特點：</p>
 <ul>
 <li>它被全球<strong>191個國家的數百萬個出版商使用</strong>，它可以讓你的博客接觸到更廣泛的讀者和促進更多的互動。</li>
@@ -351,7 +351,7 @@
 <li>它提供了一個API，它可以讓你<strong>自定義評論系統的外觀和功能</strong>。</li>
 </ul>
 <h3 id="gitalk是什麼">Gitalk是什麼?</h3>
-<p><img src="https://Vincent3054.github.io/images/20230301002.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301002.png" alt=""></p>
 <p>Gitalk是一個基於github issue和preact開發的評論組件，它可以讓你在靜態網頁裡面新增留言區。它有以下幾個特點：</p>
 <ul>
 <li>它<strong>使用github issue來存儲和管理評論</strong>，它可以讓你方便地追蹤和回覆評論，而且不需要額外的數據庫。</li>
@@ -431,31 +431,31 @@
 <p>假設你的 Website URL 為 <a href="https://littlebookboy.website.com">https://littlebookboy.website.com</a>，則 config.toml 配置就會是</p>
 <pre tabindex="0"><code class="language-sql=" data-lang="sql=">disqusShortname = &#34;littlebookboy&#34;
 </code></pre><p>本地執行結果，以 tranquilpeak 為例：</p>
-<p><img src="https://Vincent3054.github.io/images/20230301003.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301003.png" alt=""></p>
 <p>線上執行結果 (丟到公開頁面後，評論系統介面才會被渲染成功)：</p>
-<p><img src="https://Vincent3054.github.io/images/20230301004.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301004.png" alt=""></p>
 <h4 id="附圖說明">附圖說明</h4>
 <p>未有 Disqus 帳號，請先到官網註冊，請按 GET STARTED：</p>
-<p><img src="https://Vincent3054.github.io/images/20230301005.png" alt=""></p>
-<p><img src="https://Vincent3054.github.io/images/20230301006.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301005.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301006.png" alt=""></p>
 <p>選擇你偏好的註冊方式，完成註冊，頁面會跳轉回首頁，請按 GET STARTED，選擇 <code>I want to install Disqus on my site</code>：</p>
-<p><img src="https://Vincent3054.github.io/images/20230301007.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301007.png" alt=""></p>
 <p>建立新站，填入網站資訊，按下 Create：</p>
-<p><img src="https://Vincent3054.github.io/images/20230301008.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301008.png" alt=""></p>
 <p>選擇整合平台，請拉到最下面選 <code>I don't see my platform listed, install manually with Universal Code</code>：</p>
-<p><img src="https://Vincent3054.github.io/images/20230301009.png" alt=""></p>
-<p><img src="https://Vincent3054.github.io/images/20230301010.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301009.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301010.png" alt=""></p>
 <p>在 <code>Universal Code</code> 頁面拉到最下面按 <code>Configure</code>：</p>
-<p><img src="https://Vincent3054.github.io/images/20230301011.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301011.png" alt=""></p>
 <p>配置完整的網站資訊，</p>
-<p><img src="https://Vincent3054.github.io/images/20230301012.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301012.png" alt=""></p>
 <blockquote>
 <p>請注意，這邊的 Website URL 子域名會作為 hugo 配置參數 disqusShortname 被使用到，網址結構為： <a href="https://yourDisqusShortName.website.com">https://yourDisqusShortName.website.com</a></p>
 </blockquote>
 <p>完成配置後，拉到最下面，按下 Dismiss Setup 跳過配置 Community：</p>
-<p><img src="https://Vincent3054.github.io/images/20230301013.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301013.png" alt=""></p>
 <p>建站完成後，會跳到這個頁面：</p>
-<p><img src="https://Vincent3054.github.io/images/20230301014.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301014.png" alt=""></p>
 <h3 id="如何在hugo上使用gitalk">如何在hugo上使用Gitalk?</h3>
 <h4 id="申請github-oauth-app">申請GitHub Oauth App</h4>
 <p>需要GitHub應用，如果沒有<a href="https://github.com/settings/applications/new">點擊這裡申請</a>，授權回調URL填寫當使用插件頁面的域名稱。</p>
@@ -491,7 +491,7 @@
 </tr>
 </tbody>
 </table>
-<p><img src="https://Vincent3054.github.io/images/20230301015.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301015.png" alt=""></p>
 <h4 id="創建範本">創建範本</h4>
 <p>在主題目錄下，新建範本，如 themes/mainload/layouts/partials/gitalk.html</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{{ <span style="color:#66d9ef">if</span> .<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">enableGitalk</span> }}
@@ -521,7 +521,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;gitalk.html&#34;</span> . }}
 </span></span></code></pre></div><h4 id="新增配置">新增配置</h4>
 <p>需要修改config.toml配置，注意repo新增自己的版本庫地址，一般是username.github.io，clientID、clientSecret位置詳見下圖:</p>
-<p><img src="https://Vincent3054.github.io/images/20230301016.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301016.png" alt=""></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>[Params]
 </span></span><span style="display:flex;"><span>  enableGitalk <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>
@@ -559,7 +559,7 @@
 </span></span><span style="display:flex;"><span>        enableHotKey <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>        pagerDirection <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;first&#34;</span>
 </span></span></code></pre></div><p>線上執行結果 (丟到公開頁面後，評論系統介面才會被渲染成功)：</p>
-<p><img src="https://Vincent3054.github.io/images/20230301017.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301017.png" alt=""></p>
 <h2 id="結論">結論</h2>
 <p>在本文中，我介紹了如何在hugo上使用disqus或gitalk創建一個互動式留言板。這兩種評論系統各有優缺點，適合不同的需求和偏好。無論你選擇哪一種，都可以讓你的博客更加生動和有趣，增加與讀者之間的交流和互動。希望這篇文章對你有所幫助，歡迎留言分享你的看法和經驗。</p>
 <h2 id="補充">補充</h2>

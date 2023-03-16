@@ -8,20 +8,29 @@
     <language>zh-tw</language>
     <lastBuildDate>Thu, 16 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>10minute</title>
-      <link>https://Vincent3054.github.io/tags/10minute/</link>
+      <title>C#</title>
+      <link>https://Vincent3054.github.io/tags/c#/</link>
       <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://Vincent3054.github.io/tags/10minute/</guid>
+      <guid>https://Vincent3054.github.io/tags/c#/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Hugo</title>
-      <link>https://Vincent3054.github.io/tags/hugo/</link>
+      <title>notes</title>
+      <link>https://Vincent3054.github.io/tags/notes/</link>
       <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://Vincent3054.github.io/tags/hugo/</guid>
+      <guid>https://Vincent3054.github.io/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>10minute</title>
+      <link>https://Vincent3054.github.io/tags/10minute/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/tags/10minute/</guid>
       <description></description>
     </item>
     
@@ -31,6 +40,15 @@
       <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://Vincent3054.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://Vincent3054.github.io/tags/hugo/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

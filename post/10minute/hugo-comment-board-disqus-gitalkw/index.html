@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/Vincent3054.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "Sky Chen",
+    
+    "image": "https://Vincent3054.github.io/images/avatar3.png"
+    
+  },
+  "name":"Blog",
+  "description":"用Hugo打造一個完美的留言板，從安裝到配置的全程指南",
+  "url":"https:\/\/Vincent3054.github.io\/post\/10minute\/hugo-comment-board-disqus-gitalkw\/",
+  "keywords":"[Hugo, Disqus, Gitalk, message board, Comments, web2.0, 部落格, 部落格留言板, 部落格互動]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.110.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Sky Chen">
+<meta name="keywords" content="Hugo, Disqus, Gitalk, message board, Comments, web2.0, 部落格, 部落格留言板, 部落格互動">
+<meta name="description" content="用Hugo打造一個完美的留言板，從安裝到配置的全程指南">
+
+
+<meta property="og:description" content="用Hugo打造一個完美的留言板，從安裝到配置的全程指南">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Hugo]如何在Hugo上使用Disqus或Gitalk創建一個互動式留言板">
+<meta name="twitter:title" content="[Hugo]如何在Hugo上使用Disqus或Gitalk創建一個互動式留言板">
+<meta property="og:url" content="https://Vincent3054.github.io/post/10minute/hugo-comment-board-disqus-gitalkw/">
+<meta property="twitter:url" content="https://Vincent3054.github.io/post/10minute/hugo-comment-board-disqus-gitalkw/">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="用Hugo打造一個完美的留言板，從安裝到配置的全程指南">
+<meta name="twitter:description" content="用Hugo打造一個完美的留言板，從安裝到配置的全程指南">
+<meta property="og:locale" content="zh-tw">
+
+  
+    <meta property="article:published_time" content="2023-03-01T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2023-03-01T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Hugo">
+    
+  
+  
+    
+      <meta property="article:tag" content="10minute">
+    
+      <meta property="article:tag" content="Hugo">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/avatar3.png">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/avatar3.png">
+
+
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/content/notes0004.jpg">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/content/notes0004.jpg">
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/content/notes0004.jpg">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/content/notes0004.jpg">
+
+
+    <title>[Hugo]如何在Hugo上使用Disqus或Gitalk創建一個互動式留言板</title>
+
+    <link rel="icon" href="https://Vincent3054.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://Vincent3054.github.io/post/10minute/hugo-comment-board-disqus-gitalkw/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha512-MLcK/YRapzET1qTBXrOiZE6bGBgtATMo2bIyalVJ8EKDEGNoeA3SPQkvWAR0zNS650YG13ocXBMeioDuZcSRuQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://Vincent3054.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KMNNV397T8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KMNNV397T8');
+</script>
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://Vincent3054.github.io/" aria-label="去首頁">Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://Vincent3054.github.io/#about" aria-label="打開鏈接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://Vincent3054.github.io/#about" aria-label="閱讀有關作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+        </a>
+        <h4 class="sidebar-profile-name">Sky Chen</h4>
+        
+          <h5 class="sidebar-profile-bio">I&rsquo;m Sky Chen, a creative developer passionate about C#, DevOps and Agile.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首頁</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分類</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">標籤</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">所有文章</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Atom</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">關於</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/Vincent3054" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/%E5%BB%BA%E6%88%90-%E9%99%B3-6438201a0/" target="_blank" rel="noopener" title="Linkedin">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Linkedin</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://reactgatsbypersonalwebsite.gatsbyjs.io/resume/" target="_blank" rel="noopener" title="Personal">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-brands fa-react" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Personal</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-left
+              post-header-cover--partial"
+       style="background-image:url('/images/content/notes0004.jpg')"
+       data-behavior="4">
+    
+      <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      [Hugo]如何在Hugo上使用Disqus或Gitalk創建一個互動式留言板
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-03-01T00:00:00Z">
+        
+  三月 1, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>分類</span>
+    
+      <a class="category-link" href="https://Vincent3054.github.io/categories/hugo">Hugo</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <h1 id="如何在hugo上使用disqus或gitalk創建一個互動式留言板">如何在Hugo上使用Disqus或Gitalk創建一個互動式留言板</h1>
+<p>tags: <code>Hugo</code></p>
+<h1 id="table-of-contents">目錄</h1>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#互動式留言板">互動式留言板</a>
+      <ul>
+        <li><a href="#disqus是什麼">Disqus是什麼?</a></li>
+        <li><a href="#gitalk是什麼">Gitalk是什麼?</a></li>
+        <li><a href="#disqus-vs-gitalk">Disqus VS Gitalk</a></li>
+        <li><a href="#如何在hugo上使用disqus">如何在hugo上使用Disqus?</a>
+          <ul>
+            <li><a href="#hugo-配置">Hugo 配置</a></li>
+            <li><a href="#附圖說明">附圖說明</a></li>
+          </ul>
+        </li>
+        <li><a href="#如何在hugo上使用gitalk">如何在hugo上使用Gitalk?</a>
+          <ul>
+            <li><a href="#申請github-oauth-app">申請GitHub Oauth App</a></li>
+            <li><a href="#創建範本">創建範本</a></li>
+            <li><a href="#新增配置">新增配置</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#結論">結論</a></li>
+    <li><a href="#補充">補充</a></li>
+    <li><a href="#參考連結">參考連結</a></li>
+  </ul>
+</nav>
+
+<h2 id="互動式留言板">互動式留言板</h2>
+<p>當讀者對你的部落格內容有問題，想發問交流時，勢必需要留言溝通的工具，此類工具通常稱為 Comments System (評論系統)，常見的有：<a href="https://disqus.com/">Disqus</a>、<a href="https://developers.facebook.com/docs/plugins/comments/">Facebook comments</a>、GitHub issue (Gitalk)、Livefyre 等。</p>
+<p>Hugo 具有追加整合 Comments 服務的彈性，讓我們可以輕鬆地將此類工具，放在任何頁面中，本篇會介紹 Disqus 評論系統的整合方式。</p>
+<h3 id="disqus是什麼">Disqus是什麼?</h3>
+<p><img src="https://Vincent3054.github.io/images/content/20230301001.png" alt=""></p>
+<p>Disqus是專門針對部落格、網站留言機制做整合服務的平台，供瀏覽網站的訪客可以針對文章進行留言。它有以下幾個特點：</p>
+<ul>
+<li>它被全球<strong>191個國家的數百萬個出版商使用</strong>，它可以讓你的博客接觸到更廣泛的讀者和促進更多的互動。</li>
+<li>它<strong>支持多種語言和社交媒體登錄</strong>，它可以讓你的讀者更方便地發表和管理自己的評論。</li>
+<li>它提供了一個<strong>討論編輯器</strong>，它可以讓你一鍵更新任何討論主題的屬性，例如標題或鏈接。</li>
+<li>它提供了一個API，它可以讓你<strong>自定義評論系統的外觀和功能</strong>。</li>
+</ul>
+<h3 id="gitalk是什麼">Gitalk是什麼?</h3>
+<p><img src="https://Vincent3054.github.io/images/content/20230301002.png" alt=""></p>
+<p>Gitalk是一個基於github issue和preact開發的評論組件，它可以讓你在靜態網頁裡面新增留言區。它有以下幾個特點：</p>
+<ul>
+<li>它<strong>使用github issue來存儲和管理評論</strong>，它可以讓你方便地追蹤和回覆評論，而且不需要額外的數據庫。</li>
+<li>它<strong>支持markdown語法</strong>，它可以讓你的讀者更靈活地表達自己的想法。</li>
+<li>它提供了一個proxy，它可以<strong>解決github api的跨域問題</strong>。</li>
+<li>它提供了一個API，它可以讓你<strong>自定義評論組件的外觀和功能</strong>。</li>
+</ul>
+<h3 id="disqus-vs-gitalk">Disqus VS Gitalk</h3>
+<p>disqus和gitalk都是基於github issue的評論組件，但它們有以下幾個不同點：</p>
+<ul>
+<li>disqus是一個<strong>第三方服務</strong>，它可以讓你在多個平台上使用同一個評論系統，而且有更多的功能和選項。但它也有一些缺點，例如<strong>廣告、隱私問題、加載速度</strong>等。</li>
+<li>gitalk是一個<strong>開源項目</strong>，它可以讓你完全控制自己的評論數據，而且更適合靜態網頁。但它也有一些缺點，例如需要<strong>用戶登錄github、需要手動初始化issue、可能遇到跨域問題</strong>等。</li>
+</ul>
+<h3 id="如何在hugo上使用disqus">如何在hugo上使用Disqus?</h3>
+<p>按照官網介紹，Hugo 已經幫你內建了一套評論系統：Disqus，以下是啟用的文字版說明，後面會在依照流程附上圖片給大家參考：</p>
+<ul>
+<li>
+<p>未有 Disqus 帳號，請先<a href="https://disqus.com/profile/signup/">註冊</a></p>
+</li>
+<li>
+<p>已有 Disqus 帳號，請按 GET STARTED</p>
+</li>
+<li>
+<p>點擊 <code>I want to install Disqus on my site.</code> <a href="https://disqus.com/profile/signup/intent/">頁面在此可快速前往</a></p>
+</li>
+<li>
+<p>填入網站資訊：</p>
+<ul>
+<li>網站名稱 (Web Site Name)</li>
+<li>網站種類 (Category)</li>
+<li>按下 Create</li>
+</ul>
+</li>
+<li>
+<p>進入 Disqus Install 環節：</p>
+<ul>
+<li>
+<p>選擇整合平台：頁面跳到 Select Platform，但因為官方沒有 Hugo 的選項，請拉到最下面選<code>I don't see my platform listed, install manually with Universal Code</code></p>
+</li>
+<li>
+<p>配置整合程式碼：接著 Select Platform 之後，頁面跳到<code>Universal Code</code>頁面，在這一步要看使用者選用的佈景，有沒有整合好 Disqus 到你的 layout 中</p>
+<ul>
+<li>已有整合：可跳過 <code>Universal Code</code> 這部分</li>
+<li>尚未整合：
+<ul>
+<li>若你不想換佈景，請參考 <a href="https://gohugo.io/templates/partials/#disqus">Partial Templates</a> 的配置說明，自己動手整合</li>
+<li>若你想換佈景，筆者試過用 ananke 以及 tranquilpeak 兩個佈景，都有整合 Disqus</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>此步驟以「已有整合」為例，在 <code>Universal Code</code> 頁面拉到最下面按 <code>Configure</code></p>
+</li>
+<li>
+<p>配置你的 <code>Disqus Configure</code></p>
+<ul>
+<li>網站名稱 Website Name</li>
+<li>網站網址 Website URL 請配置上線後的公開網址，子域名就是你的 <code>disqusShortname</code></li>
+<li>網站種類 Category</li>
+<li>顯示語系 Language 評論系統介面要顯示的語系</li>
+</ul>
+</li>
+<li>
+<p>配置好後，按下 Complete Setup</p>
+</li>
+<li>
+<p>接著 Disqus 會問你要不要設置 Community，這邊先不用，拉到最下面按 <code>Dismiss Setup</code></p>
+</li>
+<li>
+<p>完成</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="hugo-配置">Hugo 配置</h4>
+<p>假設你的 Website URL 為 <a href="https://littlebookboy.website.com">https://littlebookboy.website.com</a>，則 config.toml 配置就會是</p>
+<pre tabindex="0"><code class="language-sql=" data-lang="sql=">disqusShortname = &#34;littlebookboy&#34;
+</code></pre><p>本地執行結果，以 tranquilpeak 為例：</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301003.png" alt=""></p>
+<p>線上執行結果 (丟到公開頁面後，評論系統介面才會被渲染成功)：</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301004.png" alt=""></p>
+<h4 id="附圖說明">附圖說明</h4>
+<p>未有 Disqus 帳號，請先到官網註冊，請按 GET STARTED：</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301005.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301006.png" alt=""></p>
+<p>選擇你偏好的註冊方式，完成註冊，頁面會跳轉回首頁，請按 GET STARTED，選擇 <code>I want to install Disqus on my site</code>：</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301007.png" alt=""></p>
+<p>建立新站，填入網站資訊，按下 Create：</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301008.png" alt=""></p>
+<p>選擇整合平台，請拉到最下面選 <code>I don't see my platform listed, install manually with Universal Code</code>：</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301009.png" alt=""></p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301010.png" alt=""></p>
+<p>在 <code>Universal Code</code> 頁面拉到最下面按 <code>Configure</code>：</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301011.png" alt=""></p>
+<p>配置完整的網站資訊，</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301012.png" alt=""></p>
+<blockquote>
+<p>請注意，這邊的 Website URL 子域名會作為 hugo 配置參數 disqusShortname 被使用到，網址結構為： <a href="https://yourDisqusShortName.website.com">https://yourDisqusShortName.website.com</a></p>
+</blockquote>
+<p>完成配置後，拉到最下面，按下 Dismiss Setup 跳過配置 Community：</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301013.png" alt=""></p>
+<p>建站完成後，會跳到這個頁面：</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301014.png" alt=""></p>
+<h3 id="如何在hugo上使用gitalk">如何在hugo上使用Gitalk?</h3>
+<h4 id="申請github-oauth-app">申請GitHub Oauth App</h4>
+<p>需要GitHub應用，如果沒有<a href="https://github.com/settings/applications/new">點擊這裡申請</a>，授權回調URL填寫當使用插件頁面的域名稱。</p>
+<p>以本站為例，必須填寫以下內容：</p>
+<table>
+<thead>
+<tr>
+<th>欄位</th>
+<th>內容</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application name</td>
+<td>gittalk for blog</td>
+<td>填寫應用名稱</td>
+</tr>
+<tr>
+<td>Homepage URL</td>
+<td><a href="https://vincent3054.github.io/">https://vincent3054.github.io/</a></td>
+<td>主頁地址</td>
+</tr>
+<tr>
+<td>Application description</td>
+<td>blog留言板插件gtalk</td>
+<td>備註</td>
+</tr>
+<tr>
+<td>Authorization callback URL</td>
+<td><a href="https://vincent3054.github.io/">https://vincent3054.github.io/</a></td>
+<td>回調地址</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://Vincent3054.github.io/images/content/20230301015.png" alt=""></p>
+<h4 id="創建範本">創建範本</h4>
+<p>在主題目錄下，新建範本，如 themes/mainload/layouts/partials/gitalk.html</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{{ <span style="color:#66d9ef">if</span> .<span style="color:#a6e22e">Site</span>.<span style="color:#a6e22e">Params</span>.<span style="color:#a6e22e">enableGitalk</span> }}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gitalk-container&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">gitalk</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Gitalk</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">clientID</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;{{ .Site.Params.Gitalk.clientID }}&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">clientSecret</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;{{ .Site.Params.Gitalk.clientSecret }}&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">repo</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;{{ .Site.Params.Gitalk.repo }}&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">owner</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;{{ .Site.Params.Gitalk.owner }}&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">admin</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;{{ .Site.Params.Gitalk.owner }}&#39;</span>],
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">pathname</span>, <span style="color:#75715e">// Ensure uniqueness and length less than 50
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">distractionFreeMode</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> <span style="color:#75715e">// Facebook-like distraction free mode
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  });
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ([<span style="color:#e6db74">&#34;localhost&#34;</span>, <span style="color:#e6db74">&#34;127.0.0.1&#34;</span>].<span style="color:#a6e22e">indexOf</span>(window.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">hostname</span>) <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>      document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;gitalk-container&#39;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Gitalk comments not available by default when the website is previewed locally.&#39;</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">gitalk</span>.<span style="color:#a6e22e">render</span>(<span style="color:#e6db74">&#39;gitalk-container&#39;</span>);
+</span></span><span style="display:flex;"><span>  })();
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</span></span><span style="display:flex;"><span>{{ <span style="color:#a6e22e">end</span> }}
+</span></span></code></pre></div><p>修改主題模板layouts/_default/single.html，在{{ partial “comment.html” . }}的下一行，新增以下内容:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{{ <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;gitalk.html&#34;</span> . }}
+</span></span></code></pre></div><h4 id="新增配置">新增配置</h4>
+<p>需要修改config.toml配置，注意repo新增自己的版本庫地址，一般是username.github.io，clientID、clientSecret位置詳見下圖:</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301016.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>[Params]
+</span></span><span style="display:flex;"><span>  enableGitalk <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Params.Gitalk]
+</span></span><span style="display:flex;"><span>    clientID <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xxx&#34;</span> <span style="color:#f92672">#</span> Your client ID
+</span></span><span style="display:flex;"><span>    clientSecret <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xxx&#34;</span> <span style="color:#f92672">#</span> Your client secret
+</span></span><span style="display:flex;"><span>    repo <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xbc.me&#34;</span> <span style="color:#f92672">#</span> The repo <span style="color:#66d9ef">to</span> store comments
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">owner</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;geekwho11&#34;</span> <span style="color:#f92672">#</span> Your GitHub ID
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">admin</span><span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;geekwho11&#34;</span> <span style="color:#f92672">#</span> Required. Github repository <span style="color:#66d9ef">owner</span> <span style="color:#66d9ef">and</span> collaborators. (Users who <span style="color:#66d9ef">having</span> <span style="color:#66d9ef">write</span> <span style="color:#66d9ef">access</span> <span style="color:#66d9ef">to</span> this repository)
+</span></span><span style="display:flex;"><span>    id<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;location.pathname&#34;</span> <span style="color:#f92672">#</span> The <span style="color:#66d9ef">unique</span> id <span style="color:#66d9ef">of</span> the page.
+</span></span><span style="display:flex;"><span>    labels<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;gitalk&#34;</span> <span style="color:#f92672">#</span> Github issue labels. <span style="color:#66d9ef">If</span> you used <span style="color:#66d9ef">to</span> use Gitment, you can change it
+</span></span><span style="display:flex;"><span>    perPage<span style="color:#f92672">=</span> <span style="color:#ae81ff">15</span> <span style="color:#f92672">#</span> Pagination <span style="color:#66d9ef">size</span>, <span style="color:#66d9ef">with</span> maximum <span style="color:#ae81ff">100</span>.
+</span></span><span style="display:flex;"><span>    pagerDirection<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;last&#34;</span> <span style="color:#f92672">#</span> <span style="color:#66d9ef">Comment</span> sorting direction, available <span style="color:#66d9ef">values</span> <span style="color:#66d9ef">are</span> <span style="color:#e6db74">&#39;last&#39;</span> <span style="color:#66d9ef">and</span> <span style="color:#e6db74">&#39;first&#39;</span>.
+</span></span><span style="display:flex;"><span>    createIssueManually<span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span> <span style="color:#f92672">#</span> <span style="color:#66d9ef">If</span> it <span style="color:#66d9ef">is</span> <span style="color:#e6db74">&#39;false&#39;</span>, it <span style="color:#66d9ef">is</span> auto <span style="color:#66d9ef">to</span> make a Github issue <span style="color:#66d9ef">when</span> the administrators login.
+</span></span><span style="display:flex;"><span>    distractionFreeMode<span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span> <span style="color:#f92672">#</span> Enable hot <span style="color:#66d9ef">key</span> (cmd<span style="color:#f92672">|</span>ctrl <span style="color:#f92672">+</span> enter) submit <span style="color:#66d9ef">comment</span>.
+</span></span></code></pre></div><p>如果使用「Tranquilpeak」佈景主題，直接修改config.toml原註解內容即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>  <span style="color:#f92672">#</span> <span style="color:#75715e">--------------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#f92672">#</span> <span style="color:#66d9ef">Comment</span> <span style="color:#66d9ef">system</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">#</span> <span style="color:#75715e">--------------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  [params.<span style="color:#66d9ef">comment</span>]
+</span></span><span style="display:flex;"><span>    [params.<span style="color:#66d9ef">comment</span>.disqus]
+</span></span><span style="display:flex;"><span>      enable <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>      shortname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hugo-tranquilpeak-theme&#34;</span>
+</span></span><span style="display:flex;"><span>    [params.<span style="color:#66d9ef">comment</span>.gitalk]
+</span></span><span style="display:flex;"><span>      enable <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      clientId <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;13axxxxxxxxxxxxxaae5&#34;</span>
+</span></span><span style="display:flex;"><span>      clientSecret <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;a205de00xxxxxxxxxxxxxxxx9255f&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">owner</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;vincent3054&#34;</span>
+</span></span><span style="display:flex;"><span>      repo <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;vincent3054.github.io&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">#</span> See <span style="color:#66d9ef">all</span> <span style="color:#66d9ef">options</span>: https:<span style="color:#f92672">//</span>github.com<span style="color:#f92672">/</span>gitalk<span style="color:#f92672">/</span>gitalk<span style="color:#f92672">#</span><span style="color:#66d9ef">options</span>
+</span></span><span style="display:flex;"><span>      [params.<span style="color:#66d9ef">comment</span>.gitalk.<span style="color:#66d9ef">options</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">language</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;zh-tw&#34;</span>
+</span></span><span style="display:flex;"><span>        perPage <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>        distractionFreeMode <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>        enableHotKey <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        pagerDirection <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;first&#34;</span>
+</span></span></code></pre></div><p>線上執行結果 (丟到公開頁面後，評論系統介面才會被渲染成功)：</p>
+<p><img src="https://Vincent3054.github.io/images/content/20230301017.png" alt=""></p>
+<h2 id="結論">結論</h2>
+<p>在本文中，我介紹了如何在hugo上使用disqus或gitalk創建一個互動式留言板。這兩種評論系統各有優缺點，適合不同的需求和偏好。無論你選擇哪一種，都可以讓你的博客更加生動和有趣，增加與讀者之間的交流和互動。希望這篇文章對你有所幫助，歡迎留言分享你的看法和經驗。</p>
+<h2 id="補充">補充</h2>
+<p><a href="https://vincent3054.github.io/10minute/hugo-github-page-blog/">運用Hugo架設部落格</a></p>
+<h2 id="參考連結">參考連結</h2>
+<p><a href="https://openai.com/blog/chatgpt/">ChatGPT</a></p>
+<p><a href="https://ithelp.ithome.com.tw/articles/10248312">Disqus原文連結</a></p>
+<p><a href="https://xbc.me/add-gittalk-to-hugo/">Gitalk原文連結</a></p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">標籤</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://Vincent3054.github.io/tags/10minute/">10minute</a>
+
+  <a class="tag tag--primary tag--small" href="https://Vincent3054.github.io/tags/hugo/">Hugo</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/10minute/notion-ai-writing-assistant/" data-tooltip="[AI]Notion AI：一款強大的AI寫作助手，讓你事半功倍" aria-label="下一篇: [AI]Notion AI：一款強大的AI寫作助手，讓你事半功倍">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/10minute/hugo-website-seo-guide/" data-tooltip="[Hugo]Hugo網站的SEO優化指南" aria-label="上一篇: [Hugo]Hugo網站的SEO優化指南">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享這個帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://Vincent3054.github.io/post/10minute/hugo-comment-board-disqus-gitalkw/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://Vincent3054.github.io/post/10minute/hugo-comment-board-disqus-gitalkw/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://Vincent3054.github.io/post/10minute/hugo-comment-board-disqus-gitalkw/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="發表評論">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到頂部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="gitalk">
+      <noscript>Please enable JavaScript to view the comments powered by Gitalk.</noscript>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js" integrity="sha512-EcTCcXV46teiNwe0VcnM5A038tcY+BaQYO4nW6Gh2i7v4/HjBVg7xx3+JBLl9WofDds//INJAiEGAtdgr8PWyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+      (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('gitalk').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+          return;
+        }
+        new Gitalk({
+          clientID: '13ab4cf55a20f60eaae5',
+          clientSecret: 'fc9e6f4d6193d80cb52323bb94c84e1f0b9f36c2',
+          repo: 'vincent3054.github.io',
+          owner: 'vincent3054',
+          admin: ['vincent3054'],
+          id: '664ac93538088f15ae12b6709494f75d',
+          ...{"distractionfreemode":false,"enablehotkey":true,"language":"zh-tw","pagerdirection":"first","perpage":10}
+        }).render('gitalk')
+      })()
+    </script>
+  
+
+
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2023 Sky Chen. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/10minute/notion-ai-writing-assistant/" data-tooltip="[AI]Notion AI：一款強大的AI寫作助手，讓你事半功倍" aria-label="下一篇: [AI]Notion AI：一款強大的AI寫作助手，讓你事半功倍">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/10minute/hugo-website-seo-guide/" data-tooltip="[Hugo]Hugo網站的SEO優化指南" aria-label="上一篇: [Hugo]Hugo網站的SEO優化指南">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享這個帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://Vincent3054.github.io/post/10minute/hugo-comment-board-disqus-gitalkw/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://Vincent3054.github.io/post/10minute/hugo-comment-board-disqus-gitalkw/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://Vincent3054.github.io/post/10minute/hugo-comment-board-disqus-gitalkw/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="發表評論">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到頂部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FVincent3054.github.io%2Fpost%2F10minute%2Fhugo-comment-board-disqus-gitalkw%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2FVincent3054.github.io%2Fpost%2F10minute%2Fhugo-comment-board-disqus-gitalkw%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2FVincent3054.github.io%2Fpost%2F10minute%2Fhugo-comment-board-disqus-gitalkw%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+    
+    <h4 id="about-card-name">Sky Chen</h4>
+    
+      <div id="about-card-bio">I&rsquo;m Sky Chen, a creative developer passionate about C#, DevOps and Agile.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Software Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Taipei, Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://Vincent3054.github.io/images/cover1.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://Vincent3054.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

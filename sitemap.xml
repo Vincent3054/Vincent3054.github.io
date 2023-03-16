@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://Vincent3054.github.io/notes/hugo-website-seo-guide/</loc>
-    <lastmod>2023-03-16T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://Vincent3054.github.io/tags/10minute/</loc>
+    <loc>https://Vincent3054.github.io/post/notes/csharp-generic-type-constraint/</loc>
     <lastmod>2023-03-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://Vincent3054.github.io/</loc>
+    <lastmod>2023-03-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Vincent3054.github.io/tags/c#/</loc>
     <lastmod>2023-03-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -27,7 +27,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://Vincent3054.github.io/tags/hugo/</loc>
+    <loc>https://Vincent3054.github.io/tags/notes/</loc>
     <lastmod>2023-03-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -37,7 +37,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://Vincent3054.github.io/notes/</loc>
+    <loc>https://Vincent3054.github.io/post/</loc>
     <lastmod>2023-03-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -47,17 +47,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://Vincent3054.github.io/10minute/midjourney-ai-artist/</loc>
+    <loc>https://Vincent3054.github.io/post/10minute/midjourney-ai-artist/</loc>
+    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Vincent3054.github.io/tags/10minute/</loc>
     <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://Vincent3054.github.io/categories/10minute/</loc>
-    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://Vincent3054.github.io/10minute/</loc>
     <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -72,12 +72,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://Vincent3054.github.io/10minute/notion-ai-writing-assistant/</loc>
+    <loc>https://Vincent3054.github.io/post/10minute/notion-ai-writing-assistant/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://Vincent3054.github.io/10minute/hugo-comment-board-disqus-gitalkw/</loc>
+    <loc>https://Vincent3054.github.io/post/10minute/hugo-comment-board-disqus-gitalkw/</loc>
+    <lastmod>2023-03-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Vincent3054.github.io/tags/hugo/</loc>
     <lastmod>2023-03-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -87,7 +92,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://Vincent3054.github.io/10minute/hugo-website-seo-guide/</loc>
+    <loc>https://Vincent3054.github.io/post/10minute/hugo-website-seo-guide/</loc>
     <lastmod>2023-02-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -97,12 +102,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://Vincent3054.github.io/10minute/openai-linebot-ai-assistant/</loc>
+    <loc>https://Vincent3054.github.io/post/10minute/openai-linebot-ai-assistant/</loc>
     <lastmod>2023-02-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://Vincent3054.github.io/10minute/hugo-github-page-blog/</loc>
+    <loc>https://Vincent3054.github.io/post/10minute/hugo-github-page-blog/</loc>
     <lastmod>2023-02-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

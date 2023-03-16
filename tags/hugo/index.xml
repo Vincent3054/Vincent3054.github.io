@@ -6,7 +6,16 @@
     <description>Recent content in Hugo on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 01 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[C#]三個範例告訴你，什麼是where (泛型類型條件約束)</title>
+      <link>https://Vincent3054.github.io/notes/hugo-website-seo-guide/</link>
+      <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/notes/hugo-website-seo-guide/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>[Hugo]如何在Hugo上使用Disqus或Gitalk創建一個互動式留言板</title>
       <link>https://Vincent3054.github.io/10minute/hugo-comment-board-disqus-gitalkw/</link>

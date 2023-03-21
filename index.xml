@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog</title>
+    <title>AI筆記</title>
     <link>https://Vincent3054.github.io/</link>
-    <description>Recent content on Blog</description>
+    <description>Recent content on AI筆記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 16 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[AI]ChatGPT：AI的IPhone時刻</title>
+      <link>https://Vincent3054.github.io/post/10minute/ai-chatgpt/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/post/10minute/ai-chatgpt/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>[C#]三個範例告訴你，什麼是where (泛型類型條件約束)</title>
       <link>https://Vincent3054.github.io/post/notes/csharp-generic-type-constraint/</link>
@@ -49,15 +58,6 @@
       <pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://Vincent3054.github.io/post/10minute/hugo-website-seo-guide/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>[AI]ChatGPT：AI的IPhone時刻</title>
-      <link>https://Vincent3054.github.io/post/10minute/ai-chatgpt/</link>
-      <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://Vincent3054.github.io/post/10minute/ai-chatgpt/</guid>
       <description></description>
     </item>
     

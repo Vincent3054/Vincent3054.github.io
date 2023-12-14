@@ -6,7 +6,16 @@
     <description>Recent content in notes on AI筆記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[FrontEnd]輕鬆打造漂亮表單：從Element到Style的實用技巧</title>
+      <link>https://Vincent3054.github.io/post/notes/formelementandformstyle/</link>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/post/notes/formelementandformstyle/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>[Azure]Azure Blob Storage介紹及案例</title>
       <link>https://Vincent3054.github.io/post/notes/csharp-generic-type-constraint/</link>

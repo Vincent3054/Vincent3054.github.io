@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/Vincent3054.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "Sky Chen",
+    
+    "image": "https://Vincent3054.github.io/images/avatar3.png"
+    
+  },
+  "name":"AI筆記",
+  "description":"輕鬆打造漂亮表單：從Element到Style的實用技巧",
+  "url":"https:\/\/Vincent3054.github.io\/post\/notes\/formelementandformstyle\/",
+  "keywords":"[FrontEnd, Element, FormElement, Form, FormStyle]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.110.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Sky Chen">
+<meta name="keywords" content="FrontEnd, Element, FormElement, Form, FormStyle">
+<meta name="description" content="輕鬆打造漂亮表單：從Element到Style的實用技巧">
+
+
+<meta property="og:description" content="輕鬆打造漂亮表單：從Element到Style的實用技巧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[FrontEnd]輕鬆打造漂亮表單：從Element到Style的實用技巧">
+<meta name="twitter:title" content="[FrontEnd]輕鬆打造漂亮表單：從Element到Style的實用技巧">
+<meta property="og:url" content="https://Vincent3054.github.io/post/notes/formelementandformstyle/">
+<meta property="twitter:url" content="https://Vincent3054.github.io/post/notes/formelementandformstyle/">
+<meta property="og:site_name" content="AI筆記">
+<meta property="og:description" content="輕鬆打造漂亮表單：從Element到Style的實用技巧">
+<meta name="twitter:description" content="輕鬆打造漂亮表單：從Element到Style的實用技巧">
+<meta property="og:locale" content="zh-tw">
+
+  
+    <meta property="article:published_time" content="2023-12-11T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2023-12-11T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="notes">
+    
+      <meta property="article:section" content="FrontEnd">
+    
+  
+  
+    
+      <meta property="article:tag" content="FrontEnd">
+    
+      <meta property="article:tag" content="notes">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/avatar3.png">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/avatar3.png">
+
+
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/content/notes0007.jpg">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/content/notes0007.jpg">
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/content/notes0007.jpg">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/content/notes0007.jpg">
+
+
+    <title>[FrontEnd]輕鬆打造漂亮表單：從Element到Style的實用技巧</title>
+
+    <link rel="icon" href="https://Vincent3054.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://Vincent3054.github.io/post/notes/formelementandformstyle/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha512-MLcK/YRapzET1qTBXrOiZE6bGBgtATMo2bIyalVJ8EKDEGNoeA3SPQkvWAR0zNS650YG13ocXBMeioDuZcSRuQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://Vincent3054.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KMNNV397T8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KMNNV397T8');
+</script>
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://Vincent3054.github.io/" aria-label="去首頁">AI筆記</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://Vincent3054.github.io/#about" aria-label="打開鏈接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://Vincent3054.github.io/#about" aria-label="閱讀有關作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+        </a>
+        <h4 class="sidebar-profile-name">Sky Chen</h4>
+        
+          <h5 class="sidebar-profile-bio">這是一個基於AI技術誕生的網站，你所看到網站的一切都是藉由AI輔助產生，如果你也對AI有興趣，歡迎留言支持我!</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首頁</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分類</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">標籤</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">所有文章</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Atom</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">關於</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/Vincent3054" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/%E5%BB%BA%E6%88%90-%E9%99%B3-6438201a0/" target="_blank" rel="noopener" title="Linkedin">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Linkedin</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://reactgatsbypersonalwebsite.gatsbyjs.io/resume/" target="_blank" rel="noopener" title="Personal">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-brands fa-react" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Personal</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-left
+              post-header-cover--partial"
+       style="background-image:url('/images/content/notes0007.jpg')"
+       data-behavior="4">
+    
+      <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      [FrontEnd]輕鬆打造漂亮表單：從Element到Style的實用技巧
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2023-12-11T00:00:00Z">
+        
+  十二月 11, 2023
+
+      </time>
+    
+    
+  
+  
+    <span>分類</span>
+    
+      <a class="category-link" href="https://Vincent3054.github.io/categories/notes">notes</a>, 
+    
+      <a class="category-link" href="https://Vincent3054.github.io/categories/frontend">FrontEnd</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <h1 id="輕鬆打造漂亮表單從element到style的實用技巧">輕鬆打造漂亮表單：從Element到Style的實用技巧</h1>
+<p>tags: <code>FrontEnd</code> <code>notes</code></p>
+<h1 id="table-of-contents">目錄</h1>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#pick-suitable-elements">Pick suitable elements</a>
+      <ul>
+        <li><a href="#the-input-element">The input element</a></li>
+        <li><a href="#原生form-element優點">原生Form Element優點</a></li>
+        <li><a href="#use-case-1">Use case 1.</a></li>
+        <li><a href="#use-case-2">Use case 2.</a></li>
+      </ul>
+    </li>
+    <li><a href="#style-your-form">Style your form</a>
+      <ul>
+        <li><a href="#css--accent-color">CSS &gt; accent-color</a></li>
+        <li><a href="#customize-input-element">Customize input element</a></li>
+        <li><a href="#customize-select-element">Customize select element</a></li>
+        <li><a href="#customize-checkbox-element">Customize checkbox element</a></li>
+        <li><a href="#customize-radio-buttons-element">Customize radio buttons element</a></li>
+        <li><a href="#avoid-misunderstanding">Avoid misunderstanding</a></li>
+      </ul>
+    </li>
+    <li><a href="#amazing-supports">Amazing Supports</a>
+      <ul>
+        <li><a href="#input--web-api">Input &amp; Web API</a></li>
+        <li><a href="#validation">Validation</a></li>
+        <li><a href="#usability">Usability</a></li>
+      </ul>
+    </li>
+    <li><a href="#wonderful-partners">Wonderful partners</a>
+      <ul>
+        <li><a href="#css--logical-properties">CSS &gt; Logical Properties</a></li>
+        <li><a href="#css--has">CSS &gt; :has()</a></li>
+        <li><a href="#input--select-">input ?! select ?!</a></li>
+        <li><a href="#details">details</a></li>
+        <li><a href="#dialog">dialog</a></li>
+        <li><a href="#form--inert">form &amp; inert</a></li>
+      </ul>
+    </li>
+    <li><a href="#thanks-all-of-you">Thanks, all of you.</a></li>
+  </ul>
+</nav>
+
+<p>最近我參加了2023年的WebConf，一個匯聚了無數Web開發者的技術研討會，其中一個議程讓我印象深刻，因為講者使用了一些基本的元素(Element)和樣式(Style)，讓我能打造一個優質使用者體驗的「好」表單，內容很實用，操作起來也很簡單，所以我將這個議程精華整理成文章，希望對大家有所幫助。</p>
+<h1 id="agenda">Agenda</h1>
+<ul>
+<li>Pick suitable elements</li>
+<li>Style your form</li>
+<li>Amazing supports</li>
+<li>Wonderful partners</li>
+</ul>
+<hr>
+<h2 id="pick-suitable-elements">Pick suitable elements</h2>
+<ul>
+<li>The input element</li>
+<li>原生Form Element優點</li>
+<li>Use case 1.</li>
+<li>Use case 2.</li>
+</ul>
+<hr>
+<h3 id="the-input-element">The input element</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif; text-align: left">
+    <p>
+      <ul style="font-size: 20px; line-height: 1.6;">         
+        <li><strong>datetime-local</strong>:</li>
+          <ul style="list-style-type: circle; margin-left: 20px;">
+            <li> date+time可點擊icon選取</li>
+          </ul>
+        <li><strong>color</strong>:</li>
+          <ul style="list-style-type: circle; margin-left: 20px;">
+            <li> 有滴管按鈕可以攝取顏色</li>
+          </ul>
+        <li><strong>number</strong>:</li>
+          <ul style="list-style-type: circle; margin-left: 20px;">
+            <li> 可操作鍵盤上下鍵增減</li>
+          </ul>
+        <li><strong>range</strong>: </li>   
+          <ul style="list-style-type: circle; margin-left: 20px;">
+            <li> 可操作鍵盤左右鍵增減</li>
+          </ul>
+        <li><strong>search</strong>: </li>
+          <ul style="list-style-type: circle; margin-left: 20px;">
+            <li> 輸入搜尋內容後出現btn點擊可清空</li>
+          </ul>
+        <li><strong>email</strong>:  </li>
+          <ul style="list-style-type: circle; margin-left: 20px;">
+            <li> email格式驗證，存history</li>
+          </ul>
+        <li><strong>url</strong>:  </li>
+          <ul style="list-style-type: circle; margin-left: 20px;">
+            <li> URL格式驗證</li>
+          </ul>
+      </ul>
+    </p>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_diverse_inputs.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<h3 id="原生form-element優點">原生Form Element優點</h3>
+<ul style="font-size: 20px; line-height: 2;">
+    <li><strong>很多都有基本的驗證，避免拿到錯誤的資料</strong></li>
+    <li><strong>自帶 widgets，不需額外開發</strong> </li>
+    <li><strong>原生支援</strong> </li>
+    <li><strong>延續使用者體驗</strong></li>
+</ul>
+<hr>
+<h3 id="use-case-1">Use case 1.</h3>
+<div style="display: flex;">
+    <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;  text-align: left">
+    <p style="font-size: 24px; line-height: 1.6;">
+      Take <code style="padding: 2px 4px; border-radius: 4px;">&lt;input /&gt;</code> UI / UX and methods to indicate various adjustments.
+    </p>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/webComponent_msc-circle-progress.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<h3 id="use-case-2">Use case 2.</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif; text-align: left">
+    <p style="font-size: 24px; line-height: 1.6;">
+      With <code style="padding: 2px 4px; border-radius: 4px;">&lt;input[type=range]&gt;</code> supported, Developers could save 「drag、drop」 event usage and don't need to detect current device.
+    </p>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/webComponent_msc-ez-video.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<h2 id="style-your-form">Style your form</h2>
+<ul>
+<li>CSS &gt; accent-color</li>
+<li>Customize input element</li>
+<li>Customize select element</li>
+<li>Customize checkbox element</li>
+<li>Customize radio buttons element</li>
+<li>Avoid misunderstanding</li>
+</ul>
+<hr>
+<h3 id="css--accent-color">CSS &gt; accent-color</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;">
+     <p style="font-size: 24px; line-height: 1.6; text-align: left">
+     The accent-color CSS property sets the accent color for user-interface controls generated by some elements.
+    </p>
+<pre style="margin-left: 0px;width:400px;height:500px;">
+<code>
+<style>
+:nth-child(2 of .row) input {
+  accent-color: #eb0f29;
+}
+:nth-child(3 of .row) input {
+  accent-color: rgba(26 197 103);
+}
+</style>
+  </code></pre>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_css_accent-color.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<h3 id="customize-input-element">Customize input element</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;text-align: left;">     
+     <p style="font-size: 24px; line-height: 1.6;">
+     With modern CSS supports, web developers could style <code style="padding: 2px 4px; border-radius: 4px;">&lt;input /&gt;</code> easily ever.
+    </p>
+<pre style="margin-left: 0px;width: 400px;">
+<code style="font-size: 14px;height: 500px;">
+<style>
+<div class="input-set">
+  <input name="input-name" type="text" placeholder="placeholder" />
+  <label class="input-set__label">
+    <span class="input-set__label__span">label</span>
+  </label>
+  <em class="input-set__em"></em>
+</div>
+
+.input-set {
+  --background-color: var(--default-background-color, rgba(var(--white)));
+  --text-color: var(--default-text-color, rgba(var(--batcave)));
+  --theme: var(--default-theme, rgba(var(--dory)));
+  --hover: var(--theme);
+  ...
+  ...
+  /* readyonly, disabled */
+  --background-color-disabled: var(--default-background-color-disabled, rgba(var(--grey-hair)));
+  --text-color-disabled: var(--default-text-color-disabled, rgba(var(--bob)));
+  ...
+  ...
+}
+.input-set > input::-webkit-input-placeholder {
+  color: var(--placeholder-text-color);
+  transition: color 100ms ease;
+  will-change: color;
+}
+.input-set > input::-moz-placeholder {
+  color: var(--placeholder-text-color);
+  transition: color 100ms ease;
+  will-change: color;
+}
+.input-set {
+  position: relative;
+  display: block;
+}
+.input-set > input {
+  appearance: none;
+  ...
+  ...
+}
+.input-set > input:focus {
+  outline: 0 none;
+}
+.input-set__label { ... }
+.input-set__label__span { ... }
+.input-set__label::after { ... }
+.input-set__em { ... }
+.input-set__em::before { ... }
+/* focus */
+.input-set > input:focus {
+  --border-color: var(--hover);
+  --border-size: var(--border-size-active);
+}
+.input-set > input:focus::-webkit-input-placeholder {
+  --placeholder-text-color: var(--placeholder-text-color-active);
+}
+.input-set > input:focus::-moz-placeholder {
+  --placeholder-text-color: var(--placeholder-text-color-active);
+}
+.input-set > input:focus ~ .input-set__label {
+  color: var(--hover);
+  transform: translateY(-24px) scale(0.85);
+}
+.input-set > input:not(:placeholder-shown) ~ .input-set__label {
+  transform: translateY(-24px) scale(0.85);
+}
+/* invalid */
+.input-set > input:invalid ~ .input-set__em,
+.input-set > input[invalid] ~ .input-set__em {
+  --err-display: flex;
+}
+.input-set > input:invalid,
+.input-set > input[invalid] {
+  --border-color: var(--err-color);
+}
+/* inert, readonly, disabled */
+[inert] .input-set,
+.input-set:has(input[readonly]),
+.input-set:has(input[disabled]) {
+  --default-text-color: var(--text-color-disabled);
+  --default-border-color: var(--border-color-disabled);
+  --default-background-color: var(--background-color-disabled);
+}
+@media (hover: hover) {
+  .input-set:hover {
+    --border-color: var(--hover);
+  }
+  .input-set:hover > input:not(:placeholder-shown) ~ .input-set__label {
+    --label-text-color: var(--hover);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .input-set {
+    ...
+    ...
+  }
+}
+</style>
+</code>
+</pre>
+</div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_customize_input_text_kai.html" style="width: 100%; height: 100%; border: none; overflow: hidden;"></iframe>
+  </div>
+</div>
+<hr>
+<h3 id="customize-select-element">Customize select element</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;">With modern CSS supports, web developers could style<code style="padding: 2px 4px; border-radius: 4px;">&lt;select /&gt;</code> easily ever. 
+    </p>
+<pre style="margin-left: 0px;width: 400px;">
+<code style="font-size: 14px;height: 500px;">
+<style>
+<div class="input-set input-set--select">
+  <select name="select-name">
+    <optgroup label="Group A">
+      <option value="1">option 1</option>
+      <option value="2">option 2</option>
+      <option value="3">option 3</option>
+    </optgroup>
+    <optgroup label="Group B">
+      <option value="4">option 4</option>
+      <option value="5">option 5</option>
+      <option value="6">option 6</option>
+    </optgroup>
+  </select>
+  <labelclass="input-set__label">
+    <span class="input-set__label__span">label</span>
+  </label>
+  <em class="input-set__em"></em>
+</div>
+.input-set {
+  --background-color: var(--default-background-color, rgba(var(--white)));
+  --text-color: var(--default-text-color, rgba(var(--batcave)));
+  --border-color: var(--default-border-color, rgba(var(--dolphin)));
+  --err-color: var(--default-err-color, rgba(var(--solo-cup)));
+  --err-text-color: var(--default-err-text-color, rgba(var(--dolphin)));
+  --label-text-color: var(--default-label-text-color, rgba(var(--dolphin)));
+  --theme: var(--default-theme, rgba(var(--dory)));
+  --hover: var(--theme);
+  /* readyonly, disabled */
+  --background-color-disabled: var(--default-background-color-disabled, rgba(var(--grey-hair)));
+  --text-color-disabled: var(--default-text-color-disabled, rgba(var(--bob)));
+  --border-color-disabled: var(--default-border-color-disabled, rgba(var(--bob)));
+  --placeholder-text-color-normal: transparent;
+  --placeholder-text-color-active: var(--default-placeholder-text-color, rgba(var(--charcoal)));
+  --placeholder-text-color: var(--placeholder-text-color-normal);
+  ...
+  ...
+}
+/* select */
+.input-set--select select {
+  padding-inline-end: calc(var(--padding-inline-end) * 2 + 24px);
+}
+.input-set--select::after { ... }
+.input-set > select::-webkit-input-placeholder {
+  color: var(--placeholder-text-color);
+  transition: color 100ms ease;
+  will-change: color;
+}
+.input-set > select::-moz-placeholder {
+  color: var(--placeholder-text-color);
+  transition: color 100ms ease;
+  will-change: color;
+}
+.input-set {
+  position: relative;
+  display: block;
+}
+.input-set > select {
+  appearance: none;
+  ...
+  ...
+}
+.input-set > select:focus {
+  outline: 0 none;
+}
+.input-set__label { ... }
+.input-set__label__span { ... }
+.input-set__label::after { ... }
+.input-set__em { ... }
+.input-set__em::before { ... }
+/* focus */
+.input-set > select:focus {
+  --border-color: var(--hover);
+  --border-size: var(--border-size-active);
+}
+.input-set > select:focus::-webkit-input-placeholder {
+  --placeholder-text-color: var(--placeholder-text-color-active);
+}
+.input-set > select:focus::-moz-placeholder {
+  --placeholder-text-color: var(--placeholder-text-color-active);
+}
+.input-set > select:focus ~ .input-set__label {
+  color: var(--hover);
+  transform: translateY(-24px) scale(0.85);
+}
+.input-set > select:not(:placeholder-shown) ~ .input-set__label {
+  transform: translateY(-24px) scale(0.85);
+}
+/* invalid */
+.input-set > select:invalid ~ .input-set__em,
+.input-set > select[invalid] ~ .input-set__em {
+  --err-display: flex;
+}
+.input-set > select:invalid,
+.input-set > select[invalid] {
+  --border-color: var(--err-color);
+}
+/* inert, readonly, disabled */
+[inert] .input-set,
+.input-set:has(select[readonly]),
+.input-set:has(select[disabled]) {
+  --default-text-color: var(--text-color-disabled);
+  --default-border-color: var(--border-color-disabled);
+  --default-background-color: var(--background-color-disabled);
+}
+@media (hover: hover) {
+  .input-set:hover {
+    --border-color: var(--hover);
+  }
+  .input-set:hover > select:not(:placeholder-shown) ~ .input-set__label {
+    --label-text-color: var(--hover);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .input-set {
+    ...
+    ...
+  }
+}
+</style>
+</code>
+</pre>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_customize_select_kai.html" style="width: 100%; height: 100%; border: none; overflow: hidden;"></iframe>
+  </div>
+</div>
+<hr>
+<h3 id="customize-checkbox-element">Customize checkbox element</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;">
+    With modern CSS supports, web developers could style <code style="padding: 2px 4px; border-radius: 4px;">input[type=checkbox]</code> easily ever. 
+    </p>
+<pre style="margin-left: 0px;width: 400px;">
+<code style="font-size: 14px;height: 500px;">
+<style>
+<div class="checkbox-set">
+  <input id="my-checkbox" type="checkbox" name="checkbox[]" value="0" />
+  <label class="checkbox-set__label" for="my-checkbox"></label>
+</div>
+.checkbox-set {
+  /* normal */
+  --accent-color: var(--default-accent-color, rgba(42 108 246));
+  --border-color: var(--default-border-color, rgba(131 138 146));
+  --background-color: var(--default-background-color, rgba(255 255 255));
+  --checkmark-color: var(--default-checkmark-color, rgba(255 255 255));
+  /* disabled */
+  --border-color--disabled: var(--default-border-color--disabled, rgba(178 185 192));
+  --background-color--disabled: var(--default-background-color--disabled, rgba(255 255 255));
+  --checkmark-color--disabled: var(--default-checkmark-color--disabled, rgba(178 185 192));
+  ...
+  ...
+}
+.checkbox-set__label {
+  --checkmark-opacity-normal: 0;
+  --checkmark-opacity-active: 1;
+  --checkmark-opacity: var(--checkmark-opacity-normal); 
+}
+.checkbox-set input:checked ~ .checkbox-set__label {
+  --border-color: var(--accent-color); 
+  --background-color: var(--accent-color); 
+  --checkmark-opacity: var(--checkmark-opacity-active); 
+}
+.checkbox-set input:not(:disabled):focus-visible ~ .checkbox-set__label {
+  --border-color: var(--accent-color); 
+}
+[inert] .checkbox-set input ~ .checkbox-set__label,
+.checkbox-set input:disabled ~ .checkbox-set__label {
+  --border-color: var(--border-color--disabled); 
+  --background-color: var(--background-color--disabled); 
+  --checkmark-color: var(--checkmark-color--disabled); 
+}
+.checkbox-set {
+  position: relative;
+  inline-size: var(--size);
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+.checkbox-set input {
+  position: absolute;
+  top: -100%;
+  outline: 0 none;
+}
+.checkbox-set__label { ... }
+.checkbox-set__label::before { ... }
+.checkbox-set__label::after { ... }
+@media (hover: hover) {
+  .checkbox-set input:not(:disabled) ~ .checkbox-set__label:hover {
+    --border-color: var(--accent-color); 
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .checkbox-set {
+    ...
+    ...
+  }
+}
+</style>
+</code>
+</pre>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_customize_input_checkbox.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<h3 id="customize-radio-buttons-element">Customize radio buttons element</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;">
+    With modern CSS supports, web developers could style  <code style="padding: 2px 4px; border-radius: 4px;">input[type=radio]</code> easily ever. 
+    </p>
+<pre style="margin-left: 0px;width: 400px;">
+<code style="font-size: 14px;height: 500px;">
+<style>
+<div class="radio-set">
+  <input id="my-radio" type="radio" name="radio" value="0" />
+  <label class="radio-set__label" for="my-radio"></label>
+</div>
+.radio-set {
+  /* normal */
+  --accent-color: var(--default-accent-color, rgba(42 108 246));
+  --border-color: var(--default-border-color, rgba(131 138 146));
+  --background-color: var(--default-background-color, rgba(255 255 255));
+  --default-dot-color: var(--default-dot-color, rgba(accent-color));
+  /* disabled */
+  --border-color--disabled: var(--default-border-color--disabled, rgba(178 185 192));
+  --background-color--disabled: var(--default-background-color--disabled, rgba(255 255 255));
+  --default-dot-color--disabled: var(--default-accent-color, rgba(178 185 192));
+  ...
+  ...
+}
+.radio-set__label {
+  --dot-scale-normal: .001;
+  --dot-scale-active: 1;
+  --dot-scale: var(--dot-scale-normal); 
+}
+.radio-set input:checked ~ .radio-set__label {
+  --border-color: var(--accent-color); 
+  --dot-scale: var(--dot-scale-active); 
+}
+.radio-set input:not(:disabled):focus-visible ~ .radio-set__label {
+  --border-color: var(--accent-color); 
+}
+.radio-set input:disabled ~ .radio-set__label {
+  --border-color: var(--border-color--disabled); 
+  --background-color: var(--background-color--disabled); 
+  --dot-color: var(--dot-color--disabled); 
+}
+.radio-set {
+  position: relative;
+  inline-size: var(--border-radius);
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+.radio-set input {
+  position: absolute;
+  top: -100%;
+  outline: 0 none;
+}
+.radio-set__label { ... }
+.radio-set__label::before { ... }
+.radio-set__label::after { ... }
+@media (hover: hover) {
+  .radio-set input:not(:disabled) ~ .radio-set__label:hover {
+    --border-color: var(--accent-color); 
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .radio-set {
+    ...
+    ...
+  }
+}
+</style>
+</code>
+</pre>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_customize_input_radio.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<h3 id="avoid-misunderstanding">Avoid misunderstanding</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;width: 400px;">
+    Sometimes you might face some embarrassed situations. Such as <code style="padding: 2px 4px; border-radius: 4px;">「radiobox」</code> or <code style=" padding: 2px 4px; border-radius: 4px;">「checkbutton」</code>.
+    </p>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_input_avoid_misunderstanding.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>    
+</div>
+<hr>
+<h2 id="amazing-supports">Amazing Supports</h2>
+<ul>
+<li>Input &amp; Web API</li>
+<li>Validation</li>
+<li>Usability</li>
+</ul>
+<hr>
+<h3 id="input--web-api">Input &amp; Web API</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;">
+    Some <code style="padding: 2px 4px; border-radius: 4px;">&lt;input /&gt;</code> exposed some interesting web api for developers for vivid usage.
+    </p>
+<pre style="margin-left: 0px;width: 400px;">
+<code style="font-size: 14px;height: 500px;">
+<script>
+// input[type=color]
+const inputColor = document.querySelector('input[type=color]');
+inputColor.showPicker();
+// EyeDropper
+document.querySelector('.button--eyedropper')
+  .addEventListener('click',
+    async () => {
+      const eyeDropper = new EyeDropper();
+      const result = await eyeDropper.open();
+      const colorHexValue = result.sRGBHex;
+    }
+  );
+// input[type=datetime-local]
+const inputDatetime = document.querySelector('input[type="datetime-local"]');
+inputDatetime.showPicker();
+// input[type=number]
+const inputNumber = document.querySelector('input[type=number]');
+document.querySelector('.button--plus')
+  .addEventListener('click',
+    () => {
+      inputNumber.stepUp();
+    }
+  );
+document.querySelector('.button--minus')
+  .addEventListener('click',
+    () => {
+      inputNumber.stepDown();
+    }
+  );
+// input and select()
+const inputSelectContent = document.querySelector('.input--selectContent');
+inputSelectContent.select();
+<p></script></p>
+</code>
+</pre>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_input_and_web_api.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<h3 id="validation">Validation</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif; text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;">
+    Form Element 有許多有趣的屬性，開發人員可以將它們應用在驗證上，使驗證更加簡單快速。
+    </p>
+<pre style="margin-left: 0px;width:400px;">
+<code style="font-size: 14px;height:500px;">
+<script type="module">
+<form action="...">
+  <input
+    type="..."
+    value="..."
+    accept=".jpg,.jpeg,.png,.gif,.webp"
+    min="1"
+    max="3000000"
+    minlength="1"
+    maxlength="10"
+    step="5"
+    pattern="https://((youtu.be)|(youtube.com)|(www.youtube.com))/.*"
+    multiple
+    required
+    readonly
+    disabled
+  />
+</form>
+const controller = new AbortController();
+const { signal } = controller;
+const form = document.querySelector('form');
+
+const transformErrorMessage = (inputEle) => {
+  let message = '';
+  const validity = inputEle.validity;
+  const {
+    validityDefault,
+    validityRangeOverflow,
+    validityRangeUnderflow,
+    validityValueMissing
+  } = inputEle.dataset;
+
+  switch (true) {
+    case validity.valueMissing:
+      message = validityValueMissing || '此為必填欄位';
+      break;
+
+    case validity.rangeOverflow:
+      message = validityRangeOverflow || '內容已超過最大值';
+      break;
+
+    case validity.rangeUnderflow:
+      message = validityRangeUnderflow || '內容低於最小值';
+      break;
+
+    default:
+      message = validityDefault || '格式錯誤，請再確認';
+      break;
+  }
+
+  return message;
+}
+
+const onInput = (evt) => {
+  const input = evt.target.closest('input');
+
+  if (!input) {
+    return;
+  }
+
+  input.toggleAttribute('invalid', false);
+};
+
+
+const onInvalid = (evt) => {
+  evt.preventDefault();
+
+  const inputSet = evt.target.closest('.input-set');
+  const input = evt.target.closest('input');
+  
+  if (!inputSet) {
+    return;
+  }
+
+  const errElement = inputSet.querySelector('.input-set__em');
+  errElement.textContent = transformErrorMessage(evt.target);
+  input.toggleAttribute('invalid', true);
+};
+
+
+const onSubmit = (evt) => {
+  evt.preventDefault();
+
+  if (form.hasAttribute('inert')) {
+    return;
+  }
+
+  form.toggleAttribute('inert', true);
+
+  // native error checks
+  const flag = form.checkValidity();
+
+  if (!flag) {
+    // errors occured
+    ...
+    form.toggleAttribute('inert', false); 
+    return;
+  }
+
+  const formData = new FormData(form);
+  const dataObject = Object.fromEntries(formData.entries());
+
+  ...
+  ...
+  ...
+
+  form.toggleAttribute('inert', false);
+};
+
+// events
+form.addEventListener('invalid', onInvalid, { signal, capture: true });
+form.addEventListener('input', onInput, { signal });
+form.addEventListener('submit', onSubmit, { signal });
+</script>
+</code>
+</pre>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/yahoo/item-submit.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<h3 id="usability">Usability</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;">
+         驗證之後，開發人員應該思考如何增強可用性，現在越來越多的Web API有支援這點。例如自動大寫、自動修正、自動完成、輸入模式和Enter鍵提示。
+    </p>
+<pre style="margin-left: 0px; width:400px;">
+<code style="font-size: 14px; height:350px;">
+<script>
+<form action="...">
+  <input
+    type="..."
+    value="..."
+    autocapitalize="..."
+    autocorrect="..."
+    autocomplete="..."
+    enterkeyhint="go"
+    inputmode="numeric"
+  />
+</form>
+</script>
+</code>
+</pre>      
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <img src="https://blog.lalacube.com/mei/img/phoenix_the_gokui/usability-0.png">
+  </div>
+</div>
+<hr>
+<p><img src="https://hackmd.io/_uploads/SkwpDUd4p.png" alt="2023-11-20 09 52 7"></p>
+<hr>
+<h2 id="wonderful-partners">Wonderful partners</h2>
+<ul>
+<li>CSS &gt; Logical Properties</li>
+<li>CSS &gt; :has()</li>
+<li>input ?! select ?!</li>
+<li>details</li>
+<li>dialog</li>
+<li>form &amp; inert</li>
+</ul>
+<hr>
+<h3 id="css--logical-properties">CSS &gt; Logical Properties</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif; text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;">
+         With modern CSS supports, web developers could style <code style=" padding: 2px 4px; border-radius: 4px;">&lt;input /&gt;</code>  easily ever.
+    </p>
+<pre style="margin-left: 0px;width:400px;">
+<code style="font-size: 14px;height:500px;">
+<style>
+<div class="input-set">
+  <input name="input-name" type="text" placeholder="placeholder" />
+  <label class="input-set__label">
+    <span class="input-set__label__span">label</span>
+  </label>
+  <em class="input-set__em"></em>
+</div>
+.input-set {
+  --background-color: var(--default-background-color, rgba(var(--white)));
+  --text-color: var(--default-text-color, rgba(var(--batcave)));
+  --border-color: var(--default-border-color, rgba(var(--dolphin)));
+  --err-color: var(--default-err-color, rgba(var(--solo-cup)));
+  --err-text-color: var(--default-err-text-color, rgba(var(--dolphin)));
+  --label-text-color: var(--default-label-text-color, rgba(var(--dolphin)));
+  --theme: var(--default-theme, rgba(var(--dory)));
+  --hover: var(--theme);
+  /* readyonly, disabled */
+  --background-color-disabled: var(--default-background-color-disabled, rgba(var(--grey-hair)));
+  --text-color-disabled: var(--default-text-color-disabled, rgba(var(--bob)));
+  --border-color-disabled: var(--default-border-color-disabled, rgba(var(--bob)));
+  --placeholder-text-color-normal: transparent;
+  --placeholder-text-color-active: var(--default-placeholder-text-color, rgba(var(--charcoal)));
+  --placeholder-text-color: var(--placeholder-text-color-normal);
+  ...
+  ...
+}
+.input-set > input::-webkit-input-placeholder {
+  color: var(--placeholder-text-color);
+  transition: color 100ms ease;
+  will-change: color;
+}
+.input-set > input::-moz-placeholder {
+  color: var(--placeholder-text-color);
+  transition: color 100ms ease;
+  will-change: color;
+}
+.input-set {
+  position: relative;
+  display: block;
+}
+.input-set > input {
+  appearance: none;
+  ...
+  ...
+}
+.input-set > input:focus {
+  outline: 0 none;
+.input-set__label { ... }
+.input-set__label__span { ... }
+.input-set__label::after { ... }
+.input-set__em { ... }
+.input-set__em::before { ... }
+/* focus */
+.input-set > input:focus {
+  --border-color: var(--hover);
+  --border-size: var(--border-size-active);
+}
+.input-set > input:focus::-webkit-input-placeholder {
+  --placeholder-text-color: var(--placeholder-text-color-active);
+}
+.input-set > input:focus::-moz-placeholder {
+  --placeholder-text-color: var(--placeholder-text-color-active);
+}
+.input-set > input:focus ~ .input-set__label {
+  color: var(--hover);
+  transform: translateY(-24px) scale(0.85);
+}
+.input-set > input:not(:placeholder-shown) ~ .input-set__label {
+  transform: translateY(-24px) scale(0.85);
+}
+/* invalid */
+.input-set > input:invalid ~ .input-set__em,
+.input-set > input[invalid] ~ .input-set__em {
+  --err-display: flex;
+}
+.input-set > input:invalid,
+.input-set > input[invalid] {
+  --border-color: var(--err-color);
+}
+/* inert, readonly, disabled */
+[inert] .input-set,
+.input-set:has(input[readonly]),
+.input-set:has(input[disabled]) {
+  --default-text-color: var(--text-color-disabled);
+  --default-border-color: var(--border-color-disabled);
+  --default-background-color: var(--background-color-disabled);
+}
+@media (hover: hover) {
+  .input-set:hover {
+    --border-color: var(--hover);
+  }
+  .input-set:hover > input:not(:placeholder-shown) ~ .input-set__label {
+    --label-text-color: var(--hover);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .input-set {
+    ...
+    ...
+  }
+}
+</style>
+</code>
+</pre>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_input_and_logical_properties.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<h3 id="css--has">CSS &gt; :has()</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;">:has() is so powerful for condition syntax, it could replace some JavaScript supports.
+    </p>
+<pre style="margin-left: 0px;width:400px;">
+<code style="font-size: 14px;height:500px;">
+<style>
+<div class="wrap">
+  <div class="unit">
+    <div>
+      <input id="radioA" type="radio" name="my-radio" value="0" />
+    </div>
+    <p class="hidden-content">hidden information</p>
+  </div>
+
+  <div class="unit">
+    <div>
+      <input id="radioB" type="radio" name="my-radio" value="1" />
+    </div>
+    <p class="hidden-content">hidden information</p>
+  </div>
+</div>
+
+.hidden-content {
+  display: none;
+}
+
+.wrap:has(#radioA:checked) :nth-child(1 of .unit) .hidden-content {
+  display: block;
+}
+
+.wrap:has(#radioB:checked) :nth-child(2 of .unit) .hidden-content {
+  display: block;
+}
+</style>
+</code>
+</pre>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/yahoo/item-submit.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<h3 id="input--select-">input ?! select ?!</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif; text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;"><code style="padding: 2px 4px; border-radius: 4px;">&lt;input /&gt;</code> could associate <code style="padding: 2px 4px; border-radius: 4px;">&lt;datalist /&gt;</code> through attribute list to let input has dropdown menu just like </code> could associate <code style="padding: 2px 4px; border-radius: 4px;">&lt;select /&gt;</code>.
+    </p>
+<pre style="margin-left: 0px;width:400px;">
+<code style="font-size: 14px;height:400px;">
+<style>
+<input
+  name="my-input"
+  type="text"
+  placeholder="placeholder"
+  autocomplete="off"
+  list="my-datalist"
+/>
+<datalist id="my-datalist">
+  <option value="option 1">option 1</option>
+  <option value="option 2">option 2</option>
+  <option value="option 3">option 3</option>
+  <option value="option 4">option 4</option>
+  <option value="option 5">option 5</option>
+</datalist>
+</style>
+</code>
+</pre>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_input_with_datalist.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<h3 id="details">details</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;">
+         <code style="padding: 2px 4px; border-radius: 4px;">&lt; details /&gt;</code> provide toggle feature to disaply or hide information. It's suitable for tip or extra information.
+    </p>
+<pre style="margin-left: 0px;width:400px;height:250px;">
+<code style="font-size: 14px;">
+<style>
+<details class="tip">
+  <summary class="tip__summary">
+    summary
+  </summary>
+  <p class="tip__content">
+    content
+  </p>
+</details>
+</style>
+</code>
+</pre>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_details.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<h3 id="dialog">dialog</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif; text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;width: 400px;">
+    The <code style="padding: 2px 4px; border-radius: 4px;">&lt;dialog /&gt;</code> HTML element represents a dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.
+    </p>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/example-html-dialog.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<h3 id="form--inert">form &amp; inert</h3>
+<div style="display: flex;">
+  <div style="flex: 1; padding: 20px; font-family: 'Arial', sans-serif;text-align: left">
+     <p style="font-size: 24px; line-height: 1.6;">
+         It's time to apply 「inert」to freeze or unfreeze
+<code style="padding: 2px 4px; border-radius: 4px;">&lt;form /&gt;</code>.
+    </p>
+        <pre style="margin-left: 0px;width:400px;height:500px;">
+          <code style="font-size: 14px;">
+<style>
+[inert] :is(input, select) {
+  ...
+  ...
+}
+</style>
+<script>
+const form = document.querySelector('form');
+
+form.addEventListener('submit',
+  (evt) => {
+    ...
+    ...
+    form.inert = true; // freeze || unfreeze form
+    ...
+    ...
+  }
+);
+</script>
+</code>
+</pre>
+  </div>
+  <div style="flex: 1; padding: 10px; position: relative; height: 600px;">
+    <iframe src="https://blog.lalacube.com/mei/slides_demo_form_and_inert.html" style="width: 100%; height: 100%; border: none; overflow: hidden;">
+    </iframe>
+  </div>
+</div>
+<hr>
+<div style="flex: 1; padding: 0px 20px 20px 100px; font-family: 'Arial', sans-serif;text-align: left">
+    <h1 style="padding-left:20px">
+        Recap
+    </h1>
+    <p>
+        <ul style="font-size: 32px; line-height: 2;">
+        <li><strong>Pick suitable elements</strong></li>
+        <li><strong>Style your form</strong> </li>
+        <li><strong>Use element & Web API wisely</strong> </li>
+        <li><strong>Amazing Web Components</strong></li>
+      </ul>
+    </p>
+</div>
+<hr>
+<h2 id="thanks-all-of-you">Thanks, all of you.</h2>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">標籤</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://Vincent3054.github.io/tags/frontend/">FrontEnd</a>
+
+  <a class="tag tag--primary tag--small" href="https://Vincent3054.github.io/tags/notes/">notes</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/notes/csharp-generic-type-constraint/" data-tooltip="[Azure]Azure Blob Storage介紹及案例" aria-label="上一篇: [Azure]Azure Blob Storage介紹及案例">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享這個帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://Vincent3054.github.io/post/notes/formelementandformstyle/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://Vincent3054.github.io/post/notes/formelementandformstyle/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://Vincent3054.github.io/post/notes/formelementandformstyle/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="發表評論">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到頂部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="gitalk">
+      <noscript>Please enable JavaScript to view the comments powered by Gitalk.</noscript>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js" integrity="sha512-EcTCcXV46teiNwe0VcnM5A038tcY+BaQYO4nW6Gh2i7v4/HjBVg7xx3+JBLl9WofDds//INJAiEGAtdgr8PWyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+      (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('gitalk').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+          return;
+        }
+        new Gitalk({
+          clientID: '13ab4cf55a20f60eaae5',
+          clientSecret: 'fc9e6f4d6193d80cb52323bb94c84e1f0b9f36c2',
+          repo: 'vincent3054.github.io',
+          owner: 'vincent3054',
+          admin: ['vincent3054'],
+          id: '39f048a77a905061f9225d1eae5b1075',
+          ...{"distractionfreemode":false,"enablehotkey":true,"language":"zh-tw","pagerdirection":"first","perpage":10}
+        }).render('gitalk')
+      })()
+    </script>
+  
+
+
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2023 Sky Chen. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/notes/csharp-generic-type-constraint/" data-tooltip="[Azure]Azure Blob Storage介紹及案例" aria-label="上一篇: [Azure]Azure Blob Storage介紹及案例">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享這個帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://Vincent3054.github.io/post/notes/formelementandformstyle/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://Vincent3054.github.io/post/notes/formelementandformstyle/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://Vincent3054.github.io/post/notes/formelementandformstyle/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="發表評論">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到頂部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FVincent3054.github.io%2Fpost%2Fnotes%2Fformelementandformstyle%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2FVincent3054.github.io%2Fpost%2Fnotes%2Fformelementandformstyle%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2FVincent3054.github.io%2Fpost%2Fnotes%2Fformelementandformstyle%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+    
+    <h4 id="about-card-name">Sky Chen</h4>
+    
+      <div id="about-card-bio">這是一個基於AI技術誕生的網站，你所看到網站的一切都是藉由AI輔助產生，如果你也對AI有興趣，歡迎留言支持我!</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Software Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Taipei, Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://Vincent3054.github.io/images/cover1.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://Vincent3054.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

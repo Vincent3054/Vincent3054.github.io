@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FrontEnd on AI筆記</title>
+    <link>https://Vincent3054.github.io/tags/frontend/</link>
+    <description>Recent content in FrontEnd on AI筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 11 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[FrontEnd]輕鬆打造漂亮表單：從Element到Style的實用技巧</title>
+      <link>https://Vincent3054.github.io/post/notes/formelementandformstyle/</link>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/post/notes/formelementandformstyle/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

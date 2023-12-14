@@ -16,9 +16,9 @@
     
   },
   "name":"AI筆記",
-  "description":"[Azure]Azure Blob Storage介紹及案例",
+  "description":"三個範例告訴你，什麼是where (泛型類型條件約束)",
   "url":"https:\/\/Vincent3054.github.io\/post\/notes\/csharp-generic-type-constraint\/",
-  "keywords":"[Azure, Blob, Storage, Azure Storage]"
+  "keywords":"[C#, 泛型類型條件約束, generic type constraint, where, 泛型, 條件約束, generic, constraint]"
 }
 
 </script>
@@ -27,38 +27,38 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.110.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Sky Chen">
-<meta name="keywords" content="Azure, Blob, Storage, Azure Storage">
-<meta name="description" content="[Azure]Azure Blob Storage介紹及案例">
+<meta name="keywords" content="C#, 泛型類型條件約束, generic type constraint, where, 泛型, 條件約束, generic, constraint">
+<meta name="description" content="三個範例告訴你，什麼是where (泛型類型條件約束)">
 
 
-<meta property="og:description" content="[Azure]Azure Blob Storage介紹及案例">
+<meta property="og:description" content="三個範例告訴你，什麼是where (泛型類型條件約束)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Azure]Azure Blob Storage介紹及案例">
-<meta name="twitter:title" content="[Azure]Azure Blob Storage介紹及案例">
+<meta property="og:title" content="[C#]三個範例告訴你，什麼是where (泛型類型條件約束)">
+<meta name="twitter:title" content="[C#]三個範例告訴你，什麼是where (泛型類型條件約束)">
 <meta property="og:url" content="https://Vincent3054.github.io/post/notes/csharp-generic-type-constraint/">
 <meta property="twitter:url" content="https://Vincent3054.github.io/post/notes/csharp-generic-type-constraint/">
 <meta property="og:site_name" content="AI筆記">
-<meta property="og:description" content="[Azure]Azure Blob Storage介紹及案例">
-<meta name="twitter:description" content="[Azure]Azure Blob Storage介紹及案例">
+<meta property="og:description" content="三個範例告訴你，什麼是where (泛型類型條件約束)">
+<meta name="twitter:description" content="三個範例告訴你，什麼是where (泛型類型條件約束)">
 <meta property="og:locale" content="zh-tw">
 
   
-    <meta property="article:published_time" content="2023-06-14T00:00:00">
+    <meta property="article:published_time" content="2023-03-16T00:00:00">
   
   
-    <meta property="article:modified_time" content="2023-06-14T00:00:00">
+    <meta property="article:modified_time" content="2023-03-16T00:00:00">
   
   
   
     
       <meta property="article:section" content="notes">
     
-      <meta property="article:section" content="Azure">
+      <meta property="article:section" content="C#">
     
   
   
     
-      <meta property="article:tag" content="Azure">
+      <meta property="article:tag" content="C#">
     
       <meta property="article:tag" content="notes">
     
@@ -79,15 +79,15 @@
 
 
 
-  <meta property="og:image" content="https://Vincent3054.github.io/images/content/notes0018.jpg">
-  <meta property="twitter:image" content="https://Vincent3054.github.io/images/content/notes0018.jpg">
+  <meta property="og:image" content="https://Vincent3054.github.io/images/content/notes0007.jpg">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/content/notes0007.jpg">
 
 
-  <meta property="og:image" content="https://Vincent3054.github.io/images/content/notes0017.jpg">
-  <meta property="twitter:image" content="https://Vincent3054.github.io/images/content/notes0017.jpg">
+  <meta property="og:image" content="https://Vincent3054.github.io/images/content/notes0007.jpg">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/content/notes0007.jpg">
 
 
-    <title>[Azure]Azure Blob Storage介紹及案例</title>
+    <title>[C#]三個範例告訴你，什麼是where (泛型類型條件約束)</title>
 
     <link rel="icon" href="https://Vincent3054.github.io/favicon.png">
     
@@ -266,21 +266,21 @@
   <div class="post-header-cover
               text-left
               post-header-cover--partial"
-       style="background-image:url('/images/content/notes0018.jpg')"
+       style="background-image:url('/images/content/notes0007.jpg')"
        data-behavior="4">
     
       <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      [Azure]Azure Blob Storage介紹及案例
+      [C#]三個範例告訴你，什麼是where (泛型類型條件約束)
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2023-06-14T00:00:00Z">
+      <time datetime="2023-03-16T00:00:00Z">
         
-  六月 14, 2023
+  三月 16, 2023
 
       </time>
     
@@ -291,7 +291,7 @@
     
       <a class="category-link" href="https://Vincent3054.github.io/categories/notes">notes</a>, 
     
-      <a class="category-link" href="https://Vincent3054.github.io/categories/azure">Azure</a>
+      <a class="category-link" href="https://Vincent3054.github.io/categories/c">C#</a>
     
   
 
@@ -311,25 +311,18 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <h1 id="azure-blob-storage介紹及案例">Azure Blob Storage介紹及案例</h1>
-<p>tags: <code>Azure</code> <code>notes</code></p>
+              <h1 id="三個範例告訴你什麼是where-泛型類型條件約束">三個範例告訴你，什麼是where (泛型類型條件約束)</h1>
+<p>tags: <code>C#</code> <code>notes</code></p>
 <h1 id="table-of-contents">目錄</h1>
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#介紹">介紹</a></li>
-    <li><a href="#特點">特點</a></li>
-    <li><a href="#操作">操作</a>
+    <li><a href="#什麼是where-泛型類型條件約束">什麼是Where (泛型類型條件約束)?</a></li>
+    <li><a href="#使用時機">使用時機</a></li>
+    <li><a href="#範例">範例</a>
       <ul>
-        <li><a href="#在-azure-portal-上建立-blob-storage">在 Azure portal 上建立 Blob Storage</a></li>
-        <li><a href="#在-azure-portal-上下載檔案至-azure-blob-storage">在 Azure portal 上/下載檔案至 Azure Blob Storage</a></li>
-        <li><a href="#使用api-上下載檔案至-azure-blob-storage">使用API 上/下載檔案至 Azure Blob Storage</a></li>
-      </ul>
-    </li>
-    <li><a href="#案例分享">案例分享</a>
-      <ul>
-        <li><a href="#痛點">痛點</a></li>
-        <li><a href="#改善">改善</a></li>
-        <li><a href="#優化">優化</a></li>
+        <li><a href="#1where-t--class">1.where T : class</a></li>
+        <li><a href="#2where-t--struct">2.where T : struct</a></li>
+        <li><a href="#3where-t--interface">3.where T : interface</a></li>
       </ul>
     </li>
     <li><a href="#總結">總結</a></li>
@@ -337,210 +330,90 @@
   </ul>
 </nav>
 
-<h2 id="介紹">介紹</h2>
-<p>Azure Blob Storage Service 為非結構(unstructured)儲存體服務。因為具有無限制規模、全球存取與不錯的成本效益等特性，非常適用於 PaaS，適用情境：大數據分析與IoT/感測器資料蒐集。 Blob 也常用於：</p>
-<ul>
-<li>透過瀏覽器存取圖片與文件</li>
-<li>提供分散存取使用</li>
-<li>串流影像與音樂</li>
-<li>資料備份、還原、災難還原與封存</li>
-<li>分析資料存放 (提供 Azure 上服務使用)</li>
-</ul>
-<p>Blobs可以分成三種</p>
-<table>
-<thead>
-<tr>
-<th>名稱</th>
-<th>說明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Block Blobs</td>
-<td>適合儲存文字與Binary資料，如文件與多美體檔案</td>
-</tr>
-<tr>
-<td>Append Blobs</td>
-<td>與Block blobs相似，對於資料接續有最佳化，是用於logging情境</td>
-</tr>
-<tr>
-<td>Page Block</td>
-<td>有效率頻繁讀寫。VM的OS與data disk就是使用page blobs</td>
-</tr>
-</tbody>
-</table>
-<p>Blobs 有三種存取類型</p>
-<table>
-<thead>
-<tr>
-<th>名稱</th>
-<th>說明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Private</td>
-<td>只有帳戶擁有者可以存取</td>
-</tr>
-<tr>
-<td>Append Blobs</td>
-<td>公開存取，任何人皆可以存取</td>
-</tr>
-<tr>
-<td>Page Block</td>
-<td>Blob集合群組，Blob與Contariner訊皆可公開存取</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>一個帳戶可以有多個 Container，而一個 Container 可以有多個 Blob。 請注意， Container 的命名需要為小寫。</p>
-</blockquote>
-<h2 id="特點">特點</h2>
+<h2 id="什麼是where-泛型類型條件約束">什麼是Where (泛型類型條件約束)?</h2>
+<p>泛型類型條件約束（generic type constraints）是C#語言中一種用於限制泛型型別參數（generic type parameters）的機制。通過條件約束，可以告訴編譯器該泛型型別參數必須滿足什麼條件，這樣就可以在編譯期間對該參數進行類型檢查，避免在運行時出現類型錯誤。</p>
+<p>條件約束可以是以下幾種類型：</p>
 <ol>
 <li>
-<p>可靠性和可擴展性：Azure Blob Storage 提供高度可靠和可擴展的儲存解決方案。它能自動複製和備份數據，以確保數據的持久性和可用性。這使得它適用於處理大量數據和高頻的讀取和寫入操作。</p>
+<p><code>where T : class</code>：T必須是一個引用類型，而不能是值類型（如int、bool等）。</p>
 </li>
 <li>
-<p>階層化存儲：Azure Blob Storage 提供多個存儲層級，包括熱存儲和冷存儲。熱存儲適用於經常被訪問的數據，它提供低延遲和高吞吐量的存取能力。冷存儲則適用於不經常被訪問的數據，它提供了更低的存儲成本，但可能會有稍高的讀取延遲。</p>
+<p><code>where T : struct</code>：T必須是一個值類型。</p>
 </li>
 <li>
-<p>安全性：Azure Blob Storage 提供多層次的安全措施，保護存儲在其中的數據。它支援身份驗證和存取權限控制，可以設定細粒度的存取權限，以限制對數據的訪問。此外，Blob Storage 還提供數據的加密功能，以保護數據的機密性。</p>
+<p><code>where T : new()</code>：T必須具有公共的無參數構造函數。</p>
 </li>
 <li>
-<p>擴展性和彈性：Azure Blob Storage 具有良好的擴展性和彈性，能夠應對不斷增長的數據需求。它支援自動擴展根據實際需求調整存儲容量和性能。這使得它適用於處理不同規模的工作負載，從小型應用到大型企業級應用程式。</p>
+<p><code>where T : &lt;base class&gt;</code>：T必須是指定基類（base class）或其派生類。</p>
 </li>
 <li>
-<p>檔案層次結構：Blob Storage 使用容器和 Blob 的概念來組織和管理數據。容器類似於文件夾，用於分類和組織 Blob。Blob 則是實際的數據對象，可以是任何類型的文件。你可以使用 Blob 的 URL 來直接訪問和下載數據。</p>
-</li>
-<li>
-<p>整合性：Azure Blob Storage 可以與其他 Azure 服務和工具進行無縫整合。例如，你可以將 Blob Storage 與 Azure Functions、Azure Logic Apps 和 Azure Media Services 等服務結合使用，實現更強大的功能。</p>
-</li>
-<li>
-<p>成本效益：Azure Blob Storage 提供了彈性的價格模型，根據實際使用量計算費用。你只需支付實際使用的存儲容量和傳輸流量，並可以根據需求選擇合適的存儲層級，以優化成本。</p>
+<p><code>where T : &lt;interface&gt;</code>：T必須實現指定接口（interface）。</p>
 </li>
 </ol>
-<p>總結來說，Azure Blob Storage 是一個可靠、安全、擴展和彈性的儲存服務，特別適合存儲和管理大量非結構化數據。它提供了多個存儲層級、細粒度的安全控制和良好的整合性，同時具有成本效益。無論是小型應用還是大型企業級應用程式，Azure Blob Storage 都能滿足不同規模和需求的數據儲存需求。</p>
-<h2 id="操作">操作</h2>
-<h3 id="在-azure-portal-上建立-blob-storage">在 Azure portal 上建立 Blob Storage</h3>
-<p>Step 1. 首先我們新增一個儲存體帳戶：開啟 marketplace → 輸入Blob → 選擇儲存體帳戶
-<img src="https://Vincent3054.github.io/images/content/20230614001.png" alt="">
-Step 2. 點選建立
-<img src="https://Vincent3054.github.io/images/content/20230614002.png" alt="">
-Step 3. 輸入儲存體帳戶相關必填資訊，點選檢閱後按確定
-<img src="https://Vincent3054.github.io/images/content/20230614003.png" alt="">
-Step 4. 儲存體帳戶建立完成後，開啟儲存體帳戶主畫面 → 點選 容器(Blob)
-<img src="https://Vincent3054.github.io/images/content/20230614004.png" alt="">
-Step 5. 點選新增容器
-<img src="https://Vincent3054.github.io/images/content/20230614005.png" alt="">
-Step 6. 輸入名稱(全小寫)、存取層即選擇 Blob
-<img src="https://Vincent3054.github.io/images/content/20230614006.png" alt="">
-Step 7. 點選建立
-<img src="https://Vincent3054.github.io/images/content/20230614007.png" alt="">
-Step 8. 容器建立完成
-<img src="https://Vincent3054.github.io/images/content/20230614008.png" alt=""></p>
-<h3 id="在-azure-portal-上下載檔案至-azure-blob-storage">在 Azure portal 上/下載檔案至 Azure Blob Storage</h3>
-<p>Step 1. 點選剛剛我們建立的容器
-<img src="https://Vincent3054.github.io/images/content/20230614009.png" alt="">
-Step 2. 點選上傳
-<img src="https://Vincent3054.github.io/images/content/20230614010.png" alt="">
-Step 3. 選擇要上傳的檔案，點選確定
-<img src="https://Vincent3054.github.io/images/content/20230614011.png" alt="">
-Step 4. 上傳完成 !
-<img src="https://Vincent3054.github.io/images/content/20230614012.png" alt="">
-Step 5. 點選最右邊 &hellip;按鈕 開啟下拉選單，點選下載，會立即下載檔案
-<img src="https://Vincent3054.github.io/images/content/20230614013.png" alt="">
-Step 6. 您也可以直接複製下載連結 ： 點選檔案 → 複製 URL 即可
-<img src="https://Vincent3054.github.io/images/content/20230614014.png" alt=""></p>
-<h3 id="使用api-上下載檔案至-azure-blob-storage">使用API 上/下載檔案至 Azure Blob Storage</h3>
-<p>以下是使用 Azure Blob Storage .NET SDK 進行上傳和下載檔案的範例程式碼：</p>
-<pre tabindex="0"><code class="language-csharp=" data-lang="csharp=">using Azure.Storage.Blobs;
-using System;
-
-class Program
+<p>泛型類型條件約束可以提高代碼的安全性和可讀性，也可以幫助開發人員更好地利用C#的泛型特性。</p>
+<h2 id="使用時機">使用時機</h2>
+<p>使用where關鍵字來指定泛型類型應該滿足的條件約束可以增強代碼的靜態類型檢查，防止不必要的代碼錯誤。通常在以下情況下會使用where：</p>
+<p>當你需要對泛型類型進行限制，以確保它只能是特定的類型（如值類型、引用類型、類、結構等）時，可以使用where關鍵字來指定條件約束。</p>
+<p>當你需要在泛型類型中使用特定的方法或屬性時，可以使用where關鍵字來指定條件約束，以確保泛型類型支持該方法或屬性。</p>
+<h2 id="範例">範例</h2>
+<h3 id="1where-t--class">1.where T : class</h3>
+<p>以下範例展示如何何使用泛型類型條件約束來限制泛型類型參數的類型：</p>
+<pre tabindex="0"><code class="language-csharp=" data-lang="csharp=">public class ExampleClass&lt;T&gt; where T : class
 {
-    static async Task Main(string[] args)
+    public T ExampleMethod(T param)
     {
-        // Azure Blob Storage 連線字串
-        string connectionString = &#34;your_connection_string&#34;;
-        // Blob 容器名稱
-        string containerName = &#34;your_container_name&#34;;
-        // Blob 名稱
-        string blobName = &#34;your_blob_name&#34;;
-        // 檔案路徑
-        string filePath = &#34;your_file_path&#34;;
-
-         // 上傳檔案到 Azure Blob Storage
-        BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
-        BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
-        BlobClient blobClient = containerClient.GetBlobClient(blobName);
-
-        using (FileStream uploadStream = File.OpenRead(filePath))
-        {
-            await blobClient.UploadAsync(uploadStream, true);
-        }
-
-        Console.WriteLine(&#34;Blob uploaded successfully!&#34;);
-
-        // 下載檔案從 Azure Blob Storage
-        using (FileStream downloadStream = File.OpenWrite(downloadPath))
-        {
-            await blobClient.DownloadToAsync(downloadStream);
-        }
-
-        Console.WriteLine(&#34;Blob downloaded successfully!&#34;);
+        // 參數param必須是一個引用類型
+        return param;
     }
 }
-</code></pre><h2 id="案例分享">案例分享</h2>
-<h3 id="痛點">痛點</h3>
-<p>現行檔案中心是將檔案上傳到VM，可能會經常遇到以下問題：</p>
-<ol>
-<li>可用性問題：如果虛擬機發生故障或需要維護，則無法訪問或使用其中的檔案。這可能會導致服務中斷或停止。</li>
-<li>擴展性問題：虛擬機的存儲容量有限，當需要處理大量檔案或大型檔案時，可能會耗盡虛擬機的存儲空間。</li>
-<li>效能問題：虛擬機本身可能無法提供足夠的計算和存儲資源，導致上傳和下載檔案的效能變慢。</li>
-<li>可靠性問題：虛擬機的硬體故障或儲存故障可能導致數據損失或損壞，因為它們並不具備內建的數據冗餘和備份功能。</li>
-<li>維護和管理問題：將檔案存儲在虛擬機內需要進行管理、備份和維護工作，增加了管理成本和風險。</li>
-</ol>
-<p>儲存資料的性質主要的內容是圖片（身分證、財力證明等文件）內容屬於機密文件，每日進件量也會非常可觀，單一系統每日檔案上傳量就高達1364筆。</p>
-<h3 id="改善">改善</h3>
-<p>總和上述痛點，整理出檔案中心需要必備的特點：</p>
-<ol>
-<li>效能：需能承受高頻</li>
-<li>容量：需能承受高量</li>
-<li>維運：易於管理、備份、監控</li>
-<li>安全性：存取權限控制、加密</li>
-</ol>
-<p>解決辦法：</p>
-<ol>
-<li>效能、容量問題：Azure Blob Storage 是一個高度可擴展的服務，可以根據需求進行橫向擴展。你可以通過增加存儲賬戶的容量和適當地配置存儲服務，以應對高頻高量的檔案上傳需求。</li>
-<li>維運問題：Azure Blob Storage 提供了許多監控工具和功能，如 Azure Monitor 和 Azure Storage 分析。可以使用這些工具來監控存儲使用情況、性能指標、錯誤日誌等，以便追蹤系統的狀態和進行故障排除。</li>
-<li>安全性問題：Azure Blob Storage 提供了多層次的安全措施，包括身份驗證、存取權限控制、加密和監控功能。這些功能可以幫助保護你存儲在 Blob Storage 中的機密文件免受未授權訪問和數據洩露。</li>
-</ol>
-<p>綜合上訴原因需考量到可靠性、可擴展性、安全性等多放面的問題，此案例可考慮搭配使用Azure Blob Storage來解決問題。</p>
-<h3 id="優化">優化</h3>
-<ol>
-<li>引入緩存機制：
-<ul>
-<li>使用快取技術，將經常訪問的檔案或數據暫存在內存或快取服務中，以提高訪問速度和效能。</li>
-</ul>
-</li>
-<li>實現檔案分片和並行上傳：
-<ul>
-<li>對於大型檔案，可以將其分成多個小片段進行上傳，這樣可以提高上傳效率。</li>
-<li>使用多線程或異步操作，實現並行上傳多個片段，以充分利用網絡帶寬。</li>
-</ul>
-</li>
-<li>優化網絡傳輸：
-<ul>
-<li>使用壓縮算法對檔案進行壓縮，減少傳輸的數據量。</li>
-<li>考慮使用流式傳輸，即在上傳過程中立即處理和儲存檔案的片段，而不需要等待整個檔案上傳完成。</li>
-</ul>
-</li>
-</ol>
+</code></pre><p>在上面的範例中，<code>ExampleClass&lt;T&gt;</code>是一個泛型類型，它使用了<code>where T : class</code>的條件約束，表示T必須是一個引用類型。在ExampleMethod方法中，參數param也必須是一個引用類型，因為它的類型參數T需要滿足條件約束。</p>
+<h3 id="2where-t--struct">2.where T : struct</h3>
+<p>當你定義一個泛型類或方法時，可以使用where關鍵字來指定泛型類型應該滿足的條件約束。以下是一個簡單的範例：</p>
+<pre tabindex="0"><code class="language-csharp=" data-lang="csharp=">public class Example&lt;T&gt; where T : struct
+{
+    public T Value { get; set; }
+    
+    public Example(T value)
+    {
+        Value = value;
+    }
+    
+    public bool IsPositive()
+    {
+        return Value &gt; default(T);
+    }
+}
+</code></pre><p>在這個例子中，我們定義了一個名為Example的泛型類。該類有一個名為Value的屬性和一個名為IsPositive的方法。這個泛型類有一個條件約束，即T必須是一個值類型（struct）。</p>
+<p>在IsPositive方法中，我們使用了default關鍵字來獲取T類型的預設值，這樣我們就可以比較Value是否大於預設值（對於大多數值類型來說，預設值是0）。</p>
+<p>現在我們可以使用Example類型來創建具有不同值類型的對象。例如，我們可以這樣使用：</p>
+<pre tabindex="0"><code class="language-csharp=" data-lang="csharp=">var example1 = new Example&lt;int&gt;(5);
+var example2 = new Example&lt;double&gt;(-2.5);
+var example3 = new Example&lt;DateTime&gt;(DateTime.Now);
+</code></pre><p>在這個例子中，我們創建了三個Example對象，分別使用了int、double和DateTime類型作為泛型類型參數。由於int和double都是值類型，而DateTime也是一個struct，所以這些對象都符合<code>Example&lt;T&gt;</code>泛型類的條件約束。</p>
+<p>我們可以使用IsPositive方法來檢查這些對象是否是正數，例如：</p>
+<pre tabindex="0"><code class="language-csharp=" data-lang="csharp=">Console.WriteLine(example1.IsPositive()); // true
+Console.WriteLine(example2.IsPositive()); // false
+</code></pre><p>這將輸出true和false，這取決於example1和example2對象的Value屬性是否大於0。</p>
+<h3 id="3where-t--interface">3.where T : interface</h3>
+<p>以下範例展示如何使用泛型類型條件約束來限制泛型類型參數必須實現指定的接口：</p>
+<pre tabindex="0"><code class="language-csharp=" data-lang="csharp=">public interface IExampleInterface
+{
+    void ExampleMethod();
+}
+
+public class ExampleClass&lt;T&gt; where T : IExampleInterface
+{
+    public void ExampleMethod(T param)
+    {
+        // 參數param必須實現IExampleInterface接口
+        param.ExampleMethod();
+    }
+}
+</code></pre><p>在上面的範例中，<code>ExampleClass&lt;T&gt;</code>是一個泛型類型，它使用了<code>where T : IExampleInterface</code>的條件約束，表示T必須實現IExampleInterface接口。在ExampleMethod方法中，參數param必須實現IExampleInterface接口，才能調用ExampleMethod方法中定義的<code>param.ExampleMethod()</code>方法。</p>
 <h2 id="總結">總結</h2>
-<p>使用 Azure Blob Storage 作為檔案儲存解決方案是理想選擇。它提供高度可擴展的儲存能力，應對高頻高量的檔案上傳需求。同時具有優異的可用性、效能和安全性。透過 Azure Blob Storage，確保機密文件的安全且快速可靠地存取。與.NET 5或其他程式語言整合也非常容易。總體而言，使用 Azure Blob Storage 改善效能、可靠性、安全性和可擴展性，提供更好的檔案儲存和管理體驗。</p>
+<p>總的來說，where關鍵字在C#泛型中用於指定泛型類型應該滿足的條件約束。它可以用於限制泛型類型必須是特定的類型（如值類型、引用類型、類、結構等），或實現特定的介面或擁有特定的方法或屬性。使用where可以增強代碼的靜態類型檢查，提高代碼的可靠性、可讀性、易於維護性和可重用性，防止不必要的代碼錯誤。</p>
 <h2 id="參考連結">參考連結</h2>
-<p><a href="http://dog0416.blogspot.com/2018/05/azure-azure-blob-storage.html">Duran 的技術冶煉廠</a></p>
-<p><a href="https://azure.microsoft.com/zh-tw/products/storage/blobs">微軟官網介紹</a></p>
+<p><a href="https://learn.microsoft.com/zh-tw/dotnet/csharp/language-reference/keywords/where-generic-type-constraint">微軟官方文件</a></p>
               
 
 
@@ -554,7 +427,7 @@ class Program
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">標籤</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://Vincent3054.github.io/tags/azure/">Azure</a>
+  <a class="tag tag--primary tag--small" href="https://Vincent3054.github.io/tags/c/">C#</a>
 
   <a class="tag tag--primary tag--small" href="https://Vincent3054.github.io/tags/notes/">notes</a>
 
@@ -569,7 +442,7 @@ class Program
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/notes/formelementandformstyle/" data-tooltip="[FrontEnd]輕鬆打造漂亮表單：從Element到Style的實用技巧" aria-label="下一篇: [FrontEnd]輕鬆打造漂亮表單：從Element到Style的實用技巧">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/10minute/ai-chatgpt/" data-tooltip="[AI]ChatGPT：AI的IPhone時刻" aria-label="下一篇: [AI]ChatGPT：AI的IPhone時刻">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -577,7 +450,7 @@ class Program
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/10minute/nijijourney-ai-artist/" data-tooltip="[AI]NijiJourney：史上最強的二次元 AI 繪圖工具" aria-label="上一篇: [AI]NijiJourney：史上最強的二次元 AI 繪圖工具">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/10minute/notion-ai-writing-assistant/" data-tooltip="[AI]Notion AI：一款強大的AI寫作助手，讓你事半功倍" aria-label="上一篇: [AI]Notion AI：一款強大的AI寫作助手，讓你事半功倍">
           
               <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
               <i class="fa fa-angle-right"></i>
@@ -675,7 +548,7 @@ class Program
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/notes/formelementandformstyle/" data-tooltip="[FrontEnd]輕鬆打造漂亮表單：從Element到Style的實用技巧" aria-label="下一篇: [FrontEnd]輕鬆打造漂亮表單：從Element到Style的實用技巧">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/10minute/ai-chatgpt/" data-tooltip="[AI]ChatGPT：AI的IPhone時刻" aria-label="下一篇: [AI]ChatGPT：AI的IPhone時刻">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -683,7 +556,7 @@ class Program
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/10minute/nijijourney-ai-artist/" data-tooltip="[AI]NijiJourney：史上最強的二次元 AI 繪圖工具" aria-label="上一篇: [AI]NijiJourney：史上最強的二次元 AI 繪圖工具">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/10minute/notion-ai-writing-assistant/" data-tooltip="[AI]Notion AI：一款強大的AI寫作助手，讓你事半功倍" aria-label="上一篇: [AI]Notion AI：一款強大的AI寫作助手，讓你事半功倍">
           
               <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
               <i class="fa fa-angle-right"></i>

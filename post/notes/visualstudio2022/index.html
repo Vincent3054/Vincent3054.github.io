@@ -245,7 +245,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://reactgatsbypersonalwebsite.gatsbyjs.io/resume/" target="_blank" rel="noopener" title="Personal">
+      <a class="sidebar-button-link " href="https://rad-gaufre-beb6ed.netlify.app/resume/" target="_blank" rel="noopener" title="Personal">
     
       <i class="sidebar-button-icon fab fa-lg fa-brands fa-react" aria-hidden="true"></i>
       
@@ -334,6 +334,7 @@
         <li><a href="#dev-tunnel-讓使用者連到開發機測試">Dev Tunnel 讓使用者連到開發機測試</a></li>
       </ul>
     </li>
+    <li><a href="#使用-httprepl-來測試-web-api">使用 HttpRepl 來測試 Web API</a></li>
   </ul>
 </nav>
 
@@ -458,6 +459,27 @@
 <li>有一些限制</li>
 <li><a href="https://learn.microsoft.com/zh-tw/connectors/custom-connectors/port-tunneling">詳細介紹</a></li>
 </ul>
+<h2 id="使用-httprepl-來測試-web-api">使用 HttpRepl 來測試 Web API</h2>
+<ul>
+<li>新增http檔案
+<ul>
+<li><img src="https://Vincent3054.github.io/images/content/20231219025.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<pre tabindex="0"><code>### GET
+GET https://www.google.com.tw/
+Content-Type:application/json
+
+### POST
+POST https://alumni.nccu.edu.tw/cgi-bin/login
+Content-Type:application/json
+
+{
+  &#34;USERID&#34;: &#34;ID&#34;,
+  &#34;PASSWD&#34;: &#34;P@S$W0rd&#34;
+}
+</code></pre>
               
 
 
@@ -579,7 +601,7 @@
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2023 Sky Chen. All Rights Reserved
+    &copy; 2024 Sky Chen. All Rights Reserved
   </span>
 </footer>
 

@@ -6,7 +6,16 @@
     <description>Recent content in notes on AI筆記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 18 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://Vincent3054.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code Smells 程式碼異味</title>
+      <link>https://Vincent3054.github.io/post/notes/codesmells/</link>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vincent3054.github.io/post/notes/codesmells/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>[Other]Visual Studio 2022 開發工具大補帖</title>
       <link>https://Vincent3054.github.io/post/notes/visualstudio2022/</link>

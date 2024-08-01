@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/Vincent3054.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "Sky Chen",
+    
+    "image": "https://Vincent3054.github.io/images/avatar3.png"
+    
+  },
+  "name":"AI筆記",
+  "description":"Code Smells 程式碼異味",
+  "url":"https:\/\/Vincent3054.github.io\/post\/notes\/codesmells\/",
+  "keywords":"[CodeSmells, 程式碼異味, Smells, 壞味道, Bad Smell]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.110.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Sky Chen">
+<meta name="keywords" content="CodeSmells, 程式碼異味, Smells, 壞味道, Bad Smell">
+<meta name="description" content="Code Smells 程式碼異味">
+
+
+<meta property="og:description" content="Code Smells 程式碼異味">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Code Smells 程式碼異味">
+<meta name="twitter:title" content="Code Smells 程式碼異味">
+<meta property="og:url" content="https://Vincent3054.github.io/post/notes/codesmells/">
+<meta property="twitter:url" content="https://Vincent3054.github.io/post/notes/codesmells/">
+<meta property="og:site_name" content="AI筆記">
+<meta property="og:description" content="Code Smells 程式碼異味">
+<meta name="twitter:description" content="Code Smells 程式碼異味">
+<meta property="og:locale" content="zh-tw">
+
+  
+    <meta property="article:published_time" content="2024-08-01T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2024-08-01T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="notes">
+    
+      <meta property="article:section" content="Other">
+    
+  
+  
+    
+      <meta property="article:tag" content="Other">
+    
+      <meta property="article:tag" content="notes">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/avatar3.png">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/avatar3.png">
+
+
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/content/notes0017.jpg">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/content/notes0017.jpg">
+
+
+  <meta property="og:image" content="https://Vincent3054.github.io/images/content/notes0017.jpg">
+  <meta property="twitter:image" content="https://Vincent3054.github.io/images/content/notes0017.jpg">
+
+
+    <title>Code Smells 程式碼異味</title>
+
+    <link rel="icon" href="https://Vincent3054.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://Vincent3054.github.io/post/notes/codesmells/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha512-MLcK/YRapzET1qTBXrOiZE6bGBgtATMo2bIyalVJ8EKDEGNoeA3SPQkvWAR0zNS650YG13ocXBMeioDuZcSRuQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://Vincent3054.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KMNNV397T8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KMNNV397T8');
+</script>
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://Vincent3054.github.io/" aria-label="去首頁">AI筆記</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://Vincent3054.github.io/#about" aria-label="打開鏈接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://Vincent3054.github.io/#about" aria-label="閱讀有關作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+        </a>
+        <h4 class="sidebar-profile-name">Sky Chen</h4>
+        
+          <h5 class="sidebar-profile-bio">這是一個基於AI技術誕生的網站，你所看到網站的一切都是藉由AI輔助產生，如果你也對AI有興趣，歡迎留言支持我!</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首頁</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分類</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">標籤</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">所有文章</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Atom</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://Vincent3054.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">關於</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/Vincent3054" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/%E5%BB%BA%E6%88%90-%E9%99%B3-6438201a0/" target="_blank" rel="noopener" title="Linkedin">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Linkedin</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://rad-gaufre-beb6ed.netlify.app/resume/" target="_blank" rel="noopener" title="Personal">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-brands fa-react" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Personal</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-left
+              post-header-cover--partial"
+       style="background-image:url('/images/content/notes0017.jpg')"
+       data-behavior="4">
+    
+      <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Code Smells 程式碼異味
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2024-08-01T00:00:00Z">
+        
+  八月 1, 2024
+
+      </time>
+    
+    
+  
+  
+    <span>分類</span>
+    
+      <a class="category-link" href="https://Vincent3054.github.io/categories/notes">notes</a>, 
+    
+      <a class="category-link" href="https://Vincent3054.github.io/categories/other">Other</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <h1 id="code-smells-程式碼異味">Code Smells 程式碼異味</h1>
+<p>tags: <code>Other</code> <code>notes</code></p>
+<h1 id="table-of-contents">目錄</h1>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#簡介">簡介</a></li>
+    <li><a href="#31-mysterious-name-神秘的名稱">3.1 Mysterious Name (神秘的名稱)</a>
+      <ul>
+        <li><a href="#解法">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#32-duplicated-code-重複的程式碼">3.2 Duplicated Code (重複的程式碼)</a>
+      <ul>
+        <li><a href="#code-smells">Code Smells</a></li>
+        <li><a href="#解法-1">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#33-long-function-冗長的函式-long-method">3.3 Long Function (冗長的函式) Long Method</a>
+      <ul>
+        <li><a href="#code-smells-1">Code Smells</a></li>
+        <li><a href="#解法-2">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#34-long-parameter-list-冗長的參數列">3.4 Long Parameter List (冗長的參數列)</a>
+      <ul>
+        <li><a href="#code-smells-2">Code Smells</a></li>
+        <li><a href="#解法-3">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#35-global-data-全域變數">3.5 Global Data (全域變數)</a>
+      <ul>
+        <li><a href="#code-smells-3">Code Smells</a></li>
+        <li><a href="#解法-4">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#36-mutable-data-可變資料">3.6 Mutable Data (可變資料)</a>
+      <ul>
+        <li><a href="#code-smells-4">Code Smells</a></li>
+        <li><a href="#解法-5">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#37-divergent-change-發散式修改">3.7 Divergent Change (發散式修改)</a>
+      <ul>
+        <li><a href="#code-smells-5">Code Smells</a></li>
+        <li><a href="#解法-6">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#38-shotgun-surgery-散彈式修改">3.8 Shotgun Surgery (散彈式修改)</a>
+      <ul>
+        <li><a href="#code-smells-6">Code Smells</a></li>
+        <li><a href="#解法-7">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#39-feature-envy依戀情結">3.9 Feature Envy（依戀情結）</a>
+      <ul>
+        <li><a href="#code-smells-7">Code Smells</a></li>
+        <li><a href="#解法-8">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#310-data-clumps-資料泥團">3.10 Data Clumps (資料泥團)</a>
+      <ul>
+        <li><a href="#code-smells-8">Code Smells</a></li>
+        <li><a href="#解法-9">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#311-primitive-obsession-基本型態偏執">3.11 Primitive Obsession (基本型態偏執)</a>
+      <ul>
+        <li><a href="#code-smells-9">Code Smells</a></li>
+      </ul>
+    </li>
+    <li><a href="#解法-10">解法</a></li>
+    <li><a href="#312-repeated-switchess-重複的切換邏輯">3.12 Repeated Switchess (重複的切換邏輯)</a>
+      <ul>
+        <li><a href="#code-smel">Code Smel</a></li>
+        <li><a href="#解法-11">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#313-loops-迴圈">3.13 Loops (迴圈)</a>
+      <ul>
+        <li><a href="#code-smel-1">Code Smel</a></li>
+        <li><a href="#解法-12">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#314-lazy-element-冗員元素">3.14 Lazy Element (冗員元素)</a>
+      <ul>
+        <li><a href="#code-smel-2">Code Smel</a></li>
+        <li><a href="#解法-13">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#315-speculative-generality-畫大餅">3.15 Speculative Generality (畫大餅)</a>
+      <ul>
+        <li><a href="#code-smel-3">Code Smel</a></li>
+        <li><a href="#解法-14">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#316-temporary-field-暫時欄位">3.16 Temporary Field (暫時欄位)</a>
+      <ul>
+        <li><a href="#code-smel-4">Code Smel</a></li>
+        <li><a href="#解法-15">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#317-message-chains-過度耦合的訊息鏈">3.17 Message Chains (過度耦合的訊息鏈)</a>
+      <ul>
+        <li><a href="#code-smel-5">Code Smel</a></li>
+        <li><a href="#解法-16">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#318-middle-man-中間人">3.18 Middle Man (中間人)</a>
+      <ul>
+        <li><a href="#code-smel-6">Code Smel</a></li>
+        <li><a href="#解法-17">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#319-insider-trading-內幕交易">3.19 Insider Trading (內幕交易)</a>
+      <ul>
+        <li><a href="#code-smel-7">Code Smel</a></li>
+        <li><a href="#解法-18">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#320-large-class-龐大的類別">3.20 Large Class (龐大的類別)</a>
+      <ul>
+        <li><a href="#code-smel-8">Code Smel</a></li>
+        <li><a href="#解法-19">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#321-alternative-classes-with-different-interfaces-異曲同工的類別">3.21 Alternative Classes with Different Interfaces (異曲同工的類別)</a>
+      <ul>
+        <li><a href="#code-smel-9">Code Smel</a></li>
+        <li><a href="#解法-20">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#322-data-class-呆板的資料類別">3.22 Data Class (呆板的資料類別)</a>
+      <ul>
+        <li><a href="#code-smel-10">Code Smel</a></li>
+        <li><a href="#解法-21">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#323-refused-bequest-被拒絕的遺產">3.23 Refused Bequest (被拒絕的遺產)</a>
+      <ul>
+        <li><a href="#code-smel-11">Code Smel</a></li>
+        <li><a href="#解法-22">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#324-comments-過多的註解">3.24 Comments (過多的註解)</a>
+      <ul>
+        <li><a href="#code-smel-12">Code Smel</a></li>
+        <li><a href="#解法-23">解法</a></li>
+      </ul>
+    </li>
+    <li><a href="#參考資料">參考資料</a></li>
+  </ul>
+</nav>
+
+<h2 id="前言">前言</h2>
+<p>這篇文章是根據《重構：改善既有程式的設計（第二版）》的內容撰寫，並參考了相關部落格文章和 RefactoringGuru 的資源，記錄了關於程式碼異味（Code Smells）的筆記。</p>
+<h2 id="簡介">簡介</h2>
+<p>程式碼異味 (Code Smells) 是指程式碼中存在的一些設計或實作上的問題，這些問題雖然不會直接導致程式錯誤，但會增加程式碼的複雜度、降低可讀性或維護性，並可能隱藏更大的潛在問題。程式碼異味通常是重構的信號，提示開發者應該對程式碼進行改進以提高其品質。</p>
+<h2 id="31-mysterious-name-神秘的名稱">3.1 Mysterious Name (神秘的名稱)</h2>
+<ul>
+<li>是指程式碼中使用不明確或不具描述性的命名，讓人難以理解其用途或意圖。這樣的名稱會讓程式碼變得難以閱讀和維護</li>
+</ul>
+<h3 id="解法">解法</h3>
+<p>為了避免這種情況，應該使用清晰且具描述性的名稱，以便其他開發者能夠快速理解程式碼的功能。</p>
+<ul>
+<li>6.5 Change Function Declaration (修改函式宣告式)</li>
+<li>6.7 Rename Variable (更改變數名稱)</li>
+<li>9.2 Rename Field (更改欄位名稱)</li>
+</ul>
+<h2 id="32-duplicated-code-重複的程式碼">3.2 Duplicated Code (重複的程式碼)</h2>
+<h3 id="code-smells">Code Smells</h3>
+<ul>
+<li>是指在多個地方出現相同或非常相似的程式碼。這會增加維護的難度，因為修改一處可能需要同步修改多處。
+<img src="https://Vincent3054.github.io/images/content/20240801026.png" alt=""></li>
+</ul>
+<h3 id="解法-1">解法</h3>
+<p>為了解決這個問題，應該將重複的程式碼提取出來，封裝成可以重複使用的函式或模組。</p>
+<ul>
+<li>6.1 Extract Function (提取函式)</li>
+<li>8.6 Slide Statements (移動陳述式)</li>
+<li>12.1 Pull Up Method (提升方法)</li>
+</ul>
+<h2 id="33-long-function-冗長的函式-long-method">3.3 Long Function (冗長的函式) Long Method</h2>
+<h3 id="code-smells-1">Code Smells</h3>
+<ul>
+<li>是指一個函式的程式碼過長，通常超出了一個函式應該負責的單一責任範疇。這樣的函式不僅難以理解和測試，也容易引入錯誤。</li>
+<li>
+<ul>
+<li>在〈什麼是Refactoring？〉提到long method的三個force，今天來解釋一下這三個force和部落客TEDDY補充的二個force的含意：</li>
+<li>Explanation（解釋）：透過閱讀程式去理解軟體設計是一種常見的方式，而每一個method都有一個名字用來代表這個method的意圖。如果method內容很長，可能意味著這個method做了太多事，也就是說method的名稱很可能無法清楚解釋method的內容。廣義的說，long method降低understandability。</li>
+<li>Sharing（共享）：long method的某一段程式也許在其他地方可以被重複使用，但因為long method包含太多其他東西，因此排除了別重複使用的機會。sharing也可以看成是reusability。</li>
+<li>Choosing（選擇）：這一點看不懂什麼意思，知道的鄉民歡迎告知。</li>
+<li>Modifiability（可修改性）：long method程式碼較多，邏輯與狀態也相對比較複雜，因此要針對long method進行修改就變得比較困難，也比較容易出錯。</li>
+<li>Testability（可測性）：理由同上，因為long method程式碼較多，邏輯與狀態也相對比較複雜，所以也比較難進行測試。
+<img src="https://Vincent3054.github.io/images/content/20240801027.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="解法-2">解法</h3>
+<p>為了解決這個問題，通常需要將其拆分成多個較小且專注於單一任務的函式。</p>
+<ul>
+<li>6.1 Extract Function (提取函式)</li>
+<li>7.4 Replace Temp with Query (將暫時變數換成查詢函式)來移除暫時的變數。</li>
+<li>6.8 Introduce Parameter Object (使用參數物件)</li>
+<li>11.4 Preserve Whole Object (保留整個物件)來簡化一長串的參數。</li>
+<li>如果還是有過多的暫時變數與參數，就使用 11.9 Replace Function with Command (將函式換成命令物件)</li>
+<li>10.1 Decompose Conditional (分解條件邏輯)</li>
+<li>6.1 Extract Function (提取函式)</li>
+<li>10.4 Replace Conditional with Polymorphism (將條件式換成多型)</li>
+<li>8.7 Split Loop (拆開迴圈)</li>
+</ul>
+<h2 id="34-long-parameter-list-冗長的參數列">3.4 Long Parameter List (冗長的參數列)</h2>
+<h3 id="code-smells-2">Code Smells</h3>
+<ul>
+<li>是指一個方法或函數需要接收過多的參數，這不僅會讓代碼難以理解和維護，還容易導致錯誤。通常這是因為該方法試圖執行過多的責任或缺乏適當的封裝
+<img src="https://Vincent3054.github.io/images/content/20240801028.png" alt=""></li>
+</ul>
+<h3 id="解法-3">解法</h3>
+<ul>
+<li>為了解決這個問題，可以考慮將參數封裝成一個物件，或者將方法拆分成更小、更具體的功能。</li>
+<li>如果可以藉由查詢一個參數來取得另一個參數，就使用 11.5 Replace Parameter with Query (將參數換成查詢程式)</li>
+<li>如果不想要從既有的資料結構拉出許多資料，可以使用 11.4 Preserve Whole Object (保留整個物件)來傳遞原始的資料結構。</li>
+<li>如果許多參數總是同時出現，可以用 6.8 Introduce Parameter Object (使用參數物件)結合它們。</li>
+<li>如果有參數被當成旗標來指定不同的行為，可以使用 11.3 Remove Flag Argument (移除旗標引數)</li>
+</ul>
+<h2 id="35-global-data-全域變數">3.5 Global Data (全域變數)</h2>
+<h3 id="code-smells-3">Code Smells</h3>
+<ul>
+<li>全域資料的問題在於它可被基礎程式的任何地方修改，卻無法察覺究竟有那些程式碼接觸它。</li>
+</ul>
+<h3 id="解法-4">解法</h3>
+<ul>
+<li>6.6 Encapsulate Variable (封裝變數)</li>
+</ul>
+<h2 id="36-mutable-data-可變資料">3.6 Mutable Data (可變資料)</h2>
+<h3 id="code-smells-4">Code Smells</h3>
+<ul>
+<li>可變動的，也就是定義好的 data 會隨著不同情況做變動。mutable 很容易會有無法預期的 bug 產生。</li>
+<li>與Mutable data相反的是Immutable data，介紹如下：
+<ul>
+<li>Immutable is whose state cannot be modified after it is created.</li>
+<li>FP 是 immutable data ，也就是被定義好的 data 不會在任何情況下被改變，所以你能夠清楚預期他的內容。反之 mutable 是會變動的。</li>
+<li><img src="https://Vincent3054.github.io/images/content/20240801029.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="解法-5">解法</h3>
+<ul>
+<li>6.6 Encapsulate Variable (封裝變數)，確保所有的修改都是透過可以輕鬆地監控與改善的少數函式來進行的。</li>
+<li>9.1 Split Variable (拆開變數)，來將變數分開，並且避免危險的更新。</li>
+<li>8.6 Slide Statements (移動陳述式)，將其他的邏輯般到處理更新的程式碼外面。</li>
+<li>6.1 Extract Function (提取函式)</li>
+<li>11.1 Separate Query from Modifier (將查詢函式和修改函式分離)</li>
+<li>11.7 Remove Setting Method (移除 set 方法)</li>
+<li>9.3 Replace Derived Variable with Query (將衍生的變數換成查詢函式)</li>
+<li>6.9 Combine Functions into Class (將函式移入類別)</li>
+<li>6.10 Combine Functions into Transform (將函式組成轉換函式)</li>
+<li>9.4 Change Reference to Value (將參考改成值)</li>
+</ul>
+<h2 id="37-divergent-change-發散式修改">3.7 Divergent Change (發散式修改)</h2>
+<h3 id="code-smells-5">Code Smells</h3>
+<ul>
+<li>發散式修改就是，當你對類別進行修改時，您會發現自己必須更改許多不相關的方法。
+<ul>
+<li>例如：在添加新的產品類型時，您必須更改查找、顯示和訂購產品的方法。</li>
+<li>不符合物件導向的單一職責原則(Single Responsibility Principle)
+<img src="https://Vincent3054.github.io/images/content/20240801030.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="解法-6">解法</h3>
+<p>聽常會發生的原因是因為&quot;copypasta programming&quot;或不好的程式結構造成。</p>
+<ul>
+<li>6.11 Split Phase (拆成不同階段)</li>
+<li>8.1 Move Function (移動函式)</li>
+<li>7.5 Extract Class (提取類別)</li>
+</ul>
+<h2 id="38-shotgun-surgery-散彈式修改">3.8 Shotgun Surgery (散彈式修改)</h2>
+<h3 id="code-smells-6">Code Smells</h3>
+<ul>
+<li>一但程式出現了shotgun surgery這種「牽一髮而動全身」的症狀，每次修改所影響的範圍很大，因此也增加了測試的困難度。最後，分散在不同類別的相同或相似責任，也會增加理解系統的困難度。</li>
+<li>Shotgun Surgery (散彈式修改) VS Divergent Change (發散式修改)
+<ul>
+<li>Shotgun Surgery 看起來類似於 Divergent Change，實際上是相反的CodeSmails。</li>
+<li>發散式變化：指的是一個類別會受到多種變化的影響(對單個類別進行許多更改)</li>
+<li>散彈式修改：指的是一個變化會影響到多個類別(同時對多個類別進行單一更改)
+<img src="https://Vincent3054.github.io/images/content/20240801031.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="解法-7">解法</h3>
+<p>拆開、解偶，放在適合的地方。</p>
+<ul>
+<li>8.1 Move Function (移動函式)</li>
+<li>8.2 Move Field (移動欄位)</li>
+<li>6.9 Combine Functions into Class (將函式移入類別)</li>
+<li>6.10 Combine Functions into Transform (將函式組成轉換函式)</li>
+<li>6.11 Split Phase (拆成不同階段)</li>
+</ul>
+<h2 id="39-feature-envy依戀情結">3.9 Feature Envy（依戀情結）</h2>
+<h3 id="code-smells-7">Code Smells</h3>
+<ul>
+<li>
+<p>關於Feature Envy 的定義，作者指出：「函式對於某個 class 的興趣高過對自己所處之 host class 的興趣。」</p>
+</li>
+<li>
+<p>簡單來說就是，一個模組內的函式經常與另一個模組的函式或資料互動，甚至比它自己的模組的元素還要頻繁。</p>
+<ul>
+<li>比如 ClassA 的函式F 一直呼叫 ClassB 的 getter 那就很可能F根本就應該存在ClassB
+<img src="https://Vincent3054.github.io/images/content/20240801032.png" alt=""></li>
+</ul>
+</li>
+<li>
+<p>作者指出，這種迷戀最常發生在「資料」上。</p>
+<ul>
+<li>今天如果 A 類裡的某個方法，老是喜歡存取 B 類的資料來運算，這會導致 B 的細節一旦有變，A 就不得不跟著變。或是每當 B 想要改變自己身上資料的存取方式時，還得看 A 的臉色。這就造成了 A 與 B 緊密耦合，而我們並不樂見此事。</li>
+</ul>
+</li>
+</ul>
+<h3 id="解法-8">解法</h3>
+<p>最後的疼愛是手放開，用搬移函數或提煉函數讓他們分開吧!</p>
+<ul>
+<li>8.1  Move Method(搬移函數)</li>
+<li>6.1  Extract Method(提煉函數)</li>
+</ul>
+<p>那如果一個函式跟ClassA拿東西又跟ClassB拿東西又跟自己拿東西，那這個函式到底應該要放到哪裡去呢?</p>
+<ul>
+<li>原則上哪個Class被這個函式使用的最多就該去哪</li>
+</ul>
+<h2 id="310-data-clumps-資料泥團">3.10 Data Clumps (資料泥團)</h2>
+<h3 id="code-smells-8">Code Smells</h3>
+<ul>
+<li>
+<p>關於Data Clumps 的定義，作者指出：「資料項目(data items)就像小孩子，喜歡成群結隊的待在一起，你常常可以在很多不同的地方看到相同的幾個 data item 同時出現」
+<img src="https://Vincent3054.github.io/images/content/20240801033.png" alt=""></p>
+</li>
+<li>
+<p>通常這個問題會發生在&quot;程式結構不良&quot;或&quot;copypasta programming&quot;</p>
+<ul>
+<li>程式結構不良
+<ul>
+<li>沒有把資料拆出Model</li>
+</ul>
+</li>
+<li>copypasta programming
+<ul>
+<li>複製貼上縫合怪</li>
+</ul>
+</li>
+<li>這個Code Smells可能會同時出現在
+<ul>
+<li>3.3 Long Function (冗長的函式)</li>
+<li>3.4 Long Parameter List (冗長的參數列)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="解法-9">解法</h3>
+<p>這些會同時出現的資訊就該放在同一個物件裡</p>
+<ul>
+<li>7.5 Extract Class (提取類別)</li>
+<li>6.8 Introduce Parameter Object (使用參數物件)</li>
+<li>11.4 Preserve Whole Object (保留整個物件)</li>
+</ul>
+<p>那要怎麼判斷哪些人應該一起被放進別的物件裡呢?</p>
+<ul>
+<li>只需要把其中一個刪掉，找出其他跟著失去意義的資料，那這些全部都應該一起打包成新物件</li>
+</ul>
+<h2 id="311-primitive-obsession-基本型態偏執">3.11 Primitive Obsession (基本型態偏執)</h2>
+<h3 id="code-smells-9">Code Smells</h3>
+<ul>
+<li>
+<p>不要執著於使用一堆基本型別(Primitive) 在物件的世界裡該用物件的時候就用物件</p>
+<ul>
+<li>比如 Money 類別 就是一個int number跟string currency合在一起</li>
+<li>Range 類別 就是兩個int
+<img src="https://Vincent3054.github.io/images/content/20240801034.png" alt=""></li>
+</ul>
+</li>
+<li>
+<p>會發生的原因就是「懶」</p>
+<ul>
+<li>以Range來舉例，這裡就兩個int搞定，一個表示start，一個表示end 就好了啊，幹嘛還要寫新的類別</li>
+</ul>
+</li>
+</ul>
+<h2 id="解法-10">解法</h2>
+<p>常見的解法</p>
+<ul>
+<li>7.3 Replace Primitive with Object (將基本元素換成物件)</li>
+<li>12.6 Replace Type Code with Subclasses (將型別代碼換成子類別)</li>
+<li>7.5 Extract Class (提取函式)</li>
+<li>6.8 Introduce Parameter Object (使用參數物件)</li>
+</ul>
+<h2 id="312-repeated-switchess-重複的切換邏輯">3.12 Repeated Switchess (重複的切換邏輯)</h2>
+<h3 id="code-smel">Code Smel</h3>
+<ul>
+<li>
+<p>作者在初版指出：「多數時候當我們看到Switch Statements時，我們應該考慮使用多型（Polymorphism）來取代他。」</p>
+<ul>
+<li>因為當時開發者大多忽視了物件導向中多型的價值，所以希望能矯正這樣的風氣</li>
+</ul>
+</li>
+<li>
+<p>作者在第二版將這個氣味更名為「Repeated Switches」。比起「Switch Statements」，我們更應該聚焦在「重複（Repeated）」所造成的混亂與邪惡之上。</p>
+<ul>
+<li>現代開發者越來越習慣使用多形，且很多語言現在也支持複雜的Switch Statements條件句，而不是只根據基本型別或類別碼來作為條件判斷。
+<img src="https://Vincent3054.github.io/images/content/20240801035.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="解法-11">解法</h3>
+<p>用多形來取代重複的Switchess吧!</p>
+<ul>
+<li>10.4 Replace Conditional with Polymorphism (將條件式換成多型)</li>
+</ul>
+<h2 id="313-loops-迴圈">3.13 Loops (迴圈)</h2>
+<h3 id="code-smel-1">Code Smel</h3>
+<ul>
+<li>最早的程式，難免會需要用到Loops，因為當時沒有什麼替代品。</li>
+<li>如今有很多替代方式可以取代Loops，幫助更快的處理動作。
+<ul>
+<li>像是filter(過濾器) 與 map 等管道操作(pipeline operation) 可協助我們快速地查看在處理過程中使用的元素，以瞭解它們的用途。</li>
+</ul>
+</li>
+</ul>
+<h3 id="解法-12">解法</h3>
+<p>別用for迴圈了，改用map和filter吧!</p>
+<ul>
+<li>8.8 Replace Loop With Pipeline (將迴圈改成流程)</li>
+</ul>
+<h2 id="314-lazy-element-冗員元素">3.14 Lazy Element (冗員元素)</h2>
+<h3 id="code-smel-2">Code Smel</h3>
+<ul>
+<li>當你在專案內發現存在一個無所事事的元素或類別，幾乎沒有實作任何方法與職責，正是屬於這種程式碼氣味。</li>
+<li>會發生的原因
+<ul>
+<li>可能經歷多次優化迭代以後，它不知不覺之間變得非常小巧輕薄，甚至可有可無。</li>
+<li>可能是這個類別最初為了支援未來的某個專案而設計，但這些計劃工作從來沒有被正式實施或完成。
+<img src="https://Vincent3054.github.io/images/content/20240801036.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="解法-13">解法</h3>
+<p>你所創建的類別都需要有人去理解它、維護它，這些都需要成本，如果一個類別不值得這麼做 ，就該把它處理掉!</p>
+<ul>
+<li>6.2 Inline Function (將函式內聯)</li>
+<li>7.6 Inline Class (內聯類別)</li>
+</ul>
+<h2 id="315-speculative-generality-畫大餅">3.15 Speculative Generality (畫大餅)</h2>
+<h3 id="code-smel-3">Code Smel</h3>
+<ul>
+<li>當我們撰寫的程式碼是用來應對未來需求，但現實中卻可能永遠都派不上用場的這種情況。</li>
+<li>Speculative Generality (畫大餅)常跟 Dead Code (亡靈程式碼)搞混
+<ul>
+<li>Dead Code 指的是未被其他程式碼使用的程式碼</li>
+<li>Speculative Generality 則是從業務邏輯或需求的角度來看無用的程式碼。
+<img src="https://Vincent3054.github.io/images/content/20240801037.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="解法-14">解法</h3>
+<p>別畫大餅了，通通拿掉!</p>
+<ul>
+<li>如果用不太到的抽象類別，使用 12.9 Collapse Hierarchy (折疊類別階層)。</li>
+<li>使用 6.2 Inline Function (將函式內聯) 與 7.6 Inline Class (內聯類別) 來移除非必要的委託。</li>
+<li>如果函式有一些用不到的參數，可以用 6.5 Change Function Declaration (修改函式宣告式) 來移除它們。</li>
+<li>如果某個函式或類別的使用方只有測試程式，應該刪除測試案例，並執行8.9 Remove Dead Code (移除死碼)。</li>
+</ul>
+<h2 id="316-temporary-field-暫時欄位">3.16 Temporary Field (暫時欄位)</h2>
+<h3 id="code-smel-4">Code Smel</h3>
+<ul>
+<li>當一個類別或物件有一個或多個欄位只有在特定情況下才會使用到，例如在方法呼叫階段用來暫時儲存資料，其他多數時候只是空值或沒有相關的值。
+<ul>
+<li>這些欄位並不包含在該類別的主要職責當中，通常只存在特定前提條件下才有意義。</li>
+</ul>
+</li>
+<li>這個Code Smel通常也會導致 3.4 Long Parameter List
+<img src="https://Vincent3054.github.io/images/content/20240801038.png" alt=""></li>
+</ul>
+<h3 id="解法-15">解法</h3>
+<p>可以拆出來，有可以在傳參指定Null空物件來實作與原本實際物件相同的介面</p>
+<ul>
+<li>7.5 Extract Class (提取類別)</li>
+<li>8.1 Move Function (移動函式)</li>
+<li>10.5 Introduce Special Case(加入特例)/Introduce Null Object (引入Null對象)</li>
+</ul>
+<h2 id="317-message-chains-過度耦合的訊息鏈">3.17 Message Chains (過度耦合的訊息鏈)</h2>
+<h3 id="code-smel-5">Code Smel</h3>
+<ul>
+<li>
+<p>當我們執行方法時會需要呼叫一個物件，然後該物件又需要呼叫另外一個物件，以此類推長長串在一起
+<img src="https://Vincent3054.github.io/images/content/20240801039.png" alt=""></p>
+</li>
+<li>
+<p>需要特別留意「3.17 Message Chain」和「3.18 Middle Man」這兩種氣味密切相關，有時互為因果。開發者需要特別留意在兩種氣味之間取得平衡。</p>
+</li>
+</ul>
+<h3 id="解法-16">解法</h3>
+<p>移動、抽出、隱藏，想辦法不要那麼耦合，不然很難測試、維運。</p>
+<ul>
+<li>7.7 Hide Delegate (隱藏委託)</li>
+<li>6.1 Extract Function (提取函式)</li>
+<li>8.1 Move Function (移動函式)</li>
+</ul>
+<h2 id="318-middle-man-中間人">3.18 Middle Man (中間人)</h2>
+<h3 id="code-smel-6">Code Smel</h3>
+<ul>
+<li>如果一個類只執行一個操作，將工作委派給另一個類，除了左手轉右手之外沒有其他存在的價值與意義。
+<img src="https://Vincent3054.github.io/images/content/20240801040.png" alt=""></li>
+</ul>
+<h3 id="解法-17">解法</h3>
+<p>要拆也不要拆太細，拆到那個類只做左手轉右手的事</p>
+<ul>
+<li>7.8 Remove Middle Man (移除中間人)</li>
+<li>6.2 Inline Function (將函式內聯)</li>
+<li>12.10 Replace Subclass with Delegate (將子類別換成委託類別)</li>
+<li>12.11 Replace Superclass with Delegate (將超類別換成委託類別)</li>
+</ul>
+<h2 id="319-insider-trading-內幕交易">3.19 Insider Trading (內幕交易)</h2>
+<h3 id="code-smel-7">Code Smel</h3>
+<ul>
+<li>或稱Inappropriate Intimacy（不當的親密關係），兩個類別過於親密，花太多時間去研究彼此的private成分</li>
+<li>如果兩個類別過於了解彼此的細節，則在閱讀程式的時候，需要同時看懂這兩者，增加理解的困難度。此外，則任一方的改變都可能造成另一方的連動變化。
+<img src="https://Vincent3054.github.io/images/content/20240801041.png" alt=""></li>
+</ul>
+<h3 id="解法-18">解法</h3>
+<p>將雙向關聯改為單向關聯，使用繼承，或是把不需要的拆出來。</p>
+<ul>
+<li>8.1 Move Function (移動函式)</li>
+<li>8.2 Move Field (移動欄位)</li>
+<li>7.7 Hide Delegate (隱藏委託)</li>
+</ul>
+<p>繼承往往是造成過度親密的原因，因為subClass對superClass的了解總是超出預期，可以用delegation來減少兩者的依賴</p>
+<ul>
+<li>12.10 Replace Subclass with Delegate (將子類別換成委託類別)</li>
+<li>12.11 Replace Superclass with Delegate (將超類別換成委託類別)</li>
+</ul>
+<h2 id="320-large-class-龐大的類別">3.20 Large Class (龐大的類別)</h2>
+<h3 id="code-smel-8">Code Smel</h3>
+<ul>
+<li>Large class和long method(Function)壞味道很像，都可能造成duplicated code以及降低重複使用的可能性。
+<ul>
+<li>long method(Function)關注的點在method層次，而large class則是在class層次，large class的scope比較大，影響比long method還要來的強烈。
+<img src="https://Vincent3054.github.io/images/content/20240801042.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="解法-19">解法</h3>
+<ul>
+<li>如果元件適合使用繼承，使用：
+<ul>
+<li>12.8 Extract Superclass (提取超類別)</li>
+</ul>
+</li>
+<li>看看它們是否只使用類別的部分功能，或許可以將部分的功能變成獨立的類別，使用以下方法提取它們。
+<ul>
+<li>7.5 Extract Class (提取類別)</li>
+<li>12.8 Extract Superclass (提取超類別)</li>
+<li>12.6 Replace Type Code with Subclasses (將型別代碼換成子類別)</li>
+</ul>
+</li>
+</ul>
+<h2 id="321-alternative-classes-with-different-interfaces-異曲同工的類別">3.21 Alternative Classes with Different Interfaces (異曲同工的類別)</h2>
+<h3 id="code-smel-9">Code Smel</h3>
+<ul>
+<li>兩個類別名稱不同但做的是一樣的事</li>
+<li>工程師在開發函式的時候，並不知道這個功能已經有了，多人分工時特別常發生。
+<img src="https://Vincent3054.github.io/images/content/20240801043.png" alt=""></li>
+</ul>
+<h3 id="解法-20">解法</h3>
+<p>如果兩個函式在同一個library 那就選一個留下就好。
+但如果兩個在不同的library，就很值得仔細觀察這兩個函式並分離出一個合理的抽象(介面)。</p>
+<ul>
+<li>6.5 Change Function Declaration (修改函式宣告式)</li>
+<li>8.1 Move Function (移動函式)</li>
+<li>12.8 Extract Superclass (提取超類別)</li>
+</ul>
+<h2 id="322-data-class-呆板的資料類別">3.22 Data Class (呆板的資料類別)</h2>
+<h3 id="code-smel-10">Code Smel</h3>
+<ul>
+<li>Data Class是指只有屬性（資料成員），或是存取這些屬性的getter/setter函數，但卻沒有其他行為函數的類別。</li>
+<li>從物件導向的角度來看，類別應該包含資料與行為，一個只有資料的類別，隱含在其他地方會有一些程式碼來處理它。何不考慮將這些散布在各處，處理Data Class的程式碼，搬移到Data Class身上呢？
+<img src="https://Vincent3054.github.io/images/content/20240801044.png" alt=""></li>
+</ul>
+<h3 id="解法-21">解法</h3>
+<p>這種類別只是一個不會說話的資料容器被其他類別所操控，如果Data Class還有一些public的欄位讓大家直接存取，資料會被亂改很難維護，資料也缺乏完整性。</p>
+<ul>
+<li>使用 7.1 Encapsulate Record (封裝記錄) 封裝它們。</li>
+<li>對任何不應該被變動的欄位執行 11.7 Remove Setting Method (移除 set 方法)。</li>
+<li>使用 8.1 Move Function (移動函式) 將行為邏輯移入資料類別。</li>
+<li>如果無法移動整個函式，使用 6.1 Extract Function (提取函式)</li>
+</ul>
+<h2 id="323-refused-bequest-被拒絕的遺產">3.23 Refused Bequest (被拒絕的遺產)</h2>
+<h3 id="code-smel-11">Code Smel</h3>
+<ul>
+<li>指的是程式碼過度利用繼承
+<ul>
+<li>只因為想要reuse code而繼承自錯誤的superclass，導致subclass有些繼承自superclass的方法是完全用不到的</li>
+</ul>
+</li>
+<li>作者提到這個Code Smel不是很濃烈，Composite設計模式就屬於這種例子，便可以放著不用管它。但如果是錯用繼承的情況，就不能視而不見。
+<img src="https://Vincent3054.github.io/images/content/20240801045.png" alt=""></li>
+</ul>
+<h3 id="解法-22">解法</h3>
+<ul>
+<li>過度濫用繼承或錯用繼承的情況，可以參考這篇<a href="https://www.jyt0532.com/2020/03/22/lsp/">文章</a>，只在正確的時候使用繼承。</li>
+<li>當繼承階層是錯的，必須建立一個新的旁系類別(sibling class)，使用 12.4 Push Down Method (下移方法) 與 12.5 Push Down Field (下移欄位) 來將用不到的程式碼放入那個旁系類別。</li>
+<li>如果子類別重複使用行為，但是不想使用父類別的介面，不介意子類別拒絕繼承程式碼，但是如果它拒絕介面，就會大聲譴責，當遇到這種情況時，不要隨便更改繼承階層，應該使用
+<ul>
+<li>12.10 Replace Subclass with Delegate (將子類別換成委託類別)</li>
+<li>12.11 Replace Superclass with Delegate (將超類別換成委託類別)</li>
+</ul>
+</li>
+</ul>
+<h2 id="324-comments-過多的註解">3.24 Comments (過多的註解)</h2>
+<h3 id="code-smel-12">Code Smel</h3>
+<ul>
+<li>作者強調Comment如果用的好，算不上是壞味道，甚至是好味道。但在很多情況下，註解被當成是一種「障眼法」，用來掩飾「寫得亂七八糟，沒人看得懂的程式碼。」</li>
+<li>當您覺得需要寫註解時，請先嘗試重構，試著讓所有注視都變得多餘。</li>
+<li>The best comment is a good name for a method or class.
+<img src="https://Vincent3054.github.io/images/content/20240801046.png" alt=""></li>
+</ul>
+<h3 id="解法-23">解法</h3>
+<p>通常一個好的變數名稱或是函式名稱，就可以讓你不再需要註釋。</p>
+<ul>
+<li>6-1 Extract Function (提取函式)
+要是你費盡心思把複雜的函式拆解成眾多小函式，但你卻命名的很難懂，那就會更難讓人理解。</li>
+<li>6-5 Change Function Declaration (修改函式宣告式)</li>
+<li>10-6 Introduce Assertion (加入斷言)</li>
+</ul>
+<h2 id="參考資料">參考資料</h2>
+<p><a href="https://refactoring.guru/">Refactoring.Guru</a>
+<a href="https://www.jyt0532.com/">jyt0532&rsquo;s Blog</a>
+[搞笑談軟工]https://teddy-chen-tw.blogspot.com/
+<a href="">《重構 - 改善既有程式的設計》Martin Fowler</a></p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">標籤</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://Vincent3054.github.io/tags/other/">Other</a>
+
+  <a class="tag tag--primary tag--small" href="https://Vincent3054.github.io/tags/notes/">notes</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/notes/visualstudio2022/" data-tooltip="[Other]Visual Studio 2022 開發工具大補帖" aria-label="上一篇: [Other]Visual Studio 2022 開發工具大補帖">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享這個帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://Vincent3054.github.io/post/notes/codesmells/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://Vincent3054.github.io/post/notes/codesmells/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://Vincent3054.github.io/post/notes/codesmells/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="發表評論">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到頂部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="gitalk">
+      <noscript>Please enable JavaScript to view the comments powered by Gitalk.</noscript>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js" integrity="sha512-EcTCcXV46teiNwe0VcnM5A038tcY+BaQYO4nW6Gh2i7v4/HjBVg7xx3+JBLl9WofDds//INJAiEGAtdgr8PWyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+      (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('gitalk').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+          return;
+        }
+        new Gitalk({
+          clientID: '13ab4cf55a20f60eaae5',
+          clientSecret: 'fc9e6f4d6193d80cb52323bb94c84e1f0b9f36c2',
+          repo: 'vincent3054.github.io',
+          owner: 'vincent3054',
+          admin: ['vincent3054'],
+          id: '3eea77a217c3c67d4572f5b54b032ad2',
+          ...{"distractionfreemode":false,"enablehotkey":true,"language":"zh-tw","pagerdirection":"first","perpage":10}
+        }).render('gitalk')
+      })()
+    </script>
+  
+
+
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2024 Sky Chen. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://Vincent3054.github.io/post/notes/visualstudio2022/" data-tooltip="[Other]Visual Studio 2022 開發工具大補帖" aria-label="上一篇: [Other]Visual Studio 2022 開發工具大補帖">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享這個帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://Vincent3054.github.io/post/notes/codesmells/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://Vincent3054.github.io/post/notes/codesmells/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://Vincent3054.github.io/post/notes/codesmells/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#gitalk" aria-label="發表評論">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到頂部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FVincent3054.github.io%2Fpost%2Fnotes%2Fcodesmells%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2FVincent3054.github.io%2Fpost%2Fnotes%2Fcodesmells%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2FVincent3054.github.io%2Fpost%2Fnotes%2Fcodesmells%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://Vincent3054.github.io/images/avatar3.png" alt="作者的圖片" />
+    
+    <h4 id="about-card-name">Sky Chen</h4>
+    
+      <div id="about-card-bio">這是一個基於AI技術誕生的網站，你所看到網站的一切都是藉由AI輔助產生，如果你也對AI有興趣，歡迎留言支持我!</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Software Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Taipei, Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://Vincent3054.github.io/images/cover1.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://Vincent3054.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

@@ -313,76 +313,79 @@
             <div class="main-content-wrap">
               <h1 id="code-smells-程式碼異味">Code Smells 程式碼異味</h1>
 <p>tags: <code>Other</code> <code>notes</code></p>
+<h2 id="目錄">目錄</h2>
 <h1 id="table-of-contents">目錄</h1>
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#目錄">目錄</a></li>
     <li><a href="#前言">前言</a></li>
     <li><a href="#簡介">簡介</a></li>
     <li><a href="#31-mysterious-name-神秘的名稱">3.1 Mysterious Name (神秘的名稱)</a>
       <ul>
+        <li><a href="#code-smells">Code Smells</a></li>
         <li><a href="#解法">解法</a></li>
       </ul>
     </li>
     <li><a href="#32-duplicated-code-重複的程式碼">3.2 Duplicated Code (重複的程式碼)</a>
       <ul>
-        <li><a href="#code-smells">Code Smells</a></li>
+        <li><a href="#code-smells-1">Code Smells</a></li>
         <li><a href="#解法-1">解法</a></li>
       </ul>
     </li>
     <li><a href="#33-long-function-冗長的函式-long-method">3.3 Long Function (冗長的函式) Long Method</a>
       <ul>
-        <li><a href="#code-smells-1">Code Smells</a></li>
+        <li><a href="#code-smells-2">Code Smells</a></li>
         <li><a href="#解法-2">解法</a></li>
       </ul>
     </li>
     <li><a href="#34-long-parameter-list-冗長的參數列">3.4 Long Parameter List (冗長的參數列)</a>
       <ul>
-        <li><a href="#code-smells-2">Code Smells</a></li>
+        <li><a href="#code-smells-3">Code Smells</a></li>
         <li><a href="#解法-3">解法</a></li>
       </ul>
     </li>
     <li><a href="#35-global-data-全域變數">3.5 Global Data (全域變數)</a>
       <ul>
-        <li><a href="#code-smells-3">Code Smells</a></li>
+        <li><a href="#code-smells-4">Code Smells</a></li>
         <li><a href="#解法-4">解法</a></li>
       </ul>
     </li>
     <li><a href="#36-mutable-data-可變資料">3.6 Mutable Data (可變資料)</a>
       <ul>
-        <li><a href="#code-smells-4">Code Smells</a></li>
+        <li><a href="#code-smells-5">Code Smells</a></li>
         <li><a href="#解法-5">解法</a></li>
       </ul>
     </li>
     <li><a href="#37-divergent-change-發散式修改">3.7 Divergent Change (發散式修改)</a>
       <ul>
-        <li><a href="#code-smells-5">Code Smells</a></li>
+        <li><a href="#code-smells-6">Code Smells</a></li>
         <li><a href="#解法-6">解法</a></li>
       </ul>
     </li>
     <li><a href="#38-shotgun-surgery-散彈式修改">3.8 Shotgun Surgery (散彈式修改)</a>
       <ul>
-        <li><a href="#code-smells-6">Code Smells</a></li>
+        <li><a href="#code-smells-7">Code Smells</a></li>
         <li><a href="#解法-7">解法</a></li>
       </ul>
     </li>
     <li><a href="#39-feature-envy依戀情結">3.9 Feature Envy（依戀情結）</a>
       <ul>
-        <li><a href="#code-smells-7">Code Smells</a></li>
+        <li><a href="#code-smells-8">Code Smells</a></li>
         <li><a href="#解法-8">解法</a></li>
       </ul>
     </li>
     <li><a href="#310-data-clumps-資料泥團">3.10 Data Clumps (資料泥團)</a>
       <ul>
-        <li><a href="#code-smells-8">Code Smells</a></li>
+        <li><a href="#code-smells-9">Code Smells</a></li>
         <li><a href="#解法-9">解法</a></li>
       </ul>
     </li>
     <li><a href="#311-primitive-obsession-基本型態偏執">3.11 Primitive Obsession (基本型態偏執)</a>
       <ul>
-        <li><a href="#code-smells-9">Code Smells</a></li>
+        <li><a href="#code-smells-10">Code Smells</a></li>
+        <li><a href="#解法-10">解法</a></li>
       </ul>
     </li>
-    <li><a href="#解法-10">解法</a></li>
     <li><a href="#312-repeated-switchess-重複的切換邏輯">3.12 Repeated Switchess (重複的切換邏輯)</a>
       <ul>
         <li><a href="#code-smel">Code Smel</a></li>
@@ -470,6 +473,7 @@
 <h2 id="簡介">簡介</h2>
 <p>程式碼異味 (Code Smells) 是指程式碼中存在的一些設計或實作上的問題，這些問題雖然不會直接導致程式錯誤，但會增加程式碼的複雜度、降低可讀性或維護性，並可能隱藏更大的潛在問題。程式碼異味通常是重構的信號，提示開發者應該對程式碼進行改進以提高其品質。</p>
 <h2 id="31-mysterious-name-神秘的名稱">3.1 Mysterious Name (神秘的名稱)</h2>
+<h3 id="code-smells">Code Smells</h3>
 <ul>
 <li>是指程式碼中使用不明確或不具描述性的命名，讓人難以理解其用途或意圖。這樣的名稱會讓程式碼變得難以閱讀和維護</li>
 </ul>
@@ -480,8 +484,9 @@
 <li>6.7 Rename Variable (更改變數名稱)</li>
 <li>9.2 Rename Field (更改欄位名稱)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="32-duplicated-code-重複的程式碼">3.2 Duplicated Code (重複的程式碼)</h2>
-<h3 id="code-smells">Code Smells</h3>
+<h3 id="code-smells-1">Code Smells</h3>
 <ul>
 <li>是指在多個地方出現相同或非常相似的程式碼。這會增加維護的難度，因為修改一處可能需要同步修改多處。
 <img src="https://Vincent3054.github.io/images/content/20240801026.png" alt=""></li>
@@ -493,8 +498,9 @@
 <li>8.6 Slide Statements (移動陳述式)</li>
 <li>12.1 Pull Up Method (提升方法)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="33-long-function-冗長的函式-long-method">3.3 Long Function (冗長的函式) Long Method</h2>
-<h3 id="code-smells-1">Code Smells</h3>
+<h3 id="code-smells-2">Code Smells</h3>
 <ul>
 <li>是指一個函式的程式碼過長，通常超出了一個函式應該負責的單一責任範疇。這樣的函式不僅難以理解和測試，也容易引入錯誤。</li>
 <li>
@@ -522,8 +528,9 @@
 <li>10.4 Replace Conditional with Polymorphism (將條件式換成多型)</li>
 <li>8.7 Split Loop (拆開迴圈)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="34-long-parameter-list-冗長的參數列">3.4 Long Parameter List (冗長的參數列)</h2>
-<h3 id="code-smells-2">Code Smells</h3>
+<h3 id="code-smells-3">Code Smells</h3>
 <ul>
 <li>是指一個方法或函數需要接收過多的參數，這不僅會讓代碼難以理解和維護，還容易導致錯誤。通常這是因為該方法試圖執行過多的責任或缺乏適當的封裝
 <img src="https://Vincent3054.github.io/images/content/20240801028.png" alt=""></li>
@@ -536,8 +543,9 @@
 <li>如果許多參數總是同時出現，可以用 6.8 Introduce Parameter Object (使用參數物件)結合它們。</li>
 <li>如果有參數被當成旗標來指定不同的行為，可以使用 11.3 Remove Flag Argument (移除旗標引數)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="35-global-data-全域變數">3.5 Global Data (全域變數)</h2>
-<h3 id="code-smells-3">Code Smells</h3>
+<h3 id="code-smells-4">Code Smells</h3>
 <ul>
 <li>全域資料的問題在於它可被基礎程式的任何地方修改，卻無法察覺究竟有那些程式碼接觸它。</li>
 </ul>
@@ -545,8 +553,9 @@
 <ul>
 <li>6.6 Encapsulate Variable (封裝變數)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="36-mutable-data-可變資料">3.6 Mutable Data (可變資料)</h2>
-<h3 id="code-smells-4">Code Smells</h3>
+<h3 id="code-smells-5">Code Smells</h3>
 <ul>
 <li>可變動的，也就是定義好的 data 會隨著不同情況做變動。mutable 很容易會有無法預期的 bug 產生。</li>
 <li>與Mutable data相反的是Immutable data，介紹如下：
@@ -570,8 +579,9 @@
 <li>6.10 Combine Functions into Transform (將函式組成轉換函式)</li>
 <li>9.4 Change Reference to Value (將參考改成值)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="37-divergent-change-發散式修改">3.7 Divergent Change (發散式修改)</h2>
-<h3 id="code-smells-5">Code Smells</h3>
+<h3 id="code-smells-6">Code Smells</h3>
 <ul>
 <li>發散式修改就是，當你對類別進行修改時，您會發現自己必須更改許多不相關的方法。
 <ul>
@@ -588,8 +598,9 @@
 <li>8.1 Move Function (移動函式)</li>
 <li>7.5 Extract Class (提取類別)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="38-shotgun-surgery-散彈式修改">3.8 Shotgun Surgery (散彈式修改)</h2>
-<h3 id="code-smells-6">Code Smells</h3>
+<h3 id="code-smells-7">Code Smells</h3>
 <ul>
 <li>一但程式出現了shotgun surgery這種「牽一髮而動全身」的症狀，每次修改所影響的範圍很大，因此也增加了測試的困難度。最後，分散在不同類別的相同或相似責任，也會增加理解系統的困難度。</li>
 <li>Shotgun Surgery (散彈式修改) VS Divergent Change (發散式修改)
@@ -610,8 +621,9 @@
 <li>6.10 Combine Functions into Transform (將函式組成轉換函式)</li>
 <li>6.11 Split Phase (拆成不同階段)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="39-feature-envy依戀情結">3.9 Feature Envy（依戀情結）</h2>
-<h3 id="code-smells-7">Code Smells</h3>
+<h3 id="code-smells-8">Code Smells</h3>
 <ul>
 <li>
 <p>關於Feature Envy 的定義，作者指出：「函式對於某個 class 的興趣高過對自己所處之 host class 的興趣。」</p>
@@ -640,8 +652,9 @@
 <ul>
 <li>原則上哪個Class被這個函式使用的最多就該去哪</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="310-data-clumps-資料泥團">3.10 Data Clumps (資料泥團)</h2>
-<h3 id="code-smells-8">Code Smells</h3>
+<h3 id="code-smells-9">Code Smells</h3>
 <ul>
 <li>
 <p>關於Data Clumps 的定義，作者指出：「資料項目(data items)就像小孩子，喜歡成群結隊的待在一起，你常常可以在很多不同的地方看到相同的幾個 data item 同時出現」
@@ -680,8 +693,9 @@
 <ul>
 <li>只需要把其中一個刪掉，找出其他跟著失去意義的資料，那這些全部都應該一起打包成新物件</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="311-primitive-obsession-基本型態偏執">3.11 Primitive Obsession (基本型態偏執)</h2>
-<h3 id="code-smells-9">Code Smells</h3>
+<h3 id="code-smells-10">Code Smells</h3>
 <ul>
 <li>
 <p>不要執著於使用一堆基本型別(Primitive) 在物件的世界裡該用物件的時候就用物件</p>
@@ -698,7 +712,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="解法-10">解法</h2>
+<h3 id="解法-10">解法</h3>
 <p>常見的解法</p>
 <ul>
 <li>7.3 Replace Primitive with Object (將基本元素換成物件)</li>
@@ -706,6 +720,7 @@
 <li>7.5 Extract Class (提取函式)</li>
 <li>6.8 Introduce Parameter Object (使用參數物件)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="312-repeated-switchess-重複的切換邏輯">3.12 Repeated Switchess (重複的切換邏輯)</h2>
 <h3 id="code-smel">Code Smel</h3>
 <ul>
@@ -728,6 +743,7 @@
 <ul>
 <li>10.4 Replace Conditional with Polymorphism (將條件式換成多型)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="313-loops-迴圈">3.13 Loops (迴圈)</h2>
 <h3 id="code-smel-1">Code Smel</h3>
 <ul>
@@ -743,6 +759,7 @@
 <ul>
 <li>8.8 Replace Loop With Pipeline (將迴圈改成流程)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="314-lazy-element-冗員元素">3.14 Lazy Element (冗員元素)</h2>
 <h3 id="code-smel-2">Code Smel</h3>
 <ul>
@@ -761,6 +778,7 @@
 <li>6.2 Inline Function (將函式內聯)</li>
 <li>7.6 Inline Class (內聯類別)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="315-speculative-generality-畫大餅">3.15 Speculative Generality (畫大餅)</h2>
 <h3 id="code-smel-3">Code Smel</h3>
 <ul>
@@ -781,6 +799,7 @@
 <li>如果函式有一些用不到的參數，可以用 6.5 Change Function Declaration (修改函式宣告式) 來移除它們。</li>
 <li>如果某個函式或類別的使用方只有測試程式，應該刪除測試案例，並執行8.9 Remove Dead Code (移除死碼)。</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="316-temporary-field-暫時欄位">3.16 Temporary Field (暫時欄位)</h2>
 <h3 id="code-smel-4">Code Smel</h3>
 <ul>
@@ -799,6 +818,7 @@
 <li>8.1 Move Function (移動函式)</li>
 <li>10.5 Introduce Special Case(加入特例)/Introduce Null Object (引入Null對象)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="317-message-chains-過度耦合的訊息鏈">3.17 Message Chains (過度耦合的訊息鏈)</h2>
 <h3 id="code-smel-5">Code Smel</h3>
 <ul>
@@ -817,6 +837,7 @@
 <li>6.1 Extract Function (提取函式)</li>
 <li>8.1 Move Function (移動函式)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="318-middle-man-中間人">3.18 Middle Man (中間人)</h2>
 <h3 id="code-smel-6">Code Smel</h3>
 <ul>
@@ -831,6 +852,7 @@
 <li>12.10 Replace Subclass with Delegate (將子類別換成委託類別)</li>
 <li>12.11 Replace Superclass with Delegate (將超類別換成委託類別)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="319-insider-trading-內幕交易">3.19 Insider Trading (內幕交易)</h2>
 <h3 id="code-smel-7">Code Smel</h3>
 <ul>
@@ -850,6 +872,7 @@
 <li>12.10 Replace Subclass with Delegate (將子類別換成委託類別)</li>
 <li>12.11 Replace Superclass with Delegate (將超類別換成委託類別)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="320-large-class-龐大的類別">3.20 Large Class (龐大的類別)</h2>
 <h3 id="code-smel-8">Code Smel</h3>
 <ul>
@@ -875,6 +898,7 @@
 </ul>
 </li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="321-alternative-classes-with-different-interfaces-異曲同工的類別">3.21 Alternative Classes with Different Interfaces (異曲同工的類別)</h2>
 <h3 id="code-smel-9">Code Smel</h3>
 <ul>
@@ -890,6 +914,7 @@
 <li>8.1 Move Function (移動函式)</li>
 <li>12.8 Extract Superclass (提取超類別)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="322-data-class-呆板的資料類別">3.22 Data Class (呆板的資料類別)</h2>
 <h3 id="code-smel-10">Code Smel</h3>
 <ul>
@@ -905,6 +930,7 @@
 <li>使用 8.1 Move Function (移動函式) 將行為邏輯移入資料類別。</li>
 <li>如果無法移動整個函式，使用 6.1 Extract Function (提取函式)</li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="323-refused-bequest-被拒絕的遺產">3.23 Refused Bequest (被拒絕的遺產)</h2>
 <h3 id="code-smel-11">Code Smel</h3>
 <ul>
@@ -927,6 +953,7 @@
 </ul>
 </li>
 </ul>
+<p><a href="#%E7%9B%AE%E9%8C%84">返回目錄</a></p>
 <h2 id="324-comments-過多的註解">3.24 Comments (過多的註解)</h2>
 <h3 id="code-smel-12">Code Smel</h3>
 <ul>
@@ -944,10 +971,12 @@
 <li>10-6 Introduce Assertion (加入斷言)</li>
 </ul>
 <h2 id="參考資料">參考資料</h2>
-<p><a href="https://refactoring.guru/">Refactoring.Guru</a>
-<a href="https://www.jyt0532.com/">jyt0532&rsquo;s Blog</a>
-[搞笑談軟工]https://teddy-chen-tw.blogspot.com/
-<a href="">《重構 - 改善既有程式的設計》Martin Fowler</a></p>
+<ul>
+<li><a href="https://refactoring.guru/">Refactoring.Guru</a></li>
+<li><a href="https://www.jyt0532.com/">jyt0532&rsquo;s Blog</a></li>
+<li><a href="https://teddy-chen-tw.blogspot.com/">搞笑談軟工</a></li>
+<li><a href="">《重構 - 改善既有程式的設計》Martin Fowler</a></li>
+</ul>
               
 
 
